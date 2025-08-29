@@ -1,0 +1,28 @@
+{
+  "info": {
+  "version": "0.0",
+  "author": "TCode",
+  "license": "none",
+
+    "days": {
+        "monday": "Понедельник",
+        "tuesday": "Вторник",
+        "wednesday": "Среда",
+        "thursday": "Четверг",
+        "friday": "Пятница",
+        "saturday": "Суббота",
+        "sunday": "Воскресенье"
+    }
+  },
+
+"websocket_parser": {
+    "url": "wss://s-usc1a-nss-2045.firebaseio.com/.ws?v=5&ns=schooltimetable-f4833",
+    "update_timeout_m": 5,
+    "messages": ["{\"t\":\"d\",\"d\":{\"r\":1,\"a\":\"s\",\"b\":{\"c\":{\"sdk.js.5-8-2\":1}}}}",
+    "{\"t\":\"d\",\"d\":{\"r\":2,\"a\":\"q\",\"b\":{\"p\":\"/companies/-mzPgPOgmP0hOUbHwopNk/table/-DpPW1Nus2Ypi6avVpfzu\",\"h\":\"\"}}}"]
+  },
+
+  "telegram_bot": {
+
+  }
+}

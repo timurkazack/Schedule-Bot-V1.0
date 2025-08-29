@@ -1,0 +1,9 @@
+{
+  "TEST ERROR LOGGING FINALLY": "0",
+  "Strings must be encoded before hashing": "1",
+  "'str' object has no attribute 'encoding'": "2",
+  "Object of type HASH is not JSON serializable": "3",
+  "'dict' object has no attribute 'add'": "4",
+  "Object of type set is not JSON serializable": "5",
+  "Expecting value: line 67 column 11 (char 827)": "7"
+}

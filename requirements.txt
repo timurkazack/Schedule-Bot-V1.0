@@ -1,0 +1,9 @@
+# Python 3.12
+
+# shell
+# python.exe -m pip install --upgrade pip
+# pip install -r requirements.txt
+
+websocket-client # Parser
+
+pytelegrambotapi # tg bot
