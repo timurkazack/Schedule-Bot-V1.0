@@ -1,3 +1,5 @@
 .venv
 .idea
+__pycache__
+utils/__pycache__
 telegram_bot/api.txt

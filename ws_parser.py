@@ -147,8 +147,8 @@ def norm_schedule(klass, day):
 
 
 
-th = thread.Thread(target=auto_update, daemon=True)
-th.start()
+#th = thread.Thread(target=auto_update, daemon=True)
+#th.start()
 
 #print(norm_schedule("7К", "monday"))
 #get_data_from_server()
