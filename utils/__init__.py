@@ -6,6 +6,7 @@ from .error_logger import *
 from .normalizer_data_from_server import *
 from .get_schedule import *
 from .sql_use import *
+from .api import *
 
 def get_settings(module, setting):
 

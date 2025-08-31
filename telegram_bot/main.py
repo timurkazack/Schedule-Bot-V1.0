@@ -1,13 +1,19 @@
 from telebot import *
 from ws_parser import norm_schedule
+from ws_parser import run_auto_update
 from utils import sql_use
+from utils import api
 
-#with open("telegram_bot/api.txt", "r", encoding="utf-8") as f: api = f.read()
-api = "8004422788:AAGwMlUOxdTO236TSwydt_R68sxnisYaJVk"
+
+password = input("PASSWORD > ")
+api = api.get_api(password)
+
+
 bot = telebot.TeleBot(api, parse_mode="HTML")
 
+run_auto_update()
 
-bot.send_message(6983370282, text=norm_schedule("5А", "thursday"))
+bot.send_message(6983370282, text=norm_schedule("8К", "tuesday"))
 
 @bot.message_handler(func=lambda message: True)
 def echo_message(message):

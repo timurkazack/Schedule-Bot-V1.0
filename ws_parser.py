@@ -67,9 +67,9 @@ def get_data_from_server():
 
 
 def auto_update():
-    while True:
-        get_data_from_server()
-        time.sleep(utils.get_settings("websocket_parser", "update_timeout_m") * 60)
+    get_data_from_server()
+    time.sleep(utils.get_settings("websocket_parser", "update_timeout_m") * 60)
+    auto_update()
 
 
 
@@ -146,9 +146,10 @@ def norm_schedule(klass, day):
     return special_ch + label + fill + special_ch1
 
 
-
-#th = thread.Thread(target=auto_update, daemon=True)
-#th.start()
+def run_auto_update():
+    th = thread.Thread(target=auto_update, daemon=True)
+    if not th.is_alive():
+        th.start()
 
 #print(norm_schedule("7К", "monday"))
 #get_data_from_server()

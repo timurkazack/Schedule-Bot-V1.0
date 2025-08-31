@@ -2,4 +2,5 @@
 .idea
 __pycache__
 utils/__pycache__
+utils/data/caches/*
 telegram_bot/api.txt

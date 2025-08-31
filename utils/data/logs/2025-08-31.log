@@ -1,0 +1,188 @@
+2025-08-31 09:40:15 - INFO - ###############################
+2025-08-31 09:40:15 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 09:40:15 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 09:40:15 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 09:40:15 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 09:40:15 - INFO - LOGGER STARTED
+2025-08-31 09:40:15 - INFO - ###############################
+2025-08-31 09:40:16 - INFO - Stated connect to db
+2025-08-31 09:40:16 - INFO - Users db created/exist
+2025-08-31 09:40:55 - INFO - ###############################
+2025-08-31 09:40:55 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 09:40:55 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 09:40:55 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 09:40:55 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 09:40:55 - INFO - LOGGER STARTED
+2025-08-31 09:40:55 - INFO - ###############################
+2025-08-31 09:40:55 - INFO - Stated connect to db
+2025-08-31 09:40:55 - INFO - Users db created/exist
+2025-08-31 09:41:09 - INFO - ###############################
+2025-08-31 09:41:09 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 09:41:09 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 09:41:09 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 09:41:09 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 09:41:09 - INFO - LOGGER STARTED
+2025-08-31 09:41:09 - INFO - ###############################
+2025-08-31 09:41:09 - INFO - Stated connect to db
+2025-08-31 09:41:09 - INFO - Users db created/exist
+2025-08-31 09:41:10 - INFO - Start normalization
+2025-08-31 09:41:10 - INFO - Schedule normalized
+2025-08-31 09:42:42 - INFO - ###############################
+2025-08-31 09:42:42 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 09:42:42 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 09:42:42 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 09:42:42 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 09:42:42 - INFO - LOGGER STARTED
+2025-08-31 09:42:42 - INFO - ###############################
+2025-08-31 09:42:42 - INFO - Stated connect to db
+2025-08-31 09:42:42 - INFO - Users db created/exist
+2025-08-31 09:42:43 - INFO - Start normalization
+2025-08-31 09:42:43 - INFO - Schedule normalized
+2025-08-31 09:43:06 - INFO - ###############################
+2025-08-31 09:43:06 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 09:43:06 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 09:43:06 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 09:43:06 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 09:43:06 - INFO - LOGGER STARTED
+2025-08-31 09:43:06 - INFO - ###############################
+2025-08-31 09:43:06 - INFO - Stated connect to db
+2025-08-31 09:43:06 - INFO - Users db created/exist
+2025-08-31 09:44:27 - ERROR - Infinity polling: polling exited
+2025-08-31 09:44:27 - ERROR - Break infinity polling
+2025-08-31 09:49:17 - INFO - ###############################
+2025-08-31 09:49:17 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 09:49:17 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 09:49:17 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 09:49:17 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 09:49:17 - INFO - LOGGER STARTED
+2025-08-31 09:49:17 - INFO - ###############################
+2025-08-31 09:49:17 - INFO - Stated connect to db
+2025-08-31 09:49:17 - INFO - Users db created/exist
+2025-08-31 09:49:18 - INFO - Start normalization
+2025-08-31 09:49:18 - INFO - Schedule normalized
+2025-08-31 09:54:41 - INFO - ###############################
+2025-08-31 09:54:41 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 09:54:41 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 09:54:41 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 09:54:41 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 09:54:41 - INFO - LOGGER STARTED
+2025-08-31 09:54:41 - INFO - ###############################
+2025-08-31 09:54:41 - INFO - Stated connect to db
+2025-08-31 09:54:41 - INFO - Users db created/exist
+2025-08-31 09:54:43 - INFO - Start normalization
+2025-08-31 09:54:43 - INFO - Schedule normalized
+2025-08-31 10:00:59 - INFO - ###############################
+2025-08-31 10:00:59 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 10:00:59 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 10:00:59 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 10:00:59 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 10:00:59 - INFO - LOGGER STARTED
+2025-08-31 10:00:59 - INFO - ###############################
+2025-08-31 10:00:59 - INFO - Stated connect to db
+2025-08-31 10:00:59 - INFO - Users db created/exist
+2025-08-31 10:01:00 - INFO - Start normalization
+2025-08-31 10:01:00 - INFO - Schedule normalized
+2025-08-31 10:02:43 - INFO - ###############################
+2025-08-31 10:02:43 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 10:02:43 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 10:02:43 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 10:02:43 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 10:02:43 - INFO - LOGGER STARTED
+2025-08-31 10:02:43 - INFO - ###############################
+2025-08-31 10:02:43 - INFO - Stated connect to db
+2025-08-31 10:02:43 - INFO - Users db created/exist
+2025-08-31 10:02:44 - INFO - Start normalization
+2025-08-31 10:02:44 - INFO - Schedule normalized
+2025-08-31 10:03:03 - INFO - ###############################
+2025-08-31 10:03:03 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 10:03:03 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 10:03:03 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 10:03:03 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 10:03:03 - INFO - LOGGER STARTED
+2025-08-31 10:03:03 - INFO - ###############################
+2025-08-31 10:03:03 - INFO - Stated connect to db
+2025-08-31 10:03:03 - INFO - Users db created/exist
+2025-08-31 10:08:24 - INFO - ###############################
+2025-08-31 10:08:24 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 10:08:24 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 10:08:24 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 10:08:24 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 10:08:24 - INFO - LOGGER STARTED
+2025-08-31 10:08:24 - INFO - ###############################
+2025-08-31 10:08:24 - INFO - Stated connect to db
+2025-08-31 10:08:24 - INFO - Users db created/exist
+2025-08-31 12:04:48 - INFO - ###############################
+2025-08-31 12:04:48 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 12:04:48 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 12:04:48 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 12:04:48 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 12:04:48 - INFO - LOGGER STARTED
+2025-08-31 12:04:48 - INFO - ###############################
+2025-08-31 12:04:48 - INFO - Stated connect to db
+2025-08-31 12:04:48 - INFO - Users db created/exist
+2025-08-31 12:04:49 - INFO - Start normalization
+2025-08-31 12:04:49 - INFO - Schedule normalized
+2025-08-31 12:05:10 - INFO - ###############################
+2025-08-31 12:05:10 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 12:05:10 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 12:05:10 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 12:05:10 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 12:05:10 - INFO - LOGGER STARTED
+2025-08-31 12:05:10 - INFO - ###############################
+2025-08-31 12:05:10 - INFO - Stated connect to db
+2025-08-31 12:05:10 - INFO - Users db created/exist
+2025-08-31 12:05:12 - INFO - Start normalization
+2025-08-31 12:05:12 - INFO - Schedule normalized
+2025-08-31 12:06:13 - INFO - Start normalization
+2025-08-31 12:06:13 - INFO - Schedule normalized
+2025-08-31 12:43:52 - INFO - ###############################
+2025-08-31 12:43:52 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 12:43:52 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 12:43:52 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 12:43:52 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 12:43:52 - INFO - LOGGER STARTED
+2025-08-31 12:43:52 - INFO - ###############################
+2025-08-31 12:43:52 - INFO - Stated connect to db
+2025-08-31 12:43:52 - INFO - Users db created/exist
+2025-08-31 12:47:23 - INFO - ###############################
+2025-08-31 12:47:23 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 12:47:23 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 12:47:23 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 12:47:23 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 12:47:23 - INFO - LOGGER STARTED
+2025-08-31 12:47:23 - INFO - ###############################
+2025-08-31 12:47:23 - INFO - Stated connect to db
+2025-08-31 12:47:23 - INFO - Users db created/exist
+2025-08-31 12:47:24 - INFO - Start schedule normalization
+2025-08-31 12:47:24 - INFO - Schedule is the same. Cancel.
+2025-08-31 12:47:36 - ERROR - Infinity polling: polling exited
+2025-08-31 12:47:36 - ERROR - Break infinity polling
+2025-08-31 12:47:57 - INFO - ###############################
+2025-08-31 12:47:57 - INFO - TEST INFO LOGGING FINALLY
+2025-08-31 12:47:57 - WARNING - TEST WARNING LOGGING FINALLY
+2025-08-31 12:47:57 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-08-31 12:47:57 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-08-31 12:47:57 - INFO - LOGGER STARTED
+2025-08-31 12:47:57 - INFO - ###############################
+2025-08-31 12:47:57 - INFO - Stated connect to db
+2025-08-31 12:47:57 - INFO - Users db created/exist
+2025-08-31 12:48:06 - INFO - Start schedule normalization
+2025-08-31 12:48:06 - INFO - Schedule is the same. Cancel.
+2025-08-31 12:48:26 - ERROR - Infinity polling: polling exited
+2025-08-31 12:48:26 - ERROR - Break infinity polling

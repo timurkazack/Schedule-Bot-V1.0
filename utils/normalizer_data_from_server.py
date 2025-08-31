@@ -25,7 +25,7 @@ def hyphen_r(text):
 def normalizer_data_from_server(data):
     try:
 
-        my_logger.info("Start normalization")
+        my_logger.info("Start schedule normalization")
 
         # Пути для папки с кешами, к temp файлу и конечному файлу кеша
         cache_path = f"{os.path.dirname(__file__)}\\data\\caches\\"
@@ -71,6 +71,7 @@ def normalizer_data_from_server(data):
                 md5 = json.load(f)["md5"]
 
             if md5 == normal_json["md5"]:
+                my_logger.info("Schedule is the same. Cancel.")
                 return None
 
 
@@ -117,10 +118,9 @@ def normalizer_data_from_server(data):
         # Сохранение
         with open(out_file_name, "w", encoding="utf-8") as f:
             json.dump(normal_json, f, ensure_ascii=False, indent=2)
+            my_logger.info("Schedule normalized")
             return out_file_name
 
 
     except Exception as e:
         my_logger.error(e, __name__)
-    finally:
-        my_logger.info("Schedule normalized")
