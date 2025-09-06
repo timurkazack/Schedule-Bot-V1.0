@@ -92,6 +92,32 @@ def update_user_data(message_from_user, klass=None,
     conn_us.commit()
     conn_us.close()
 
+
+def get_user_data(message):
+
+    tg_id = int(message.from_user.id)
+
+    try:
+        with sq.connect(users_db) as conn_us:
+            cur_us = conn_us.cursor()
+
+            cur_us.execute("""
+                SELECT * FROM users WHERE tg_id = ?
+            """, (tg_id,))
+
+            user_data = cur_us.fetchone()
+
+            if user_data:
+                # Более универсальный способ для любого количества столбцов
+                columns = [description[0] for description in cur_us.description]
+                return dict(zip(columns, user_data))
+            else:
+                return None
+
+    except sq.Error as e:
+        my_logger.error(e, "sql")
+        return None
+
 def test():
     pass
 

@@ -113,7 +113,12 @@ def normalizer_data_from_server(data):
         # Сортировка классов и параллелей в "classes_list" (см. в структуре кеша)
         for cl_groop in normal_json["classes_list"].keys():
             normal_json["classes_list"][cl_groop] = sorted(normal_json["classes_list"][cl_groop])
-        sorted(normal_json["classes_list"])
+
+        sorted_classes_list = {}
+        for key in sorted(normal_json["classes_list"].keys()):
+            sorted_classes_list[key] = normal_json["classes_list"][key]
+
+        normal_json["classes_list"] = sorted_classes_list
 
         # Сохранение
         with open(out_file_name, "w", encoding="utf-8") as f:

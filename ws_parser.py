@@ -10,6 +10,7 @@ import websocket as wsocket
 
 is_update = False
 latest_cache = None
+updates = True
 
 
 lg.info("WS Parser started!")
@@ -67,8 +68,12 @@ def get_data_from_server():
 
 
 def auto_update():
-    get_data_from_server()
-    time.sleep(utils.get_settings("websocket_parser", "update_timeout_m") * 60)
+    if updates:
+        get_data_from_server()
+        time.sleep(utils.get_settings("websocket_parser", "update_timeout_m") * 60)
+    else:
+        time.sleep(15)
+
     auto_update()
 
 
@@ -93,20 +98,20 @@ def norm_schedule(klass, day):
     special_ch = "<code>"
     special_ch1 = "</code>"
     label = f"Расп. для {klass} на {days_tr[day]}:\n"
-    label += "№. Кабинет | Предмет\n"
+    label += "№. Кабинет  | Предмет\n"
 
     fill = ""
 
     for lesson in schedule.keys():
         lesson_num = lesson[:2]
 
-        room = schedule[lesson].split("/") if len(schedule[lesson]) > 7 else schedule[lesson]
+        room = schedule[lesson].split("/") if len(schedule[lesson]) > 8 else schedule[lesson]
         if type(room) == list:
             for x in range(len(room)):
-                room[x] = room[x] + (" "*(7 - len(room[x])))
-        else: room = room + (" "*(7 - len(room)))
+                room[x] = room[x] + (" "*(8 - len(room[x])))
+        else: room = room + (" "*(8 - len(room)))
 
-        lesson_list = tw.fill(lesson[3:], width=17).split("\n")
+        lesson_list = tw.fill(lesson[3:], width=16).split("\n")
 
 
         if type(room) != list and len(lesson_list) == 1:
@@ -129,7 +134,7 @@ def norm_schedule(klass, day):
                 if i > len(room)-1:
                     fill += f"|  {room[i]} | "
                 else:
-                    fill += f"|  {" " * 7} | "
+                    fill += f"|  {" " * 8} | "
 
                 if i > len(lesson_list)-1:
                     fill += f"{lesson_list[i]}\n"
@@ -140,7 +145,7 @@ def norm_schedule(klass, day):
             fill += f"{lesson_num} {room} | {lesson_list[0]}\n"
 
             for i in range(1, len(lesson_list)):
-                fill += f"|  {" " * 7} | {lesson_list[i]}\n"
+                fill += f"|  {" " * 8} | {lesson_list[i]}\n"
 
 
     return special_ch + label + fill + special_ch1

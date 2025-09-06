@@ -24,7 +24,7 @@ def _decrypt_with_password(encrypted_text, password):
     decrypted = cipher_suite.decrypt(encrypted_text.encode('utf-8'))
     return decrypted.decode('utf-8')
 
-def get_api(password):
+def get_api(password = "Schedule"):
     return _decrypt_with_password(utils.get_settings("telegram_bot", "api_encrypted"), password)
 
 def set_new_api(api, password):
