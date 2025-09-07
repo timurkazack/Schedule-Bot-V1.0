@@ -5,5 +5,6 @@
   "Object of type HASH is not JSON serializable": "3",
   "'dict' object has no attribute 'add'": "4",
   "Object of type set is not JSON serializable": "5",
-  "Expecting value: line 67 column 11 (char 827)": "7"
+  "Expecting value: line 67 column 11 (char 827)": "7",
+  "'dict' object has no attribute 'sort'": "7"
 }
