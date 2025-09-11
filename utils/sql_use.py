@@ -118,7 +118,5 @@ def get_user_data(message):
         my_logger.error(e, "sql")
         return None
 
-def test():
-    pass
 
 setup()

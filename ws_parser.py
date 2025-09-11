@@ -98,7 +98,7 @@ def norm_schedule(klass, day):
     special_ch = "<code>"
     special_ch1 = "</code>"
     label = f"Расп. для {klass} на {days_tr[day]}:\n"
-    label += "№. Кабинет  | Предмет\n"
+    label += "№. Кабинет  |  Предмет\n"
 
     fill = ""
 
@@ -124,21 +124,35 @@ def norm_schedule(klass, day):
                            len(room)):
                 fill += f"|  {room[i]} |\n"
 
+
         elif type(room) == list and len(lesson_list) != 1:
+
             fill += f"{lesson_num} {room[0]} | {lesson_list[0]}\n"
 
-            for i in range(
-                    max(len(room),
-                        len(lesson_list))):
+            # Начинаем со ВТОРОЙ строки (i=1), так как первая уже выведена
 
-                if i > len(room)-1:
-                    fill += f"|  {room[i]} | "
+            for i in range(1, max(len(room), len(lesson_list))):
+
+                fill += "|  "  # Начинаем новую строку таблицы
+
+                # Выводим кабинет, если он есть на этой строке
+
+                if i < len(room):
+
+                    fill += f"{room[i]} | "
+
                 else:
-                    fill += f"|  {" " * 8} | "
 
-                if i > len(lesson_list)-1:
+                    fill += f"{' ' * 8} | "
+
+                # Выводим часть названия урока, если она есть на этой строке
+
+                if i < len(lesson_list):
+
                     fill += f"{lesson_list[i]}\n"
+
                 else:
+
                     fill += "\n"
 
         elif type(room) == str and len(lesson_list) != 1:
