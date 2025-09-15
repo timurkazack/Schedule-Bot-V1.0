@@ -1,6 +1,5 @@
 import sqlite3 as sq
 import os
-from telebot import *
 from utils import my_logger
 from datetime import datetime as dt
 
@@ -43,16 +42,16 @@ def update_user_data(message_from_user, klass=None,
     tg_user_name = str(message_from_user.from_user.username)
 
     # Получаем текущее время в формате строки
-    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    current_time = dt.now().strftime("%Y-%m-%d %H:%M:%S")
 
     conn_us = sq.connect(users_db)
     cur_us = conn_us.cursor()
 
     # 1. Проверяем существует ли пользователь
-    cur_us.execute("SELECT tg_id FROM users WHERE tg_id = ?", (tg_id,))
-    user_exists = cur_us.fetchone() is not None
+    cur_us.execute("SELECT * FROM users WHERE tg_id = ?", (tg_id,))
+    user_data = cur_us.fetchone()
 
-    if not user_exists:
+    if not user_data:
         # 2. Если пользователь новый - вставляем новую запись
         cur_us.execute("""
             INSERT INTO users (
@@ -62,10 +61,10 @@ def update_user_data(message_from_user, klass=None,
             ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
             tg_id, tg_first_name, tg_last_name, tg_user_name,
-            klass, current_time, current_time,  # first_visit и last_visit = текущее время
-            is_admin or 0, is_baned or 0,  # значения по умолчанию если None
+            klass, current_time, current_time,
+            is_admin or 0, is_baned or 0,
             ban_time, ban_time_left,
-            donated_money or 0.0  # значение по умолчанию если None
+            donated_money or 0.0
         ))
     else:
         # 3. Если пользователь существует - обновляем данные
@@ -84,7 +83,7 @@ def update_user_data(message_from_user, klass=None,
             WHERE tg_id = ?
         """, (
             tg_first_name, tg_last_name, tg_user_name,
-            klass, current_time,  # обновляем last_visit
+            klass, current_time,
             is_admin, is_baned, ban_time, ban_time_left, donated_money,
             tg_id
         ))
@@ -117,6 +116,7 @@ def get_user_data(message):
     except sq.Error as e:
         my_logger.error(e, "sql")
         return None
+
 
 
 setup()

@@ -92,6 +92,8 @@ def norm_schedule(klass, day):
 
 
     schedule = gs.get_day(klass, day)
+    if schedule is None:
+        return f"❌ Расписание для класса {klass} на {day} не найдено"
 
     days_tr = utils.get_settings("info", "days")
 

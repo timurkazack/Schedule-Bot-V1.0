@@ -10,31 +10,46 @@ from utils.get_schedule import *
 #password = input("PASSWORD > ")
 api = api.get_api() #password
 
-opened_to_users = False
+opened_to_users = True
 
 admin_id = 6983370282
 
-bot = telebot.TeleBot(api)  # , parse_mode="HTML")
+bot = telebot.TeleBot(api, parse_mode="HTML")
 
 run_auto_update()
 
 
 choice_class_text = "📖 Выбрать класс"
+choice_class_again_text = "◀️ Выбрать класс заново"
 donate_text = "💸 Донат"
 help_text = "❓ Написать в поддержку"
 settings_text = "⚙️ Настройки"
 classes_text = "классы"
 
 
-START_MESSAGE = """START MESSAGE"""
-HELP_MESSAGE = """HELP MESSAGE"""
+site = "https://nextler.ru/6zk8zL1lsy.html?companyid=-mzPgPOgmP0hOUbHwopNk&tableid=-DpPW1Nus2Ypi6avVpfzu"
+
+
+START_MESSAGE = """👋 Привет {user_first_name}
+На сайте расписания школы трудно найти свой класс?
+<a href="https://nextler.ru/6zk8zL1lsy.html?companyid=-mzPgPOgmP0hOUbHwopNk&tableid=-DpPW1Nus2Ypi6avVpfzu">Сайт</a> долго грузит?
+
+Я помогу тебе!
+Тебе всего лишь надо выбрать свой класс, для этого используй клавиатуру👇"""
+
+HELP_MESSAGE = """Справка по боту:
+/start - Перезапустить бота (Придётся заново выбрать класс)
+/help - Получить эту справку
+/proposal - Написать в поддержку
+
+Дни недели/классы отображаются в соответствии с расписанием школы.
+Если какого-то дня/класса нет в меню выбора, значит его нет и в расписании на сайте"""
+
 HELPER_MESSAGE = "Напишите своё обращение:"
 CHOICE_PARALLEL_MESSAGE = "Выберете параллель👇"
 CHOICE_CLASS_MESSAGE = "Выберете класс👇"
 SAVE_CLASS_MESSAGE = """Сохранено!
-Для получения расписания воспользуетесь кнопками выбора дня недели.
-(Дни недели отображаются в соответствии с расписанием школы.
-Если какого то дня нет в меню выбора, значит его нет и в расписании на сайте)"""
+Выбирайте день недели и получайте расписание👇"""
 
 
 
@@ -43,6 +58,7 @@ SAVE_CLASS_MESSAGE = """Сохранено!
 def start_func(message):
     update_user_data(message)
     user_data = get_user_data(message)
+    my_logger.info(f"{user_data["tg_id"]} used START MESSAGE FUNC")
 
 
     markup_menu_buttons = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -58,9 +74,9 @@ def start_func(message):
 
     if not opened_to_users:
         if user_data["is_admin"] == 1:
-            bot.send_message(message.from_user.id, START_MESSAGE, reply_markup=markup_menu_buttons)
+            bot.send_message(user_data["tg_id"], START_MESSAGE.format(user_first_name=user_data["tg_first_name"]), reply_markup=markup_menu_buttons)
     else:
-        bot.send_message(message.from_user.id, START_MESSAGE, reply_markup=markup_menu_buttons)
+        bot.send_message(user_data["tg_id"], START_MESSAGE.format(user_first_name=user_data["tg_first_name"]), reply_markup=markup_menu_buttons)
 
 
 
@@ -71,6 +87,7 @@ def start_func(message):
 def help_func(message):
     update_user_data(message)
     user_data = get_user_data(message)
+    my_logger.info(f"{user_data["tg_id"]} used HELP MESSAGE FUNC")
 
 
 
@@ -90,6 +107,7 @@ def help_func(message):
 def upd_admin_func(message):
     update_user_data(message)
     user_data = get_user_data(message)
+    my_logger.info(f"{user_data["tg_id"]} used UPD FUNC")
 
     if user_data["is_admin"] == 1:
         bot.reply_to(message, "✅")
@@ -99,6 +117,7 @@ def upd_admin_func(message):
 def aus_admin_func(message):
     update_user_data(message)
     user_data = get_user_data(message)
+    my_logger.info(f"{user_data["tg_id"]} used AUTO UPDATE SWAP FUNC")
 
     if user_data["is_admin"] == 1:
         bot.reply_to(message, "✅")
@@ -111,18 +130,23 @@ def aus_admin_func(message):
 def get_help_contact(message):
     update_user_data(message)
     user_data = get_user_data(message)
+    my_logger.info(f"{user_data["tg_id"]} used GET HELP FUNC")
 
 
     if not opened_to_users:
         if user_data["is_admin"] == 1:
             bot.send_message(message.from_user.id, HELPER_MESSAGE)
             bot.register_next_step_handler(message, send_to_admin_helper_message)
+    else:
+        bot.send_message(message.from_user.id, HELPER_MESSAGE)
+        bot.register_next_step_handler(message, send_to_admin_helper_message)
 
 
-
+@bot.message_handler(commands=["proposal"])
 def send_to_admin_helper_message(message):
     update_user_data(message)
     user_data = get_user_data(message)
+    my_logger.info(f"{user_data["tg_id"]} used GET HELP FUNC 2")
 
 
     markup = types.InlineKeyboardMarkup()
@@ -143,10 +167,12 @@ def send_to_admin_helper_message(message):
 
 
 
-@bot.message_handler(func=lambda message: message.text == choice_class_text)
+@bot.message_handler(func=lambda message: message.text == choice_class_text or message.text == choice_class_again_text)
 def get_choice_parallel(message):
     update_user_data(message)
     user_data = get_user_data(message)
+    my_logger.info(f"{user_data["tg_id"]} used CHOICE PARALLEL FUNC")
+
 
     markup_parallel = types.ReplyKeyboardMarkup(resize_keyboard=True)
 
@@ -174,6 +200,8 @@ def get_choice_parallel(message):
 def get_choice_class(message):
     update_user_data(message)
     user_data = get_user_data(message)
+    my_logger.info(f"{user_data["tg_id"]} used CHOICE CLASS FUNC and choice {message.text}")
+
 
     markup_class = types.ReplyKeyboardMarkup(resize_keyboard=True)
 
@@ -196,6 +224,7 @@ def get_choice_class(message):
 def save_choice_class(message):
     update_user_data(message, klass=message.text)
     user_data = get_user_data(message)
+    my_logger.info(f"{user_data["tg_id"]} used SAVE CHOICE CLASS FUNC and choice {message.text}")
 
 
     markup_days = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -207,6 +236,8 @@ def save_choice_class(message):
             types.KeyboardButton(day))
 
     markup_days.add(*buttons)
+    markup_days.row(choice_class_again_text)
+
     if not opened_to_users:
         if user_data["is_admin"] == 1:
             bot.send_message(message.from_user.id, SAVE_CLASS_MESSAGE, reply_markup=markup_days)
@@ -216,17 +247,19 @@ def save_choice_class(message):
 
 @bot.message_handler(func=lambda message: message.text in russian_days())
 def get_schedule_for_user(message):
+    update_user_data(message)
     user_data = get_user_data(message)
+    my_logger.info(f"{user_data["tg_id"]} used GET SCHEDULE FUNC and choice {message.text}")
 
+    ru_day = message.text
+    en_day = get_ru_day_to_en(ru_day)
 
     if not opened_to_users:
         if user_data["is_admin"] == 1:
             bot.send_message(message.from_user.id,
-                             norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)),
-                             parse_mode="HTML")
+                             norm_schedule(user_data["worked_class"], en_day))
     else:
         bot.send_message(message.from_user.id,
-                         norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)),
-                         parse_mode="HTML")
+                         norm_schedule(user_data["worked_class"], en_day))
 
 bot.infinity_polling()
