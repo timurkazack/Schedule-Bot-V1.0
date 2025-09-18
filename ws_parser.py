@@ -100,7 +100,7 @@ def norm_schedule(klass, day):
     special_ch = "<code>"
     special_ch1 = "</code>"
     label = f"Расп. для {klass} на {days_tr[day]}:\n"
-    label += "№. Кабинет  |  Предмет\n"
+    label += "№. Кабинет  | Предмет\n"
 
     fill = ""
 

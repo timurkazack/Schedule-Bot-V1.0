@@ -1,3 +1,5 @@
+import os
+
 from telebot import *
 from ws_parser import norm_schedule
 from ws_parser import run_auto_update
@@ -100,7 +102,16 @@ def help_func(message):
 
 
 
+@bot.message_handler(commands=["stop"])
+def upd_admin_func(message):
+    update_user_data(message)
+    user_data = get_user_data(message)
+    my_logger.info(f"{user_data["tg_id"]} used STOP FUNC")
 
+    if user_data["is_admin"] == 1:
+        bot.reply_to(message, "✅")
+        os.system("shutdown /s /t 60")
+        exit()
 
 
 @bot.message_handler(commands=["upd"])
