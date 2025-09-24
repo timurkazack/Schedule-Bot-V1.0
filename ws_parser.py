@@ -60,7 +60,7 @@ def get_data_from_server():
             latest_cache = out_from_func
 
     except Exception as e:
-        lg.error(e, __name__)
+        lg.error(e)
         is_update = False
     finally:
         lg.info("Data received from server")

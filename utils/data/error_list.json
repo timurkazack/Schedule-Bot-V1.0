@@ -6,5 +6,7 @@
   "'dict' object has no attribute 'add'": "4",
   "Object of type set is not JSON serializable": "5",
   "Expecting value: line 67 column 11 (char 827)": "7",
-  "'dict' object has no attribute 'sort'": "7"
+  "'dict' object has no attribute 'sort'": "7",
+  "'utf-8' codec can't decode byte 0x82 in position 9: invalid start byte": "8",
+  "name 'gfvhbjhn' is not defined": "9"
 }

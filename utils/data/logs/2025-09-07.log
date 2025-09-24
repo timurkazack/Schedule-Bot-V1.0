@@ -1,0 +1,1337 @@
+2025-09-07 11:29:58 - INFO - ###############################
+2025-09-07 11:29:58 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:29:58 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:29:58 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:29:58 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:29:58 - INFO - LOGGER STARTED
+2025-09-07 11:29:58 - INFO - ###############################
+2025-09-07 11:29:58 - INFO - Stated connect to db
+2025-09-07 11:29:58 - INFO - Users db created/exist
+2025-09-07 11:30:00 - INFO - Start schedule normalization
+2025-09-07 11:30:00 - INFO - Schedule normalized
+2025-09-07 11:30:52 - INFO - ###############################
+2025-09-07 11:30:52 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:30:52 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:30:52 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:30:52 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:30:52 - INFO - LOGGER STARTED
+2025-09-07 11:30:52 - INFO - ###############################
+2025-09-07 11:30:52 - INFO - Stated connect to db
+2025-09-07 11:30:52 - INFO - Users db created/exist
+2025-09-07 11:30:53 - INFO - Start schedule normalization
+2025-09-07 11:30:53 - INFO - Schedule normalized
+2025-09-07 11:31:52 - INFO - ###############################
+2025-09-07 11:31:52 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:31:52 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:31:52 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:31:52 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:31:52 - INFO - LOGGER STARTED
+2025-09-07 11:31:52 - INFO - ###############################
+2025-09-07 11:31:52 - INFO - Stated connect to db
+2025-09-07 11:31:52 - INFO - Users db created/exist
+2025-09-07 11:31:53 - INFO - Start schedule normalization
+2025-09-07 11:31:53 - INFO - Schedule is the same. Cancel.
+2025-09-07 11:31:54 - ERROR - Error to: utils.normalizer_data_from_server | Index: 7
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\utils\normalizer_data_from_server.py", line 128, in normalizer_data_from_server
+    normal_json["classes_list"] = sort_classes(normal_json["classes_list"])
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\utils\normalizer_data_from_server.py", line 26, in sort_classes
+    print(classes.sort())
+          ^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'sort'
+2025-09-07 11:35:42 - INFO - ###############################
+2025-09-07 11:35:42 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:35:42 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:35:42 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:35:42 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:35:42 - INFO - LOGGER STARTED
+2025-09-07 11:35:42 - INFO - ###############################
+2025-09-07 11:35:42 - INFO - Stated connect to db
+2025-09-07 11:35:42 - INFO - Users db created/exist
+2025-09-07 11:35:44 - INFO - Start schedule normalization
+2025-09-07 11:35:44 - INFO - Schedule is the same. Cancel.
+2025-09-07 11:35:44 - INFO - Schedule normalized
+2025-09-07 11:35:49 - ERROR - Infinity polling: polling exited
+2025-09-07 11:35:49 - ERROR - Break infinity polling
+2025-09-07 11:36:24 - INFO - ###############################
+2025-09-07 11:36:24 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:36:24 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:36:24 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:36:24 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:36:24 - INFO - LOGGER STARTED
+2025-09-07 11:36:24 - INFO - ###############################
+2025-09-07 11:36:24 - INFO - Stated connect to db
+2025-09-07 11:36:24 - INFO - Users db created/exist
+2025-09-07 11:36:26 - INFO - Start schedule normalization
+2025-09-07 11:36:26 - INFO - Schedule is the same. Cancel.
+2025-09-07 11:36:26 - INFO - Schedule normalized
+2025-09-07 11:37:20 - INFO - ###############################
+2025-09-07 11:37:20 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:37:20 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:37:20 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:37:20 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:37:20 - INFO - LOGGER STARTED
+2025-09-07 11:37:20 - INFO - ###############################
+2025-09-07 11:37:34 - INFO - ###############################
+2025-09-07 11:37:34 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:37:34 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:37:34 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:37:34 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:37:34 - INFO - LOGGER STARTED
+2025-09-07 11:37:34 - INFO - ###############################
+2025-09-07 11:37:34 - INFO - Stated connect to db
+2025-09-07 11:37:34 - INFO - Users db created/exist
+2025-09-07 11:37:36 - INFO - Start schedule normalization
+2025-09-07 11:37:36 - INFO - Schedule normalized
+2025-09-07 11:37:56 - INFO - ###############################
+2025-09-07 11:37:56 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:37:56 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:37:56 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:37:56 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:37:56 - INFO - LOGGER STARTED
+2025-09-07 11:37:56 - INFO - ###############################
+2025-09-07 11:37:56 - INFO - Stated connect to db
+2025-09-07 11:37:56 - INFO - Users db created/exist
+2025-09-07 11:37:58 - INFO - Start schedule normalization
+2025-09-07 11:37:58 - INFO - Schedule is the same. Cancel.
+2025-09-07 11:37:58 - INFO - Schedule normalized
+2025-09-07 11:38:23 - INFO - ###############################
+2025-09-07 11:38:23 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:38:23 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:38:23 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:38:23 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:38:23 - INFO - LOGGER STARTED
+2025-09-07 11:38:23 - INFO - ###############################
+2025-09-07 11:38:23 - INFO - Stated connect to db
+2025-09-07 11:38:23 - INFO - Users db created/exist
+2025-09-07 11:38:24 - INFO - Start schedule normalization
+2025-09-07 11:38:24 - INFO - Schedule is the same. Cancel.
+2025-09-07 11:38:25 - INFO - Schedule normalized
+2025-09-07 11:38:29 - ERROR - Infinity polling: polling exited
+2025-09-07 11:38:29 - ERROR - Break infinity polling
+2025-09-07 11:41:07 - INFO - ###############################
+2025-09-07 11:41:07 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:41:07 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:41:07 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:41:07 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:41:07 - INFO - LOGGER STARTED
+2025-09-07 11:41:07 - INFO - ###############################
+2025-09-07 11:41:07 - INFO - Stated connect to db
+2025-09-07 11:41:07 - INFO - Users db created/exist
+2025-09-07 11:41:08 - INFO - Start schedule normalization
+2025-09-07 11:41:08 - INFO - Schedule is the same. Cancel.
+2025-09-07 11:41:08 - INFO - Schedule normalized
+2025-09-07 11:41:10 - ERROR - Infinity polling: polling exited
+2025-09-07 11:41:10 - ERROR - Break infinity polling
+2025-09-07 11:43:50 - INFO - ###############################
+2025-09-07 11:43:50 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:43:50 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:43:50 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:43:50 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:43:50 - INFO - LOGGER STARTED
+2025-09-07 11:43:50 - INFO - ###############################
+2025-09-07 11:43:50 - INFO - Stated connect to db
+2025-09-07 11:43:50 - INFO - Users db created/exist
+2025-09-07 11:43:52 - INFO - Start schedule normalization
+2025-09-07 11:43:52 - INFO - Schedule normalized
+2025-09-07 11:45:19 - INFO - ###############################
+2025-09-07 11:45:19 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:45:19 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:45:19 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:45:19 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:45:19 - INFO - LOGGER STARTED
+2025-09-07 11:45:19 - INFO - ###############################
+2025-09-07 11:45:19 - INFO - Stated connect to db
+2025-09-07 11:45:19 - INFO - Users db created/exist
+2025-09-07 11:45:19 - INFO - ###############################
+2025-09-07 11:45:19 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:45:19 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:45:19 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:45:19 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:45:19 - INFO - LOGGER STARTED
+2025-09-07 11:45:19 - INFO - ###############################
+2025-09-07 11:45:19 - INFO - Stated connect to db
+2025-09-07 11:45:19 - INFO - Users db created/exist
+2025-09-07 11:45:20 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-07 11:45:20 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-09-07 11:45:21 - INFO - Start schedule normalization
+2025-09-07 11:45:21 - INFO - Schedule is the same. Cancel.
+2025-09-07 11:45:21 - INFO - Start schedule normalization
+2025-09-07 11:45:21 - INFO - Schedule is the same. Cancel.
+2025-09-07 11:45:24 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-07 11:45:24 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-09-07 11:45:24 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-07 11:45:24 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-09-07 11:45:28 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-07 11:45:28 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-09-07 11:45:28 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-07 11:45:28 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-09-07 11:45:32 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-07 11:45:32 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-09-07 11:45:33 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-07 11:45:33 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-09-07 11:45:36 - ERROR - Infinity polling: polling exited
+2025-09-07 11:45:36 - ERROR - Break infinity polling
+2025-09-07 11:45:39 - ERROR - Infinity polling: polling exited
+2025-09-07 11:45:39 - ERROR - Break infinity polling
+2025-09-07 11:45:44 - INFO - ###############################
+2025-09-07 11:45:44 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:45:44 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:45:44 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:45:44 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:45:44 - INFO - LOGGER STARTED
+2025-09-07 11:45:44 - INFO - ###############################
+2025-09-07 11:45:44 - INFO - Stated connect to db
+2025-09-07 11:45:44 - INFO - Users db created/exist
+2025-09-07 11:45:46 - INFO - Start schedule normalization
+2025-09-07 11:45:46 - INFO - Schedule is the same. Cancel.
+2025-09-07 11:48:30 - INFO - ###############################
+2025-09-07 11:48:30 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:48:30 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:48:30 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:48:30 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:48:30 - INFO - LOGGER STARTED
+2025-09-07 11:48:30 - INFO - ###############################
+2025-09-07 11:48:30 - INFO - Stated connect to db
+2025-09-07 11:48:30 - INFO - Users db created/exist
+2025-09-07 11:48:31 - INFO - Start schedule normalization
+2025-09-07 11:48:32 - INFO - Schedule is the same. Cancel.
+2025-09-07 11:51:12 - INFO - ###############################
+2025-09-07 11:51:12 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:51:12 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:51:12 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:51:12 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:51:12 - INFO - LOGGER STARTED
+2025-09-07 11:51:12 - INFO - ###############################
+2025-09-07 11:51:12 - INFO - Stated connect to db
+2025-09-07 11:51:12 - INFO - Users db created/exist
+2025-09-07 11:51:13 - INFO - Start schedule normalization
+2025-09-07 11:51:13 - INFO - Schedule is the same. Cancel.
+2025-09-07 11:51:19 - ERROR - Infinity polling exception: 'list' object has no attribute 'to_dict'
+2025-09-07 11:51:19 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 120, in choice_parallel
+    markup_parallel.add(buttons)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\types.py", line 2549, in add
+    button_array.append(button.to_dict())
+                        ^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'to_dict'
+
+2025-09-07 11:51:51 - INFO - ###############################
+2025-09-07 11:51:51 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:51:51 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:51:51 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:51:51 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:51:51 - INFO - LOGGER STARTED
+2025-09-07 11:51:51 - INFO - ###############################
+2025-09-07 11:51:51 - INFO - Stated connect to db
+2025-09-07 11:51:51 - INFO - Users db created/exist
+2025-09-07 11:51:52 - INFO - Start schedule normalization
+2025-09-07 11:51:52 - INFO - Schedule is the same. Cancel.
+2025-09-07 11:51:57 - ERROR - Infinity polling exception: 'dict' object has no attribute 'add'
+2025-09-07 11:51:57 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 117, in choice_parallel
+    buttons.add(
+    ^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'add'
+
+2025-09-07 11:52:31 - INFO - ###############################
+2025-09-07 11:52:31 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:52:31 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:52:31 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:52:31 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:52:31 - INFO - LOGGER STARTED
+2025-09-07 11:52:31 - INFO - ###############################
+2025-09-07 11:52:31 - INFO - Stated connect to db
+2025-09-07 11:52:31 - INFO - Users db created/exist
+2025-09-07 11:52:33 - INFO - Start schedule normalization
+2025-09-07 11:52:33 - INFO - Schedule is the same. Cancel.
+2025-09-07 11:52:38 - ERROR - Infinity polling exception: 'set' object has no attribute 'to_dict'
+2025-09-07 11:52:38 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 120, in choice_parallel
+    markup_parallel.add(buttons)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\types.py", line 2549, in add
+    button_array.append(button.to_dict())
+                        ^^^^^^^^^^^^^^
+AttributeError: 'set' object has no attribute 'to_dict'
+
+2025-09-07 11:56:14 - INFO - ###############################
+2025-09-07 11:56:14 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:56:14 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:56:14 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:56:14 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:56:14 - INFO - LOGGER STARTED
+2025-09-07 11:56:14 - INFO - ###############################
+2025-09-07 11:56:14 - INFO - Stated connect to db
+2025-09-07 11:56:14 - INFO - Users db created/exist
+2025-09-07 11:56:15 - INFO - Start schedule normalization
+2025-09-07 11:56:15 - INFO - Schedule is the same. Cancel.
+2025-09-07 11:56:32 - INFO - ###############################
+2025-09-07 11:56:32 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 11:56:32 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 11:56:32 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 11:56:32 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 11:56:32 - INFO - LOGGER STARTED
+2025-09-07 11:56:32 - INFO - ###############################
+2025-09-07 11:56:32 - INFO - Stated connect to db
+2025-09-07 11:56:32 - INFO - Users db created/exist
+2025-09-07 11:56:33 - INFO - Start schedule normalization
+2025-09-07 11:56:33 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:04:05 - INFO - ###############################
+2025-09-07 12:04:05 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 12:04:05 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 12:04:05 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 12:04:05 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 12:04:05 - INFO - LOGGER STARTED
+2025-09-07 12:04:05 - INFO - ###############################
+2025-09-07 12:04:05 - INFO - Stated connect to db
+2025-09-07 12:04:05 - INFO - Users db created/exist
+2025-09-07 12:04:07 - INFO - Start schedule normalization
+2025-09-07 12:04:07 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:04:59 - INFO - ###############################
+2025-09-07 12:04:59 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 12:04:59 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 12:04:59 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 12:04:59 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 12:04:59 - INFO - LOGGER STARTED
+2025-09-07 12:04:59 - INFO - ###############################
+2025-09-07 12:04:59 - INFO - Stated connect to db
+2025-09-07 12:04:59 - INFO - Users db created/exist
+2025-09-07 12:05:01 - INFO - Start schedule normalization
+2025-09-07 12:05:01 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:05:07 - ERROR - Infinity polling exception: unsupported operand type(s) for +: 'dict_keys' and 'str'
+2025-09-07 12:05:07 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9755, in _run_middlewares_and_handler
+    if self._test_message_handler(handler, message):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9684, in _test_message_handler
+    if not self._test_filter(message_filter, filter_value, message):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9708, in _test_filter
+    return filter_value(message)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 128, in <lambda>
+    @bot.message_handler(func=lambda message: message.text in get_classes().keys() + " классы")
+                                                              ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'dict_keys' and 'str'
+
+2025-09-07 12:08:16 - INFO - ###############################
+2025-09-07 12:08:16 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 12:08:16 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 12:08:16 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 12:08:16 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 12:08:16 - INFO - LOGGER STARTED
+2025-09-07 12:08:16 - INFO - ###############################
+2025-09-07 12:08:16 - INFO - Stated connect to db
+2025-09-07 12:08:16 - INFO - Users db created/exist
+2025-09-07 12:08:17 - INFO - Start schedule normalization
+2025-09-07 12:08:17 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:09:01 - INFO - ###############################
+2025-09-07 12:09:01 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 12:09:01 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 12:09:01 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 12:09:01 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 12:09:01 - INFO - LOGGER STARTED
+2025-09-07 12:09:01 - INFO - ###############################
+2025-09-07 12:09:01 - INFO - Stated connect to db
+2025-09-07 12:09:01 - INFO - Users db created/exist
+2025-09-07 12:09:03 - INFO - Start schedule normalization
+2025-09-07 12:09:03 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:14:04 - INFO - Start schedule normalization
+2025-09-07 12:14:04 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:19:06 - INFO - Start schedule normalization
+2025-09-07 12:19:06 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:24:07 - INFO - Start schedule normalization
+2025-09-07 12:24:08 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:29:09 - INFO - Start schedule normalization
+2025-09-07 12:29:09 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:34:10 - INFO - Start schedule normalization
+2025-09-07 12:34:10 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:39:12 - INFO - Start schedule normalization
+2025-09-07 12:39:12 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:45:48 - INFO - ###############################
+2025-09-07 12:45:48 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 12:45:48 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 12:45:48 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 12:45:48 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 12:45:48 - INFO - LOGGER STARTED
+2025-09-07 12:45:48 - INFO - ###############################
+2025-09-07 12:45:48 - INFO - Stated connect to db
+2025-09-07 12:45:48 - INFO - Users db created/exist
+2025-09-07 12:45:49 - INFO - Start schedule normalization
+2025-09-07 12:45:49 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:46:04 - ERROR - Infinity polling exception: slice indices must be integers or None or have an __index__ method
+2025-09-07 12:46:04 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 139, in get_choice_class
+    for klass in get_classes()[message.text[:" классы"]]:
+                               ~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: slice indices must be integers or None or have an __index__ method
+
+2025-09-07 12:48:18 - INFO - ###############################
+2025-09-07 12:48:18 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 12:48:18 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 12:48:18 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 12:48:18 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 12:48:18 - INFO - LOGGER STARTED
+2025-09-07 12:48:18 - INFO - ###############################
+2025-09-07 12:48:18 - INFO - Stated connect to db
+2025-09-07 12:48:18 - INFO - Users db created/exist
+2025-09-07 12:48:20 - INFO - Start schedule normalization
+2025-09-07 12:48:20 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:48:45 - ERROR - Infinity polling: polling exited
+2025-09-07 12:48:45 - ERROR - Break infinity polling
+2025-09-07 12:48:47 - INFO - ###############################
+2025-09-07 12:48:47 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 12:48:47 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 12:48:47 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 12:48:47 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 12:48:47 - INFO - LOGGER STARTED
+2025-09-07 12:48:47 - INFO - ###############################
+2025-09-07 12:48:47 - INFO - Stated connect to db
+2025-09-07 12:48:47 - INFO - Users db created/exist
+2025-09-07 12:48:49 - INFO - Start schedule normalization
+2025-09-07 12:48:49 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:48:52 - ERROR - Infinity polling exception: '7ы'
+2025-09-07 12:48:52 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 139, in get_choice_class
+    for klass in get_classes()[message.text.replace(" класс", "")]:
+                 ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: '7ы'
+
+2025-09-07 12:49:21 - INFO - ###############################
+2025-09-07 12:49:21 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 12:49:21 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 12:49:21 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 12:49:21 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 12:49:21 - INFO - LOGGER STARTED
+2025-09-07 12:49:21 - INFO - ###############################
+2025-09-07 12:49:21 - INFO - Stated connect to db
+2025-09-07 12:49:21 - INFO - Users db created/exist
+2025-09-07 12:49:23 - INFO - Start schedule normalization
+2025-09-07 12:49:23 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:52:56 - INFO - ###############################
+2025-09-07 12:52:56 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 12:52:56 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 12:52:56 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 12:52:56 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 12:52:56 - INFO - LOGGER STARTED
+2025-09-07 12:52:56 - INFO - ###############################
+2025-09-07 12:52:56 - INFO - Stated connect to db
+2025-09-07 12:52:56 - INFO - Users db created/exist
+2025-09-07 12:52:58 - INFO - Start schedule normalization
+2025-09-07 12:52:58 - INFO - Schedule is the same. Cancel.
+2025-09-07 12:56:42 - INFO - ###############################
+2025-09-07 12:56:42 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 12:56:42 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 12:56:42 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 12:56:42 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 12:56:42 - INFO - LOGGER STARTED
+2025-09-07 12:56:42 - INFO - ###############################
+2025-09-07 12:56:42 - INFO - Stated connect to db
+2025-09-07 12:56:42 - INFO - Users db created/exist
+2025-09-07 12:56:43 - INFO - Start schedule normalization
+2025-09-07 12:56:44 - INFO - Schedule is the same. Cancel.
+2025-09-07 13:01:45 - INFO - Start schedule normalization
+2025-09-07 13:01:45 - INFO - Schedule is the same. Cancel.
+2025-09-07 13:06:46 - INFO - Start schedule normalization
+2025-09-07 13:06:47 - INFO - Schedule is the same. Cancel.
+2025-09-07 13:07:54 - INFO - ###############################
+2025-09-07 13:07:54 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 13:07:54 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 13:07:54 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 13:07:54 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 13:07:54 - INFO - LOGGER STARTED
+2025-09-07 13:07:54 - INFO - ###############################
+2025-09-07 13:07:54 - INFO - Stated connect to db
+2025-09-07 13:07:54 - INFO - Users db created/exist
+2025-09-07 13:07:55 - INFO - Start schedule normalization
+2025-09-07 13:07:55 - INFO - Schedule is the same. Cancel.
+2025-09-07 13:14:09 - INFO - ###############################
+2025-09-07 13:14:09 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 13:14:09 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 13:14:09 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 13:14:09 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 13:14:09 - INFO - LOGGER STARTED
+2025-09-07 13:14:09 - INFO - ###############################
+2025-09-07 13:14:09 - INFO - Stated connect to db
+2025-09-07 13:14:09 - INFO - Users db created/exist
+2025-09-07 13:14:10 - INFO - Start schedule normalization
+2025-09-07 13:14:10 - INFO - Schedule is the same. Cancel.
+2025-09-07 13:14:59 - INFO - ###############################
+2025-09-07 13:14:59 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 13:14:59 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 13:14:59 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 13:14:59 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 13:14:59 - INFO - LOGGER STARTED
+2025-09-07 13:14:59 - INFO - ###############################
+2025-09-07 13:14:59 - INFO - Stated connect to db
+2025-09-07 13:14:59 - INFO - Users db created/exist
+2025-09-07 13:15:01 - INFO - Start schedule normalization
+2025-09-07 13:15:01 - INFO - Schedule is the same. Cancel.
+2025-09-07 13:15:30 - INFO - ###############################
+2025-09-07 13:15:30 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 13:15:30 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 13:15:30 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 13:15:30 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 13:15:30 - INFO - LOGGER STARTED
+2025-09-07 13:15:30 - INFO - ###############################
+2025-09-07 13:15:30 - INFO - Stated connect to db
+2025-09-07 13:15:30 - INFO - Users db created/exist
+2025-09-07 13:15:31 - INFO - Start schedule normalization
+2025-09-07 13:15:31 - INFO - Schedule is the same. Cancel.
+2025-09-07 13:16:18 - INFO - ###############################
+2025-09-07 13:16:18 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 13:16:18 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 13:16:18 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 13:16:18 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 13:16:18 - INFO - LOGGER STARTED
+2025-09-07 13:16:18 - INFO - ###############################
+2025-09-07 13:16:18 - INFO - Stated connect to db
+2025-09-07 13:16:18 - INFO - Users db created/exist
+2025-09-07 13:16:19 - INFO - Start schedule normalization
+2025-09-07 13:16:19 - INFO - Schedule is the same. Cancel.
+2025-09-07 13:17:25 - INFO - ###############################
+2025-09-07 13:17:25 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 13:17:25 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 13:17:25 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 13:17:25 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 13:17:25 - INFO - LOGGER STARTED
+2025-09-07 13:17:25 - INFO - ###############################
+2025-09-07 13:17:25 - INFO - Stated connect to db
+2025-09-07 13:17:25 - INFO - Users db created/exist
+2025-09-07 13:17:26 - INFO - Start schedule normalization
+2025-09-07 13:17:26 - INFO - Schedule is the same. Cancel.
+2025-09-07 13:18:12 - INFO - ###############################
+2025-09-07 13:18:12 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 13:18:12 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 13:18:12 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 13:18:12 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 13:18:12 - INFO - LOGGER STARTED
+2025-09-07 13:18:12 - INFO - ###############################
+2025-09-07 13:18:12 - INFO - Stated connect to db
+2025-09-07 13:18:12 - INFO - Users db created/exist
+2025-09-07 13:18:13 - INFO - Start schedule normalization
+2025-09-07 13:18:13 - INFO - Schedule is the same. Cancel.
+2025-09-07 19:25:46 - INFO - ###############################
+2025-09-07 19:25:46 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:25:46 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:25:46 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:25:46 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:25:46 - INFO - LOGGER STARTED
+2025-09-07 19:25:46 - INFO - ###############################
+2025-09-07 19:26:56 - INFO - ###############################
+2025-09-07 19:26:56 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:26:56 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:26:56 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:26:56 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:26:56 - INFO - LOGGER STARTED
+2025-09-07 19:26:56 - INFO - ###############################
+2025-09-07 19:26:56 - INFO - Stated connect to db
+2025-09-07 19:26:56 - INFO - Users db created/exist
+2025-09-07 19:26:58 - INFO - Start schedule normalization
+2025-09-07 19:26:58 - INFO - Schedule is the same. Cancel.
+2025-09-07 19:27:20 - ERROR - Infinity polling: polling exited
+2025-09-07 19:27:20 - ERROR - Break infinity polling
+2025-09-07 19:30:44 - INFO - ###############################
+2025-09-07 19:30:44 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:30:44 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:30:44 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:30:44 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:30:44 - INFO - LOGGER STARTED
+2025-09-07 19:30:44 - INFO - ###############################
+2025-09-07 19:30:44 - INFO - Stated connect to db
+2025-09-07 19:30:44 - INFO - Users db created/exist
+2025-09-07 19:30:46 - INFO - Start schedule normalization
+2025-09-07 19:30:46 - INFO - Schedule is the same. Cancel.
+2025-09-07 19:30:49 - ERROR - Infinity polling exception: 'Понедельник'
+2025-09-07 19:30:49 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 184, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 94, in norm_schedule
+    schedule = gs.get_day(klass, day)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\utils\get_schedule.py", line 35, in get_day
+    return json.load(f)["schedule"][klass][day]
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+KeyError: 'Понедельник'
+
+2025-09-07 19:32:12 - INFO - ###############################
+2025-09-07 19:32:12 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:32:12 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:32:12 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:32:12 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:32:12 - INFO - LOGGER STARTED
+2025-09-07 19:32:12 - INFO - ###############################
+2025-09-07 19:32:12 - INFO - Stated connect to db
+2025-09-07 19:32:12 - INFO - Users db created/exist
+2025-09-07 19:32:14 - INFO - Start schedule normalization
+2025-09-07 19:32:14 - INFO - Schedule is the same. Cancel.
+2025-09-07 19:32:17 - ERROR - Infinity polling exception: 'Среда'
+2025-09-07 19:32:17 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 184, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 94, in norm_schedule
+    schedule = gs.get_day(klass, day)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\utils\get_schedule.py", line 35, in get_day
+    return json.load(f)["schedule"][klass][day]
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+KeyError: 'Среда'
+
+2025-09-07 19:33:48 - INFO - ###############################
+2025-09-07 19:33:48 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:33:48 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:33:48 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:33:48 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:33:48 - INFO - LOGGER STARTED
+2025-09-07 19:33:48 - INFO - ###############################
+2025-09-07 19:33:48 - INFO - Stated connect to db
+2025-09-07 19:33:48 - INFO - Users db created/exist
+2025-09-07 19:33:49 - INFO - Start schedule normalization
+2025-09-07 19:33:49 - INFO - Schedule is the same. Cancel.
+2025-09-07 19:33:51 - ERROR - Infinity polling exception: 'Среда'
+2025-09-07 19:33:51 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 184, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 94, in norm_schedule
+    schedule = gs.get_day(klass, day)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\utils\get_schedule.py", line 35, in get_day
+    return json.load(f)["schedule"][klass][day]
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+KeyError: 'Среда'
+
+2025-09-07 19:38:51 - INFO - Start schedule normalization
+2025-09-07 19:38:51 - INFO - Schedule is the same. Cancel.
+2025-09-07 19:42:25 - INFO - ###############################
+2025-09-07 19:42:25 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:42:25 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:42:25 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:42:25 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:42:25 - INFO - LOGGER STARTED
+2025-09-07 19:42:25 - INFO - ###############################
+2025-09-07 19:42:25 - INFO - Stated connect to db
+2025-09-07 19:42:25 - INFO - Users db created/exist
+2025-09-07 19:42:26 - INFO - Start schedule normalization
+2025-09-07 19:42:26 - INFO - Schedule is the same. Cancel.
+2025-09-07 19:42:38 - ERROR - Infinity polling exception: 'Понедельник'
+2025-09-07 19:42:38 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 185, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 94, in norm_schedule
+    schedule = gs.get_day(klass, day)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\utils\get_schedule.py", line 35, in get_day
+    return json.load(f)["schedule"][klass][day]
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+KeyError: 'Понедельник'
+
+2025-09-07 19:42:44 - ERROR - Infinity polling: polling exited
+2025-09-07 19:42:44 - ERROR - Break infinity polling
+2025-09-07 19:43:22 - INFO - ###############################
+2025-09-07 19:43:22 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:43:22 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:43:22 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:43:22 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:43:22 - INFO - LOGGER STARTED
+2025-09-07 19:43:22 - INFO - ###############################
+2025-09-07 19:43:22 - INFO - Stated connect to db
+2025-09-07 19:43:22 - INFO - Users db created/exist
+2025-09-07 19:43:23 - INFO - Start schedule normalization
+2025-09-07 19:43:23 - INFO - Schedule is the same. Cancel.
+2025-09-07 19:43:28 - ERROR - Infinity polling exception: 'tuesday'
+2025-09-07 19:43:28 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 184, in get_schedule_for_user
+    norm_schedule(get_ru_day_to_en(message.text), user_data["worked_class"]))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 94, in norm_schedule
+    schedule = gs.get_day(klass, day)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\utils\get_schedule.py", line 35, in get_day
+    return json.load(f)["schedule"][klass][day]
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+KeyError: 'tuesday'
+
+2025-09-07 19:43:54 - INFO - ###############################
+2025-09-07 19:43:54 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:43:54 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:43:54 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:43:54 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:43:54 - INFO - LOGGER STARTED
+2025-09-07 19:43:54 - INFO - ###############################
+2025-09-07 19:43:54 - INFO - Stated connect to db
+2025-09-07 19:43:54 - INFO - Users db created/exist
+2025-09-07 19:43:56 - INFO - Start schedule normalization
+2025-09-07 19:43:56 - INFO - Schedule is the same. Cancel.
+2025-09-07 19:43:59 - ERROR - Infinity polling exception: 'Среда'
+2025-09-07 19:43:59 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 184, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 94, in norm_schedule
+    schedule = gs.get_day(klass, day)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\utils\get_schedule.py", line 35, in get_day
+    return json.load(f)["schedule"][klass][day]
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+KeyError: 'Среда'
+
+2025-09-07 19:50:21 - INFO - ###############################
+2025-09-07 19:50:21 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:50:21 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:50:21 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:50:21 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:50:21 - INFO - LOGGER STARTED
+2025-09-07 19:50:21 - INFO - ###############################
+2025-09-07 19:50:21 - INFO - Stated connect to db
+2025-09-07 19:50:21 - INFO - Users db created/exist
+2025-09-07 19:50:22 - INFO - Start schedule normalization
+2025-09-07 19:50:23 - INFO - Schedule is the same. Cancel.
+2025-09-07 19:50:30 - ERROR - Infinity polling exception: 'Среда'
+2025-09-07 19:50:30 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 184, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 94, in norm_schedule
+    schedule = gs.get_day(klass, day)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\utils\get_schedule.py", line 35, in get_day
+    return json.load(f)["schedule"][klass][day]
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+KeyError: 'Среда'
+
+2025-09-07 19:51:14 - INFO - ###############################
+2025-09-07 19:51:14 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:51:14 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:51:14 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:51:14 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:51:14 - INFO - LOGGER STARTED
+2025-09-07 19:51:14 - INFO - ###############################
+2025-09-07 19:51:14 - INFO - Stated connect to db
+2025-09-07 19:51:14 - INFO - Users db created/exist
+2025-09-07 19:51:16 - INFO - Start schedule normalization
+2025-09-07 19:51:16 - INFO - Schedule is the same. Cancel.
+2025-09-07 19:51:17 - ERROR - Infinity polling exception: 'Среда'
+2025-09-07 19:51:17 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 184, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 94, in norm_schedule
+    schedule = gs.get_day(klass, day)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\utils\get_schedule.py", line 35, in get_day
+    return json.load(f)["schedule"][klass][day]
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+KeyError: 'Среда'
+
+2025-09-07 19:52:08 - INFO - ###############################
+2025-09-07 19:52:08 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:52:08 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:52:08 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:52:08 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:52:08 - INFO - LOGGER STARTED
+2025-09-07 19:52:08 - INFO - ###############################
+2025-09-07 19:52:08 - INFO - Stated connect to db
+2025-09-07 19:52:08 - INFO - Users db created/exist
+2025-09-07 19:54:50 - INFO - ###############################
+2025-09-07 19:54:50 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:54:50 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:54:50 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:54:50 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:54:50 - INFO - LOGGER STARTED
+2025-09-07 19:54:50 - INFO - ###############################
+2025-09-07 19:54:50 - INFO - Stated connect to db
+2025-09-07 19:54:50 - INFO - Users db created/exist
+2025-09-07 19:54:51 - INFO - Start schedule normalization
+2025-09-07 19:54:51 - INFO - Schedule is the same. Cancel.
+2025-09-07 19:54:53 - ERROR - Infinity polling exception: 'NoneType' object has no attribute 'keys'
+2025-09-07 19:54:53 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 184, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 105, in norm_schedule
+    for lesson in schedule.keys():
+                  ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'keys'
+
+2025-09-07 19:55:05 - ERROR - Infinity polling: polling exited
+2025-09-07 19:55:05 - ERROR - Break infinity polling
+2025-09-07 19:55:50 - INFO - ###############################
+2025-09-07 19:55:50 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:55:50 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:55:50 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:55:50 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:55:50 - INFO - LOGGER STARTED
+2025-09-07 19:55:50 - INFO - ###############################
+2025-09-07 19:55:51 - INFO - Stated connect to db
+2025-09-07 19:55:51 - INFO - Users db created/exist
+2025-09-07 19:55:52 - INFO - Start schedule normalization
+2025-09-07 19:55:52 - INFO - Schedule is the same. Cancel.
+2025-09-07 19:55:53 - ERROR - Infinity polling exception: 'NoneType' object has no attribute 'keys'
+2025-09-07 19:55:53 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 184, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 105, in norm_schedule
+    for lesson in schedule.keys():
+                  ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'keys'
+
+2025-09-07 19:56:21 - INFO - ###############################
+2025-09-07 19:56:21 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:56:21 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:56:21 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:56:21 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:56:21 - INFO - LOGGER STARTED
+2025-09-07 19:56:21 - INFO - ###############################
+2025-09-07 19:56:21 - INFO - Stated connect to db
+2025-09-07 19:56:21 - INFO - Users db created/exist
+2025-09-07 19:56:22 - INFO - Start schedule normalization
+2025-09-07 19:56:22 - INFO - Schedule is the same. Cancel.
+2025-09-07 19:56:28 - ERROR - Infinity polling exception: 'NoneType' object has no attribute 'keys'
+2025-09-07 19:56:28 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 185, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 105, in norm_schedule
+    for lesson in schedule.keys():
+                  ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'keys'
+
+2025-09-07 19:57:13 - INFO - ###############################
+2025-09-07 19:57:13 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:57:13 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:57:13 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:57:13 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:57:13 - INFO - LOGGER STARTED
+2025-09-07 19:57:13 - INFO - ###############################
+2025-09-07 19:57:14 - INFO - Stated connect to db
+2025-09-07 19:57:14 - INFO - Users db created/exist
+2025-09-07 19:57:15 - INFO - Start schedule normalization
+2025-09-07 19:57:15 - INFO - Schedule is the same. Cancel.
+2025-09-07 19:58:58 - INFO - ###############################
+2025-09-07 19:58:58 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 19:58:58 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 19:58:58 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 19:58:58 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 19:58:58 - INFO - LOGGER STARTED
+2025-09-07 19:58:58 - INFO - ###############################
+2025-09-07 19:58:58 - INFO - Stated connect to db
+2025-09-07 19:58:58 - INFO - Users db created/exist
+2025-09-07 19:59:00 - INFO - Start schedule normalization
+2025-09-07 19:59:00 - INFO - Schedule is the same. Cancel.
+2025-09-07 20:00:17 - INFO - ###############################
+2025-09-07 20:00:17 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 20:00:17 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 20:00:17 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 20:00:17 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 20:00:17 - INFO - LOGGER STARTED
+2025-09-07 20:00:17 - INFO - ###############################
+2025-09-07 20:00:17 - INFO - Stated connect to db
+2025-09-07 20:00:17 - INFO - Users db created/exist
+2025-09-07 20:00:18 - INFO - Start schedule normalization
+2025-09-07 20:00:18 - INFO - Schedule is the same. Cancel.
+2025-09-07 20:01:39 - INFO - ###############################
+2025-09-07 20:01:39 - INFO - TEST INFO LOGGING FINALLY
+2025-09-07 20:01:39 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-07 20:01:39 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-07 20:01:39 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-07 20:01:39 - INFO - LOGGER STARTED
+2025-09-07 20:01:39 - INFO - ###############################
+2025-09-07 20:01:39 - INFO - Stated connect to db
+2025-09-07 20:01:39 - INFO - Users db created/exist
+2025-09-07 20:01:41 - INFO - Start schedule normalization
+2025-09-07 20:01:41 - INFO - Schedule is the same. Cancel.
+2025-09-07 20:06:42 - INFO - Start schedule normalization
+2025-09-07 20:06:42 - INFO - Schedule is the same. Cancel.
+2025-09-07 20:11:44 - INFO - Start schedule normalization
+2025-09-07 20:11:44 - INFO - Schedule is the same. Cancel.

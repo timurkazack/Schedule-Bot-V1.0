@@ -44,8 +44,8 @@ def debug(text):
 def warning(text):
     logger.warning(text)
 
-def error(text, who):
-    logger.exception(f"Error to: {who} | Index: {error_logger.search_error_index(text)}")
+def error(text):
+    logger.exception(f"Error Index: {error_logger.search_error_index(text)}")
 
 def fatal(text):
     logger.fatal(text)
@@ -56,7 +56,7 @@ setup()
 info("###############################")
 info("TEST INFO LOGGING FINALLY")
 warning("TEST WARNING LOGGING FINALLY")
-error("TEST ERROR LOGGING FINALLY", __name__)
+error("TEST ERROR LOGGING FINALLY")
 fatal("TEST FATAL LOGGING FINALLY")
 info("LOGGER STARTED")
 info("###############################")

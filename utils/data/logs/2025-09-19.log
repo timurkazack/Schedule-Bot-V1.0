@@ -1,0 +1,715 @@
+2025-09-19 06:55:37 - INFO - ###############################
+2025-09-19 06:55:37 - INFO - TEST INFO LOGGING FINALLY
+2025-09-19 06:55:37 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-19 06:55:37 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-19 06:55:37 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-19 06:55:37 - INFO - LOGGER STARTED
+2025-09-19 06:55:37 - INFO - ###############################
+2025-09-19 06:55:37 - INFO - Stated connect to db
+2025-09-19 06:55:37 - INFO - Users db created/exist
+2025-09-19 06:55:37 - INFO - WS Parser started!
+2025-09-19 06:55:37 - INFO - Getting data from server
+2025-09-19 06:55:39 - INFO - Start schedule normalization
+2025-09-19 06:55:39 - INFO - Schedule is the same. Cancel.
+2025-09-19 06:55:39 - INFO - Data received from server
+2025-09-19 07:00:39 - INFO - Getting data from server
+2025-09-19 07:00:40 - INFO - Start schedule normalization
+2025-09-19 07:00:40 - INFO - Schedule is the same. Cancel.
+2025-09-19 07:00:40 - INFO - Data received from server
+2025-09-19 07:05:40 - INFO - Getting data from server
+2025-09-19 07:05:42 - INFO - Start schedule normalization
+2025-09-19 07:05:42 - INFO - Schedule is the same. Cancel.
+2025-09-19 07:05:42 - INFO - Data received from server
+2025-09-19 07:10:42 - INFO - Getting data from server
+2025-09-19 07:10:43 - INFO - Start schedule normalization
+2025-09-19 07:10:43 - INFO - Schedule is the same. Cancel.
+2025-09-19 07:10:43 - INFO - Data received from server
+2025-09-19 07:15:43 - INFO - Getting data from server
+2025-09-19 07:15:45 - INFO - Start schedule normalization
+2025-09-19 07:15:45 - INFO - Schedule is the same. Cancel.
+2025-09-19 07:15:45 - INFO - Data received from server
+2025-09-19 07:20:45 - INFO - Getting data from server
+2025-09-19 07:20:46 - INFO - Start schedule normalization
+2025-09-19 07:20:46 - INFO - Schedule normalized
+2025-09-19 07:20:46 - INFO - Data received from server
+2025-09-19 07:25:46 - INFO - Getting data from server
+2025-09-19 07:25:48 - INFO - Start schedule normalization
+2025-09-19 07:25:48 - INFO - Schedule is the same. Cancel.
+2025-09-19 07:25:48 - INFO - Data received from server
+2025-09-19 07:30:48 - INFO - Getting data from server
+2025-09-19 07:30:49 - INFO - Start schedule normalization
+2025-09-19 07:30:49 - INFO - Schedule is the same. Cancel.
+2025-09-19 07:30:49 - INFO - Data received from server
+2025-09-19 07:35:49 - INFO - Getting data from server
+2025-09-19 07:35:51 - INFO - Start schedule normalization
+2025-09-19 07:35:51 - INFO - Schedule normalized
+2025-09-19 07:35:51 - INFO - Data received from server
+2025-09-19 07:40:51 - INFO - Getting data from server
+2025-09-19 07:40:53 - INFO - Start schedule normalization
+2025-09-19 07:40:53 - INFO - Schedule normalized
+2025-09-19 07:40:53 - INFO - Data received from server
+2025-09-19 07:45:53 - INFO - Getting data from server
+2025-09-19 07:45:54 - INFO - Start schedule normalization
+2025-09-19 07:45:54 - INFO - Schedule normalized
+2025-09-19 07:45:54 - INFO - Data received from server
+2025-09-19 07:50:54 - INFO - Getting data from server
+2025-09-19 07:50:56 - INFO - Start schedule normalization
+2025-09-19 07:50:56 - INFO - Schedule is the same. Cancel.
+2025-09-19 07:50:56 - INFO - Data received from server
+2025-09-19 07:55:56 - INFO - Getting data from server
+2025-09-19 07:55:57 - INFO - Start schedule normalization
+2025-09-19 07:55:57 - INFO - Schedule is the same. Cancel.
+2025-09-19 07:55:57 - INFO - Data received from server
+2025-09-19 08:00:57 - INFO - Getting data from server
+2025-09-19 08:00:59 - INFO - Start schedule normalization
+2025-09-19 08:00:59 - INFO - Schedule is the same. Cancel.
+2025-09-19 08:00:59 - INFO - Data received from server
+2025-09-19 08:05:59 - INFO - Getting data from server
+2025-09-19 08:06:00 - INFO - Start schedule normalization
+2025-09-19 08:06:00 - INFO - Schedule is the same. Cancel.
+2025-09-19 08:06:00 - INFO - Data received from server
+2025-09-19 08:11:00 - INFO - Getting data from server
+2025-09-19 08:11:02 - INFO - Start schedule normalization
+2025-09-19 08:11:02 - INFO - Schedule is the same. Cancel.
+2025-09-19 08:11:02 - INFO - Data received from server
+2025-09-19 08:16:02 - INFO - Getting data from server
+2025-09-19 08:16:03 - INFO - Start schedule normalization
+2025-09-19 08:16:03 - INFO - Schedule is the same. Cancel.
+2025-09-19 08:16:03 - INFO - Data received from server
+2025-09-19 08:21:03 - INFO - Getting data from server
+2025-09-19 08:21:05 - INFO - Start schedule normalization
+2025-09-19 08:21:05 - INFO - Schedule normalized
+2025-09-19 08:21:05 - INFO - Data received from server
+2025-09-19 08:26:05 - INFO - Getting data from server
+2025-09-19 08:26:06 - INFO - Start schedule normalization
+2025-09-19 08:26:06 - INFO - Schedule is the same. Cancel.
+2025-09-19 08:26:06 - INFO - Data received from server
+2025-09-19 08:31:06 - INFO - Getting data from server
+2025-09-19 08:31:08 - INFO - Start schedule normalization
+2025-09-19 08:31:08 - INFO - Schedule is the same. Cancel.
+2025-09-19 08:31:08 - INFO - Data received from server
+2025-09-19 08:36:08 - INFO - Getting data from server
+2025-09-19 08:36:29 - INFO - Data received from server
+2025-09-19 08:41:29 - INFO - Getting data from server
+2025-09-19 08:41:31 - INFO - Start schedule normalization
+2025-09-19 08:41:31 - INFO - Schedule is the same. Cancel.
+2025-09-19 08:41:31 - INFO - Data received from server
+2025-09-19 08:46:31 - INFO - Getting data from server
+2025-09-19 08:46:32 - INFO - Start schedule normalization
+2025-09-19 08:46:32 - INFO - Schedule is the same. Cancel.
+2025-09-19 08:46:32 - INFO - Data received from server
+2025-09-19 08:51:32 - INFO - Getting data from server
+2025-09-19 08:51:34 - INFO - Start schedule normalization
+2025-09-19 08:51:34 - INFO - Schedule normalized
+2025-09-19 08:51:34 - INFO - Data received from server
+2025-09-19 08:56:34 - INFO - Getting data from server
+2025-09-19 08:56:35 - INFO - Start schedule normalization
+2025-09-19 08:56:35 - INFO - Schedule is the same. Cancel.
+2025-09-19 08:56:35 - INFO - Data received from server
+2025-09-19 09:01:35 - INFO - Getting data from server
+2025-09-19 09:01:37 - INFO - Start schedule normalization
+2025-09-19 09:01:37 - INFO - Schedule is the same. Cancel.
+2025-09-19 09:01:37 - INFO - Data received from server
+2025-09-19 09:06:37 - INFO - Getting data from server
+2025-09-19 09:06:58 - INFO - Data received from server
+2025-09-19 09:11:58 - INFO - Getting data from server
+2025-09-19 09:11:59 - INFO - Start schedule normalization
+2025-09-19 09:12:00 - INFO - Schedule is the same. Cancel.
+2025-09-19 09:12:00 - INFO - Data received from server
+2025-09-19 09:17:00 - INFO - Getting data from server
+2025-09-19 09:17:01 - INFO - Start schedule normalization
+2025-09-19 09:17:01 - INFO - Schedule is the same. Cancel.
+2025-09-19 09:17:01 - INFO - Data received from server
+2025-09-19 09:22:01 - INFO - Getting data from server
+2025-09-19 09:22:02 - INFO - Start schedule normalization
+2025-09-19 09:22:03 - INFO - Schedule is the same. Cancel.
+2025-09-19 09:22:03 - INFO - Data received from server
+2025-09-19 09:27:03 - INFO - Getting data from server
+2025-09-19 09:27:04 - INFO - Start schedule normalization
+2025-09-19 09:27:04 - INFO - Schedule is the same. Cancel.
+2025-09-19 09:27:04 - INFO - Data received from server
+2025-09-19 09:32:04 - INFO - Getting data from server
+2025-09-19 09:32:06 - INFO - Start schedule normalization
+2025-09-19 09:32:06 - INFO - Schedule is the same. Cancel.
+2025-09-19 09:32:06 - INFO - Data received from server
+2025-09-19 09:37:06 - INFO - Getting data from server
+2025-09-19 09:37:07 - INFO - Start schedule normalization
+2025-09-19 09:37:08 - INFO - Schedule is the same. Cancel.
+2025-09-19 09:37:08 - INFO - Data received from server
+2025-09-19 09:42:08 - INFO - Getting data from server
+2025-09-19 09:42:09 - INFO - Start schedule normalization
+2025-09-19 09:42:09 - INFO - Schedule is the same. Cancel.
+2025-09-19 09:42:09 - INFO - Data received from server
+2025-09-19 09:47:09 - INFO - Getting data from server
+2025-09-19 09:47:11 - INFO - Start schedule normalization
+2025-09-19 09:47:11 - INFO - Schedule is the same. Cancel.
+2025-09-19 09:47:11 - INFO - Data received from server
+2025-09-19 09:52:11 - INFO - Getting data from server
+2025-09-19 09:52:12 - INFO - Start schedule normalization
+2025-09-19 09:52:12 - INFO - Schedule is the same. Cancel.
+2025-09-19 09:52:12 - INFO - Data received from server
+2025-09-19 09:57:12 - INFO - Getting data from server
+2025-09-19 09:57:14 - INFO - Start schedule normalization
+2025-09-19 09:57:14 - INFO - Schedule is the same. Cancel.
+2025-09-19 09:57:14 - INFO - Data received from server
+2025-09-19 10:02:14 - INFO - Getting data from server
+2025-09-19 10:02:15 - INFO - Start schedule normalization
+2025-09-19 10:02:15 - INFO - Schedule is the same. Cancel.
+2025-09-19 10:02:15 - INFO - Data received from server
+2025-09-19 10:07:15 - INFO - Getting data from server
+2025-09-19 10:07:17 - INFO - Start schedule normalization
+2025-09-19 10:07:17 - INFO - Schedule is the same. Cancel.
+2025-09-19 10:07:17 - INFO - Data received from server
+2025-09-19 10:12:17 - INFO - Getting data from server
+2025-09-19 10:12:18 - INFO - Start schedule normalization
+2025-09-19 10:12:18 - INFO - Schedule is the same. Cancel.
+2025-09-19 10:12:18 - INFO - Data received from server
+2025-09-19 10:17:18 - INFO - Getting data from server
+2025-09-19 10:17:20 - INFO - Start schedule normalization
+2025-09-19 10:17:20 - INFO - Schedule is the same. Cancel.
+2025-09-19 10:17:20 - INFO - Data received from server
+2025-09-19 10:22:20 - INFO - Getting data from server
+2025-09-19 10:22:21 - INFO - Start schedule normalization
+2025-09-19 10:22:22 - INFO - Schedule is the same. Cancel.
+2025-09-19 10:22:22 - INFO - Data received from server
+2025-09-19 10:27:22 - INFO - Getting data from server
+2025-09-19 10:27:23 - INFO - Start schedule normalization
+2025-09-19 10:27:23 - INFO - Schedule is the same. Cancel.
+2025-09-19 10:27:23 - INFO - Data received from server
+2025-09-19 10:32:23 - INFO - Getting data from server
+2025-09-19 10:32:25 - INFO - Start schedule normalization
+2025-09-19 10:32:25 - INFO - Schedule is the same. Cancel.
+2025-09-19 10:32:25 - INFO - Data received from server
+2025-09-19 10:37:25 - INFO - Getting data from server
+2025-09-19 10:37:26 - INFO - Start schedule normalization
+2025-09-19 10:37:26 - INFO - Schedule is the same. Cancel.
+2025-09-19 10:37:26 - INFO - Data received from server
+2025-09-19 10:42:26 - INFO - Getting data from server
+2025-09-19 10:42:28 - INFO - Start schedule normalization
+2025-09-19 10:42:28 - INFO - Schedule is the same. Cancel.
+2025-09-19 10:42:28 - INFO - Data received from server
+2025-09-19 10:47:28 - INFO - Getting data from server
+2025-09-19 10:47:29 - INFO - Start schedule normalization
+2025-09-19 10:47:29 - INFO - Schedule is the same. Cancel.
+2025-09-19 10:47:29 - INFO - Data received from server
+2025-09-19 10:52:29 - INFO - Getting data from server
+2025-09-19 10:52:31 - INFO - Start schedule normalization
+2025-09-19 10:52:31 - INFO - Schedule is the same. Cancel.
+2025-09-19 10:52:31 - INFO - Data received from server
+2025-09-19 10:57:31 - INFO - Getting data from server
+2025-09-19 10:57:32 - INFO - Start schedule normalization
+2025-09-19 10:57:32 - INFO - Schedule is the same. Cancel.
+2025-09-19 10:57:32 - INFO - Data received from server
+2025-09-19 11:02:32 - INFO - Getting data from server
+2025-09-19 11:02:34 - INFO - Start schedule normalization
+2025-09-19 11:02:34 - INFO - Schedule is the same. Cancel.
+2025-09-19 11:02:34 - INFO - Data received from server
+2025-09-19 11:07:34 - INFO - Getting data from server
+2025-09-19 11:07:35 - INFO - Start schedule normalization
+2025-09-19 11:07:35 - INFO - Schedule is the same. Cancel.
+2025-09-19 11:07:35 - INFO - Data received from server
+2025-09-19 11:12:35 - INFO - Getting data from server
+2025-09-19 11:12:37 - INFO - Start schedule normalization
+2025-09-19 11:12:37 - INFO - Schedule is the same. Cancel.
+2025-09-19 11:12:37 - INFO - Data received from server
+2025-09-19 11:17:37 - INFO - Getting data from server
+2025-09-19 11:17:38 - INFO - Start schedule normalization
+2025-09-19 11:17:39 - INFO - Schedule is the same. Cancel.
+2025-09-19 11:17:39 - INFO - Data received from server
+2025-09-19 11:22:39 - INFO - Getting data from server
+2025-09-19 11:22:40 - INFO - Start schedule normalization
+2025-09-19 11:22:40 - INFO - Schedule is the same. Cancel.
+2025-09-19 11:22:40 - INFO - Data received from server
+2025-09-19 11:27:40 - INFO - Getting data from server
+2025-09-19 11:27:41 - INFO - Start schedule normalization
+2025-09-19 11:27:41 - INFO - Schedule is the same. Cancel.
+2025-09-19 11:27:41 - INFO - Data received from server
+2025-09-19 11:32:41 - INFO - Getting data from server
+2025-09-19 11:32:43 - INFO - Start schedule normalization
+2025-09-19 11:32:43 - INFO - Schedule is the same. Cancel.
+2025-09-19 11:32:43 - INFO - Data received from server
+2025-09-19 11:37:43 - INFO - Getting data from server
+2025-09-19 11:37:44 - INFO - Start schedule normalization
+2025-09-19 11:37:44 - INFO - Schedule is the same. Cancel.
+2025-09-19 11:37:44 - INFO - Data received from server
+2025-09-19 11:42:44 - INFO - Getting data from server
+2025-09-19 11:42:46 - INFO - Start schedule normalization
+2025-09-19 11:42:46 - INFO - Schedule is the same. Cancel.
+2025-09-19 11:42:46 - INFO - Data received from server
+2025-09-19 11:47:46 - INFO - Getting data from server
+2025-09-19 11:47:47 - INFO - Start schedule normalization
+2025-09-19 11:47:47 - INFO - Schedule is the same. Cancel.
+2025-09-19 11:47:47 - INFO - Data received from server
+2025-09-19 11:52:47 - INFO - Getting data from server
+2025-09-19 11:52:49 - INFO - Start schedule normalization
+2025-09-19 11:52:49 - INFO - Schedule is the same. Cancel.
+2025-09-19 11:52:49 - INFO - Data received from server
+2025-09-19 11:57:49 - INFO - Getting data from server
+2025-09-19 11:57:50 - INFO - Start schedule normalization
+2025-09-19 11:57:50 - INFO - Schedule is the same. Cancel.
+2025-09-19 11:57:50 - INFO - Data received from server
+2025-09-19 12:02:50 - INFO - Getting data from server
+2025-09-19 12:02:52 - INFO - Start schedule normalization
+2025-09-19 12:02:52 - INFO - Schedule is the same. Cancel.
+2025-09-19 12:02:52 - INFO - Data received from server
+2025-09-19 12:07:52 - INFO - Getting data from server
+2025-09-19 12:07:53 - INFO - Start schedule normalization
+2025-09-19 12:07:53 - INFO - Schedule is the same. Cancel.
+2025-09-19 12:07:53 - INFO - Data received from server
+2025-09-19 12:12:53 - INFO - Getting data from server
+2025-09-19 12:12:55 - INFO - Start schedule normalization
+2025-09-19 12:12:55 - INFO - Schedule is the same. Cancel.
+2025-09-19 12:12:55 - INFO - Data received from server
+2025-09-19 12:17:55 - INFO - Getting data from server
+2025-09-19 12:17:56 - INFO - Start schedule normalization
+2025-09-19 12:17:56 - INFO - Schedule is the same. Cancel.
+2025-09-19 12:17:56 - INFO - Data received from server
+2025-09-19 12:22:56 - INFO - Getting data from server
+2025-09-19 12:22:58 - INFO - Start schedule normalization
+2025-09-19 12:22:58 - INFO - Schedule is the same. Cancel.
+2025-09-19 12:22:58 - INFO - Data received from server
+2025-09-19 12:27:58 - INFO - Getting data from server
+2025-09-19 12:27:59 - INFO - Start schedule normalization
+2025-09-19 12:27:59 - INFO - Schedule is the same. Cancel.
+2025-09-19 12:27:59 - INFO - Data received from server
+2025-09-19 12:32:59 - INFO - Getting data from server
+2025-09-19 12:33:01 - INFO - Start schedule normalization
+2025-09-19 12:33:01 - INFO - Schedule is the same. Cancel.
+2025-09-19 12:33:01 - INFO - Data received from server
+2025-09-19 12:38:01 - INFO - Getting data from server
+2025-09-19 12:38:02 - INFO - Start schedule normalization
+2025-09-19 12:38:02 - INFO - Schedule is the same. Cancel.
+2025-09-19 12:38:02 - INFO - Data received from server
+2025-09-19 12:43:02 - INFO - Getting data from server
+2025-09-19 12:43:03 - INFO - Start schedule normalization
+2025-09-19 12:43:04 - INFO - Schedule is the same. Cancel.
+2025-09-19 12:43:04 - INFO - Data received from server
+2025-09-19 12:48:04 - INFO - Getting data from server
+2025-09-19 12:48:05 - INFO - Start schedule normalization
+2025-09-19 12:48:05 - INFO - Schedule is the same. Cancel.
+2025-09-19 12:48:05 - INFO - Data received from server
+2025-09-19 12:53:05 - INFO - Getting data from server
+2025-09-19 12:53:06 - INFO - Start schedule normalization
+2025-09-19 12:53:06 - INFO - Schedule is the same. Cancel.
+2025-09-19 12:53:06 - INFO - Data received from server
+2025-09-19 12:58:06 - INFO - Getting data from server
+2025-09-19 12:58:08 - INFO - Start schedule normalization
+2025-09-19 12:58:08 - INFO - Schedule is the same. Cancel.
+2025-09-19 12:58:08 - INFO - Data received from server
+2025-09-19 13:03:08 - INFO - Getting data from server
+2025-09-19 13:03:09 - INFO - Start schedule normalization
+2025-09-19 13:03:09 - INFO - Schedule is the same. Cancel.
+2025-09-19 13:03:09 - INFO - Data received from server
+2025-09-19 13:08:09 - INFO - Getting data from server
+2025-09-19 13:08:11 - INFO - Start schedule normalization
+2025-09-19 13:08:11 - INFO - Schedule is the same. Cancel.
+2025-09-19 13:08:11 - INFO - Data received from server
+2025-09-19 13:13:11 - INFO - Getting data from server
+2025-09-19 13:13:12 - INFO - Start schedule normalization
+2025-09-19 13:13:12 - INFO - Schedule is the same. Cancel.
+2025-09-19 13:13:12 - INFO - Data received from server
+2025-09-19 13:18:12 - INFO - Getting data from server
+2025-09-19 13:18:14 - INFO - Start schedule normalization
+2025-09-19 13:18:14 - INFO - Schedule is the same. Cancel.
+2025-09-19 13:18:14 - INFO - Data received from server
+2025-09-19 13:23:14 - INFO - Getting data from server
+2025-09-19 13:23:15 - INFO - Start schedule normalization
+2025-09-19 13:23:16 - INFO - Schedule normalized
+2025-09-19 13:23:16 - INFO - Data received from server
+2025-09-19 13:28:16 - INFO - Getting data from server
+2025-09-19 13:28:17 - INFO - Start schedule normalization
+2025-09-19 13:28:17 - INFO - Schedule is the same. Cancel.
+2025-09-19 13:28:17 - INFO - Data received from server
+2025-09-19 13:33:17 - INFO - Getting data from server
+2025-09-19 13:33:19 - INFO - Start schedule normalization
+2025-09-19 13:33:19 - INFO - Schedule is the same. Cancel.
+2025-09-19 13:33:19 - INFO - Data received from server
+2025-09-19 13:38:19 - INFO - Getting data from server
+2025-09-19 13:38:20 - INFO - Start schedule normalization
+2025-09-19 13:38:20 - INFO - Schedule is the same. Cancel.
+2025-09-19 13:38:20 - INFO - Data received from server
+2025-09-19 13:43:20 - INFO - Getting data from server
+2025-09-19 13:43:22 - INFO - Start schedule normalization
+2025-09-19 13:43:22 - INFO - Schedule is the same. Cancel.
+2025-09-19 13:43:22 - INFO - Data received from server
+2025-09-19 13:48:22 - INFO - Getting data from server
+2025-09-19 13:48:23 - INFO - Start schedule normalization
+2025-09-19 13:48:23 - INFO - Schedule is the same. Cancel.
+2025-09-19 13:48:23 - INFO - Data received from server
+2025-09-19 13:53:23 - INFO - Getting data from server
+2025-09-19 13:53:25 - INFO - Start schedule normalization
+2025-09-19 13:53:25 - INFO - Schedule is the same. Cancel.
+2025-09-19 13:53:25 - INFO - Data received from server
+2025-09-19 13:58:25 - INFO - Getting data from server
+2025-09-19 13:58:26 - INFO - Start schedule normalization
+2025-09-19 13:58:27 - INFO - Schedule is the same. Cancel.
+2025-09-19 13:58:27 - INFO - Data received from server
+2025-09-19 14:03:27 - INFO - Getting data from server
+2025-09-19 14:03:28 - INFO - Start schedule normalization
+2025-09-19 14:03:28 - INFO - Schedule is the same. Cancel.
+2025-09-19 14:03:28 - INFO - Data received from server
+2025-09-19 14:08:28 - INFO - Getting data from server
+2025-09-19 14:08:29 - INFO - Start schedule normalization
+2025-09-19 14:08:30 - INFO - Schedule is the same. Cancel.
+2025-09-19 14:08:30 - INFO - Data received from server
+2025-09-19 14:13:30 - INFO - Getting data from server
+2025-09-19 14:13:31 - INFO - Start schedule normalization
+2025-09-19 14:13:31 - INFO - Schedule is the same. Cancel.
+2025-09-19 14:13:31 - INFO - Data received from server
+2025-09-19 14:18:31 - INFO - Getting data from server
+2025-09-19 14:18:32 - INFO - Start schedule normalization
+2025-09-19 14:18:32 - INFO - Schedule is the same. Cancel.
+2025-09-19 14:18:32 - INFO - Data received from server
+2025-09-19 14:23:32 - INFO - Getting data from server
+2025-09-19 14:23:34 - INFO - Start schedule normalization
+2025-09-19 14:23:34 - INFO - Schedule is the same. Cancel.
+2025-09-19 14:23:34 - INFO - Data received from server
+2025-09-19 14:28:34 - INFO - Getting data from server
+2025-09-19 14:28:35 - INFO - Start schedule normalization
+2025-09-19 14:28:35 - INFO - Schedule is the same. Cancel.
+2025-09-19 14:28:35 - INFO - Data received from server
+2025-09-19 14:33:35 - INFO - Getting data from server
+2025-09-19 14:33:37 - INFO - Start schedule normalization
+2025-09-19 14:33:37 - INFO - Schedule is the same. Cancel.
+2025-09-19 14:33:37 - INFO - Data received from server
+2025-09-19 14:38:37 - INFO - Getting data from server
+2025-09-19 14:38:38 - INFO - Start schedule normalization
+2025-09-19 14:38:38 - INFO - Schedule is the same. Cancel.
+2025-09-19 14:38:38 - INFO - Data received from server
+2025-09-19 14:43:38 - INFO - Getting data from server
+2025-09-19 14:43:40 - INFO - Start schedule normalization
+2025-09-19 14:43:40 - INFO - Schedule is the same. Cancel.
+2025-09-19 14:43:40 - INFO - Data received from server
+2025-09-19 14:48:40 - INFO - Getting data from server
+2025-09-19 14:48:41 - INFO - Start schedule normalization
+2025-09-19 14:48:41 - INFO - Schedule is the same. Cancel.
+2025-09-19 14:48:41 - INFO - Data received from server
+2025-09-19 14:53:41 - INFO - Getting data from server
+2025-09-19 14:53:43 - INFO - Start schedule normalization
+2025-09-19 14:53:43 - INFO - Schedule is the same. Cancel.
+2025-09-19 14:53:43 - INFO - Data received from server
+2025-09-19 14:58:43 - INFO - Getting data from server
+2025-09-19 14:58:44 - INFO - Start schedule normalization
+2025-09-19 14:58:44 - INFO - Schedule is the same. Cancel.
+2025-09-19 14:58:44 - INFO - Data received from server
+2025-09-19 15:03:44 - INFO - Getting data from server
+2025-09-19 15:03:46 - INFO - Start schedule normalization
+2025-09-19 15:03:46 - INFO - Schedule is the same. Cancel.
+2025-09-19 15:03:46 - INFO - Data received from server
+2025-09-19 15:08:46 - INFO - Getting data from server
+2025-09-19 15:08:47 - INFO - Start schedule normalization
+2025-09-19 15:08:47 - INFO - Schedule is the same. Cancel.
+2025-09-19 15:08:47 - INFO - Data received from server
+2025-09-19 15:13:47 - INFO - Getting data from server
+2025-09-19 15:13:49 - INFO - Start schedule normalization
+2025-09-19 15:13:49 - INFO - Schedule is the same. Cancel.
+2025-09-19 15:13:49 - INFO - Data received from server
+2025-09-19 15:18:49 - INFO - Getting data from server
+2025-09-19 15:18:50 - INFO - Start schedule normalization
+2025-09-19 15:18:50 - INFO - Schedule normalized
+2025-09-19 15:18:50 - INFO - Data received from server
+2025-09-19 15:23:50 - INFO - Getting data from server
+2025-09-19 15:23:52 - INFO - Start schedule normalization
+2025-09-19 15:23:52 - INFO - Schedule is the same. Cancel.
+2025-09-19 15:23:52 - INFO - Data received from server
+2025-09-19 15:28:52 - INFO - Getting data from server
+2025-09-19 15:28:53 - INFO - Start schedule normalization
+2025-09-19 15:28:53 - INFO - Schedule is the same. Cancel.
+2025-09-19 15:28:53 - INFO - Data received from server
+2025-09-19 15:33:53 - INFO - Getting data from server
+2025-09-19 15:33:55 - INFO - Start schedule normalization
+2025-09-19 15:33:55 - INFO - Schedule is the same. Cancel.
+2025-09-19 15:33:55 - INFO - Data received from server
+2025-09-19 15:38:55 - INFO - Getting data from server
+2025-09-19 15:38:56 - INFO - Start schedule normalization
+2025-09-19 15:38:57 - INFO - Schedule is the same. Cancel.
+2025-09-19 15:38:57 - INFO - Data received from server
+2025-09-19 15:43:57 - INFO - Getting data from server
+2025-09-19 15:43:58 - INFO - Start schedule normalization
+2025-09-19 15:43:58 - INFO - Schedule is the same. Cancel.
+2025-09-19 15:43:58 - INFO - Data received from server
+2025-09-19 15:48:58 - INFO - Getting data from server
+2025-09-19 15:49:19 - INFO - Data received from server
+2025-09-19 15:54:19 - INFO - Getting data from server
+2025-09-19 15:54:21 - INFO - Start schedule normalization
+2025-09-19 15:54:21 - INFO - Schedule is the same. Cancel.
+2025-09-19 15:54:21 - INFO - Data received from server
+2025-09-19 15:59:21 - INFO - Getting data from server
+2025-09-19 15:59:22 - INFO - Start schedule normalization
+2025-09-19 15:59:22 - INFO - Schedule is the same. Cancel.
+2025-09-19 15:59:22 - INFO - Data received from server
+2025-09-19 16:04:22 - INFO - Getting data from server
+2025-09-19 16:04:24 - INFO - Start schedule normalization
+2025-09-19 16:04:24 - INFO - Schedule is the same. Cancel.
+2025-09-19 16:04:24 - INFO - Data received from server
+2025-09-19 16:09:24 - INFO - Getting data from server
+2025-09-19 16:09:25 - INFO - Start schedule normalization
+2025-09-19 16:09:25 - INFO - Schedule is the same. Cancel.
+2025-09-19 16:09:25 - INFO - Data received from server
+2025-09-19 16:14:25 - INFO - Getting data from server
+2025-09-19 16:14:27 - INFO - Start schedule normalization
+2025-09-19 16:14:27 - INFO - Schedule is the same. Cancel.
+2025-09-19 16:14:27 - INFO - Data received from server
+2025-09-19 16:19:27 - INFO - Getting data from server
+2025-09-19 16:19:28 - INFO - Start schedule normalization
+2025-09-19 16:19:28 - INFO - Schedule is the same. Cancel.
+2025-09-19 16:19:28 - INFO - Data received from server
+2025-09-19 16:24:28 - INFO - Getting data from server
+2025-09-19 16:24:29 - INFO - Start schedule normalization
+2025-09-19 16:24:30 - INFO - Schedule is the same. Cancel.
+2025-09-19 16:24:30 - INFO - Data received from server
+2025-09-19 16:29:30 - INFO - Getting data from server
+2025-09-19 16:29:31 - INFO - Start schedule normalization
+2025-09-19 16:29:31 - INFO - Schedule is the same. Cancel.
+2025-09-19 16:29:31 - INFO - Data received from server
+2025-09-19 16:34:31 - INFO - Getting data from server
+2025-09-19 16:34:33 - INFO - Start schedule normalization
+2025-09-19 16:34:33 - INFO - Schedule is the same. Cancel.
+2025-09-19 16:34:33 - INFO - Data received from server
+2025-09-19 16:39:33 - INFO - Getting data from server
+2025-09-19 16:39:34 - INFO - Start schedule normalization
+2025-09-19 16:39:34 - INFO - Schedule is the same. Cancel.
+2025-09-19 16:39:34 - INFO - Data received from server
+2025-09-19 16:44:34 - INFO - Getting data from server
+2025-09-19 16:44:36 - INFO - Start schedule normalization
+2025-09-19 16:44:36 - INFO - Schedule is the same. Cancel.
+2025-09-19 16:44:36 - INFO - Data received from server
+2025-09-19 16:49:36 - INFO - Getting data from server
+2025-09-19 16:49:37 - INFO - Start schedule normalization
+2025-09-19 16:49:37 - INFO - Schedule is the same. Cancel.
+2025-09-19 16:49:37 - INFO - Data received from server
+2025-09-19 16:54:37 - INFO - Getting data from server
+2025-09-19 16:54:39 - INFO - Start schedule normalization
+2025-09-19 16:54:39 - INFO - Schedule is the same. Cancel.
+2025-09-19 16:54:39 - INFO - Data received from server
+2025-09-19 16:59:39 - INFO - Getting data from server
+2025-09-19 16:59:40 - INFO - Start schedule normalization
+2025-09-19 16:59:40 - INFO - Schedule is the same. Cancel.
+2025-09-19 16:59:40 - INFO - Data received from server
+2025-09-19 17:04:40 - INFO - Getting data from server
+2025-09-19 17:04:42 - INFO - Start schedule normalization
+2025-09-19 17:04:42 - INFO - Schedule is the same. Cancel.
+2025-09-19 17:04:42 - INFO - Data received from server
+2025-09-19 17:09:42 - INFO - Getting data from server
+2025-09-19 17:09:43 - INFO - Start schedule normalization
+2025-09-19 17:09:43 - INFO - Schedule is the same. Cancel.
+2025-09-19 17:09:43 - INFO - Data received from server
+2025-09-19 17:14:43 - INFO - Getting data from server
+2025-09-19 17:14:45 - INFO - Start schedule normalization
+2025-09-19 17:14:45 - INFO - Schedule is the same. Cancel.
+2025-09-19 17:14:45 - INFO - Data received from server
+2025-09-19 17:19:45 - INFO - Getting data from server
+2025-09-19 17:19:47 - INFO - Start schedule normalization
+2025-09-19 17:19:47 - INFO - Schedule normalized
+2025-09-19 17:19:47 - INFO - Data received from server
+2025-09-19 17:24:47 - INFO - Getting data from server
+2025-09-19 17:24:48 - INFO - Start schedule normalization
+2025-09-19 17:24:49 - INFO - Schedule is the same. Cancel.
+2025-09-19 17:24:49 - INFO - Data received from server
+2025-09-19 17:29:49 - INFO - Getting data from server
+2025-09-19 17:29:50 - INFO - Start schedule normalization
+2025-09-19 17:29:50 - INFO - Schedule is the same. Cancel.
+2025-09-19 17:29:50 - INFO - Data received from server
+2025-09-19 17:34:50 - INFO - Getting data from server
+2025-09-19 17:34:52 - INFO - Start schedule normalization
+2025-09-19 17:34:52 - INFO - Schedule is the same. Cancel.
+2025-09-19 17:34:52 - INFO - Data received from server
+2025-09-19 17:39:52 - INFO - Getting data from server
+2025-09-19 17:39:53 - INFO - Start schedule normalization
+2025-09-19 17:39:53 - INFO - Schedule is the same. Cancel.
+2025-09-19 17:39:53 - INFO - Data received from server
+2025-09-19 17:44:53 - INFO - Getting data from server
+2025-09-19 17:44:55 - INFO - Start schedule normalization
+2025-09-19 17:44:55 - INFO - Schedule is the same. Cancel.
+2025-09-19 17:44:55 - INFO - Data received from server
+2025-09-19 17:49:55 - INFO - Getting data from server
+2025-09-19 17:49:56 - INFO - Start schedule normalization
+2025-09-19 17:49:56 - INFO - Schedule is the same. Cancel.
+2025-09-19 17:49:56 - INFO - Data received from server
+2025-09-19 17:54:56 - INFO - Getting data from server
+2025-09-19 17:54:58 - INFO - Start schedule normalization
+2025-09-19 17:54:58 - INFO - Schedule is the same. Cancel.
+2025-09-19 17:54:58 - INFO - Data received from server
+2025-09-19 17:59:58 - INFO - Getting data from server
+2025-09-19 17:59:59 - INFO - Start schedule normalization
+2025-09-19 17:59:59 - INFO - Schedule is the same. Cancel.
+2025-09-19 17:59:59 - INFO - Data received from server
+2025-09-19 18:04:59 - INFO - Getting data from server
+2025-09-19 18:05:01 - INFO - Start schedule normalization
+2025-09-19 18:05:01 - INFO - Schedule is the same. Cancel.
+2025-09-19 18:05:01 - INFO - Data received from server
+2025-09-19 18:10:01 - INFO - Getting data from server
+2025-09-19 18:10:02 - INFO - Start schedule normalization
+2025-09-19 18:10:03 - INFO - Schedule is the same. Cancel.
+2025-09-19 18:10:03 - INFO - Data received from server
+2025-09-19 18:15:03 - INFO - Getting data from server
+2025-09-19 18:15:04 - INFO - Start schedule normalization
+2025-09-19 18:15:04 - INFO - Schedule is the same. Cancel.
+2025-09-19 18:15:04 - INFO - Data received from server
+2025-09-19 18:20:04 - INFO - Getting data from server
+2025-09-19 18:20:05 - INFO - Start schedule normalization
+2025-09-19 18:20:06 - INFO - Schedule is the same. Cancel.
+2025-09-19 18:20:06 - INFO - Data received from server
+2025-09-19 18:25:06 - INFO - Getting data from server
+2025-09-19 18:25:07 - INFO - Start schedule normalization
+2025-09-19 18:25:07 - INFO - Schedule is the same. Cancel.
+2025-09-19 18:25:07 - INFO - Data received from server
+2025-09-19 18:30:07 - INFO - Getting data from server
+2025-09-19 18:30:09 - INFO - Start schedule normalization
+2025-09-19 18:30:09 - INFO - Schedule is the same. Cancel.
+2025-09-19 18:30:09 - INFO - Data received from server
+2025-09-19 18:35:09 - INFO - Getting data from server
+2025-09-19 18:35:10 - INFO - Start schedule normalization
+2025-09-19 18:35:10 - INFO - Schedule is the same. Cancel.
+2025-09-19 18:35:10 - INFO - Data received from server
+2025-09-19 18:40:10 - INFO - Getting data from server
+2025-09-19 18:40:12 - INFO - Start schedule normalization
+2025-09-19 18:40:12 - INFO - Schedule is the same. Cancel.
+2025-09-19 18:40:12 - INFO - Data received from server
+2025-09-19 18:45:12 - INFO - Getting data from server
+2025-09-19 18:45:13 - INFO - Start schedule normalization
+2025-09-19 18:45:13 - INFO - Schedule is the same. Cancel.
+2025-09-19 18:45:13 - INFO - Data received from server
+2025-09-19 18:50:13 - INFO - Getting data from server
+2025-09-19 18:50:15 - INFO - Start schedule normalization
+2025-09-19 18:50:15 - INFO - Schedule is the same. Cancel.
+2025-09-19 18:50:15 - INFO - Data received from server
+2025-09-19 18:55:15 - INFO - Getting data from server
+2025-09-19 18:55:36 - INFO - Data received from server
+2025-09-19 19:00:36 - INFO - Getting data from server
+2025-09-19 19:00:57 - INFO - Data received from server
+2025-09-19 19:05:57 - INFO - Getting data from server
+2025-09-19 19:05:58 - INFO - Start schedule normalization
+2025-09-19 19:05:59 - INFO - Schedule is the same. Cancel.
+2025-09-19 19:05:59 - INFO - Data received from server
+2025-09-19 19:10:59 - INFO - Getting data from server
+2025-09-19 19:11:00 - INFO - Start schedule normalization
+2025-09-19 19:11:00 - INFO - Schedule is the same. Cancel.
+2025-09-19 19:11:00 - INFO - Data received from server
+2025-09-19 19:16:00 - INFO - Getting data from server
+2025-09-19 19:16:01 - INFO - Start schedule normalization
+2025-09-19 19:16:01 - INFO - Schedule is the same. Cancel.
+2025-09-19 19:16:01 - INFO - Data received from server
+2025-09-19 19:21:01 - INFO - Getting data from server
+2025-09-19 19:21:03 - INFO - Start schedule normalization
+2025-09-19 19:21:03 - INFO - Schedule is the same. Cancel.
+2025-09-19 19:21:03 - INFO - Data received from server
+2025-09-19 19:26:03 - INFO - Getting data from server
+2025-09-19 19:26:04 - INFO - Start schedule normalization
+2025-09-19 19:26:05 - INFO - Schedule is the same. Cancel.
+2025-09-19 19:26:05 - INFO - Data received from server
+2025-09-19 19:31:05 - INFO - Getting data from server
+2025-09-19 19:31:06 - INFO - Start schedule normalization
+2025-09-19 19:31:06 - INFO - Schedule is the same. Cancel.
+2025-09-19 19:31:06 - INFO - Data received from server
+2025-09-19 19:36:06 - INFO - Getting data from server
+2025-09-19 19:36:07 - INFO - Start schedule normalization
+2025-09-19 19:36:08 - INFO - Schedule is the same. Cancel.
+2025-09-19 19:36:08 - INFO - Data received from server
+2025-09-19 19:41:08 - INFO - Getting data from server
+2025-09-19 19:41:09 - INFO - Start schedule normalization
+2025-09-19 19:41:09 - INFO - Schedule is the same. Cancel.
+2025-09-19 19:41:09 - INFO - Data received from server
+2025-09-19 19:46:09 - INFO - Getting data from server
+2025-09-19 19:46:10 - INFO - Start schedule normalization
+2025-09-19 19:46:11 - INFO - Schedule is the same. Cancel.
+2025-09-19 19:46:11 - INFO - Data received from server
+2025-09-19 19:51:11 - INFO - Getting data from server
+2025-09-19 19:51:13 - INFO - Start schedule normalization
+2025-09-19 19:51:13 - INFO - Schedule is the same. Cancel.
+2025-09-19 19:51:13 - INFO - Data received from server
+2025-09-19 19:56:13 - INFO - Getting data from server
+2025-09-19 19:56:14 - INFO - Start schedule normalization
+2025-09-19 19:56:15 - INFO - Schedule is the same. Cancel.
+2025-09-19 19:56:15 - INFO - Data received from server
+2025-09-19 20:01:15 - INFO - Getting data from server
+2025-09-19 20:01:16 - INFO - Start schedule normalization
+2025-09-19 20:01:16 - INFO - Schedule is the same. Cancel.
+2025-09-19 20:01:16 - INFO - Data received from server
+2025-09-19 20:06:16 - INFO - Getting data from server
+2025-09-19 20:06:17 - INFO - Start schedule normalization
+2025-09-19 20:06:18 - INFO - Schedule is the same. Cancel.
+2025-09-19 20:06:18 - INFO - Data received from server
+2025-09-19 20:11:18 - INFO - Getting data from server
+2025-09-19 20:11:20 - INFO - Start schedule normalization
+2025-09-19 20:11:20 - INFO - Schedule is the same. Cancel.
+2025-09-19 20:11:20 - INFO - Data received from server
+2025-09-19 20:16:20 - INFO - Getting data from server
+2025-09-19 20:16:21 - INFO - Start schedule normalization
+2025-09-19 20:16:21 - INFO - Schedule is the same. Cancel.
+2025-09-19 20:16:21 - INFO - Data received from server
+2025-09-19 20:21:21 - INFO - Getting data from server
+2025-09-19 20:21:23 - INFO - Start schedule normalization
+2025-09-19 20:21:23 - INFO - Schedule is the same. Cancel.
+2025-09-19 20:21:23 - INFO - Data received from server
+2025-09-19 20:26:23 - INFO - Getting data from server
+2025-09-19 20:26:24 - INFO - Start schedule normalization
+2025-09-19 20:26:24 - INFO - Schedule is the same. Cancel.
+2025-09-19 20:26:24 - INFO - Data received from server
+2025-09-19 20:31:24 - INFO - Getting data from server
+2025-09-19 20:31:26 - INFO - Start schedule normalization
+2025-09-19 20:31:26 - INFO - Schedule is the same. Cancel.
+2025-09-19 20:31:26 - INFO - Data received from server
+2025-09-19 20:36:26 - INFO - Getting data from server
+2025-09-19 20:36:27 - INFO - Start schedule normalization
+2025-09-19 20:36:27 - INFO - Schedule is the same. Cancel.
+2025-09-19 20:36:27 - INFO - Data received from server
+2025-09-19 20:41:27 - INFO - Getting data from server
+2025-09-19 20:41:29 - INFO - Start schedule normalization
+2025-09-19 20:41:29 - INFO - Schedule is the same. Cancel.
+2025-09-19 20:41:29 - INFO - Data received from server
+2025-09-19 20:46:29 - INFO - Getting data from server
+2025-09-19 20:46:30 - INFO - Start schedule normalization
+2025-09-19 20:46:30 - INFO - Schedule is the same. Cancel.
+2025-09-19 20:46:30 - INFO - Data received from server
+2025-09-19 20:51:30 - INFO - Getting data from server
+2025-09-19 20:51:32 - INFO - Start schedule normalization
+2025-09-19 20:51:32 - INFO - Schedule is the same. Cancel.
+2025-09-19 20:51:32 - INFO - Data received from server
+2025-09-19 20:56:32 - INFO - Getting data from server
+2025-09-19 20:56:33 - INFO - Start schedule normalization
+2025-09-19 20:56:33 - INFO - Schedule is the same. Cancel.
+2025-09-19 20:56:33 - INFO - Data received from server
+2025-09-19 21:01:33 - INFO - Getting data from server
+2025-09-19 21:01:35 - INFO - Start schedule normalization
+2025-09-19 21:01:35 - INFO - Schedule is the same. Cancel.
+2025-09-19 21:01:35 - INFO - Data received from server
+2025-09-19 21:06:35 - INFO - Getting data from server
+2025-09-19 21:06:36 - INFO - Start schedule normalization
+2025-09-19 21:06:36 - INFO - Schedule is the same. Cancel.
+2025-09-19 21:06:36 - INFO - Data received from server
+2025-09-19 21:11:36 - INFO - Getting data from server
+2025-09-19 21:11:38 - INFO - Start schedule normalization
+2025-09-19 21:11:38 - INFO - Schedule is the same. Cancel.
+2025-09-19 21:11:38 - INFO - Data received from server
+2025-09-19 21:16:38 - INFO - Getting data from server
+2025-09-19 21:16:39 - INFO - Start schedule normalization
+2025-09-19 21:16:39 - INFO - Schedule is the same. Cancel.
+2025-09-19 21:16:39 - INFO - Data received from server
+2025-09-19 21:21:39 - INFO - Getting data from server
+2025-09-19 21:21:40 - INFO - Start schedule normalization
+2025-09-19 21:21:40 - INFO - Schedule is the same. Cancel.
+2025-09-19 21:21:40 - INFO - Data received from server
+2025-09-19 21:26:40 - INFO - Getting data from server
+2025-09-19 21:26:42 - INFO - Start schedule normalization
+2025-09-19 21:26:42 - INFO - Schedule is the same. Cancel.
+2025-09-19 21:26:42 - INFO - Data received from server
+2025-09-19 21:31:42 - INFO - Getting data from server
+2025-09-19 21:31:43 - INFO - Start schedule normalization
+2025-09-19 21:31:43 - INFO - Schedule is the same. Cancel.
+2025-09-19 21:31:43 - INFO - Data received from server
+2025-09-19 21:36:43 - INFO - Getting data from server
+2025-09-19 21:36:46 - INFO - Start schedule normalization
+2025-09-19 21:36:46 - INFO - Schedule is the same. Cancel.
+2025-09-19 21:36:46 - INFO - Data received from server
+2025-09-19 21:41:46 - INFO - Getting data from server
+2025-09-19 21:41:47 - INFO - Start schedule normalization
+2025-09-19 21:41:47 - INFO - Schedule is the same. Cancel.
+2025-09-19 21:41:47 - INFO - Data received from server
+2025-09-19 21:46:47 - INFO - Getting data from server
+2025-09-19 21:46:48 - INFO - Start schedule normalization
+2025-09-19 21:46:48 - INFO - Schedule is the same. Cancel.
+2025-09-19 21:46:48 - INFO - Data received from server
+2025-09-19 21:50:35 - ERROR - Infinity polling: polling exited
+2025-09-19 21:50:35 - ERROR - Break infinity polling

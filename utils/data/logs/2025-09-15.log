@@ -1,0 +1,1091 @@
+2025-09-15 17:21:43 - INFO - ###############################
+2025-09-15 17:21:43 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 17:21:43 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 17:21:43 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 17:21:43 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 17:21:43 - INFO - LOGGER STARTED
+2025-09-15 17:21:43 - INFO - ###############################
+2025-09-15 17:21:43 - INFO - Stated connect to db
+2025-09-15 17:21:43 - INFO - Users db created/exist
+2025-09-15 17:21:45 - INFO - Start schedule normalization
+2025-09-15 17:21:45 - INFO - Schedule normalized
+2025-09-15 17:26:46 - INFO - Start schedule normalization
+2025-09-15 17:26:46 - INFO - Schedule is the same. Cancel.
+2025-09-15 17:31:48 - INFO - Start schedule normalization
+2025-09-15 17:31:48 - INFO - Schedule is the same. Cancel.
+2025-09-15 17:34:52 - INFO - ###############################
+2025-09-15 17:34:52 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 17:34:52 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 17:34:52 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 17:34:52 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 17:34:52 - INFO - LOGGER STARTED
+2025-09-15 17:34:52 - INFO - ###############################
+2025-09-15 17:34:52 - INFO - Stated connect to db
+2025-09-15 17:34:52 - INFO - Users db created/exist
+2025-09-15 17:34:53 - INFO - Start schedule normalization
+2025-09-15 17:34:53 - INFO - Schedule is the same. Cancel.
+2025-09-15 17:37:52 - INFO - ###############################
+2025-09-15 17:37:52 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 17:37:52 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 17:37:52 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 17:37:52 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 17:37:52 - INFO - LOGGER STARTED
+2025-09-15 17:37:52 - INFO - ###############################
+2025-09-15 17:37:52 - INFO - Stated connect to db
+2025-09-15 17:37:52 - INFO - Users db created/exist
+2025-09-15 17:37:54 - INFO - Start schedule normalization
+2025-09-15 17:37:54 - INFO - Schedule is the same. Cancel.
+2025-09-15 17:42:55 - INFO - Start schedule normalization
+2025-09-15 17:42:55 - INFO - Schedule is the same. Cancel.
+2025-09-15 17:43:45 - INFO - ###############################
+2025-09-15 17:43:45 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 17:43:45 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 17:43:45 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 17:43:45 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 17:43:45 - INFO - LOGGER STARTED
+2025-09-15 17:43:45 - INFO - ###############################
+2025-09-15 17:43:45 - INFO - Stated connect to db
+2025-09-15 17:43:45 - INFO - Users db created/exist
+2025-09-15 17:43:46 - INFO - Start schedule normalization
+2025-09-15 17:43:46 - INFO - Schedule is the same. Cancel.
+2025-09-15 17:43:53 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Unsupported start tag "a=href=https://nextler.ru/6zk8zl1lsy.html?companyid=-mzpgpogmp0houbhwopnk&tableid=-dppw1nus2ypi6avvpfzu" at byte offset 114
+2025-09-15 17:43:53 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 68, in start_func
+    bot.send_message(user_data["tg_id"], START_MESSAGE.format(user_first_name=user_data["tg_first_name"],
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1800, in send_message
+    apihelper.send_message(
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Unsupported start tag "a=href=https://nextler.ru/6zk8zl1lsy.html?companyid=-mzpgpogmp0houbhwopnk&tableid=-dppw1nus2ypi6avvpfzu" at byte offset 114
+
+2025-09-15 17:44:13 - ERROR - Infinity polling: polling exited
+2025-09-15 17:44:13 - ERROR - Break infinity polling
+2025-09-15 17:47:39 - INFO - ###############################
+2025-09-15 17:47:39 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 17:47:39 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 17:47:39 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 17:47:39 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 17:47:39 - INFO - LOGGER STARTED
+2025-09-15 17:47:39 - INFO - ###############################
+2025-09-15 17:47:39 - INFO - Stated connect to db
+2025-09-15 17:47:39 - INFO - Users db created/exist
+2025-09-15 17:47:40 - INFO - Start schedule normalization
+2025-09-15 17:47:41 - INFO - Schedule is the same. Cancel.
+2025-09-15 17:47:44 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Unsupported start tag "a=href=(https://nextler.ru/6zk8zl1lsy.html?companyid=-mzpgpogmp0houbhwopnk&tableid=-dppw1nus2ypi6avvpfzu)" at byte offset 114
+2025-09-15 17:47:44 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 68, in start_func
+    bot.send_message(user_data["tg_id"], START_MESSAGE.format(user_first_name=user_data["tg_first_name"],
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1800, in send_message
+    apihelper.send_message(
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Unsupported start tag "a=href=(https://nextler.ru/6zk8zl1lsy.html?companyid=-mzpgpogmp0houbhwopnk&tableid=-dppw1nus2ypi6avvpfzu)" at byte offset 114
+
+2025-09-15 17:48:38 - INFO - ###############################
+2025-09-15 17:48:38 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 17:48:38 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 17:48:38 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 17:48:38 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 17:48:38 - INFO - LOGGER STARTED
+2025-09-15 17:48:38 - INFO - ###############################
+2025-09-15 17:48:38 - INFO - Stated connect to db
+2025-09-15 17:48:38 - INFO - Users db created/exist
+2025-09-15 17:48:40 - INFO - Start schedule normalization
+2025-09-15 17:48:40 - INFO - Schedule is the same. Cancel.
+2025-09-15 17:48:44 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Unsupported start tag "a=href="https://nextler.ru/6zk8zl1lsy.html?companyid=-mzpgpogmp0houbhwopnk&tableid=-dppw1nus2ypi6avvpfzu"" at byte offset 114
+2025-09-15 17:48:44 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 68, in start_func
+    bot.send_message(user_data["tg_id"], START_MESSAGE.format(user_first_name=user_data["tg_first_name"]),
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1800, in send_message
+    apihelper.send_message(
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Unsupported start tag "a=href="https://nextler.ru/6zk8zl1lsy.html?companyid=-mzpgpogmp0houbhwopnk&tableid=-dppw1nus2ypi6avvpfzu"" at byte offset 114
+
+2025-09-15 17:49:13 - INFO - ###############################
+2025-09-15 17:49:13 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 17:49:13 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 17:49:13 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 17:49:13 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 17:49:13 - INFO - LOGGER STARTED
+2025-09-15 17:49:13 - INFO - ###############################
+2025-09-15 17:49:13 - INFO - Stated connect to db
+2025-09-15 17:49:13 - INFO - Users db created/exist
+2025-09-15 17:49:14 - INFO - Start schedule normalization
+2025-09-15 17:49:14 - INFO - Schedule is the same. Cancel.
+2025-09-15 17:49:15 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Unexpected end of name token at byte offset 122
+2025-09-15 17:49:15 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 68, in start_func
+    bot.send_message(user_data["tg_id"], START_MESSAGE.format(user_first_name=user_data["tg_first_name"],
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1800, in send_message
+    apihelper.send_message(
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Unexpected end of name token at byte offset 122
+
+2025-09-15 17:49:28 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Unexpected end of name token at byte offset 122
+2025-09-15 17:49:28 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 68, in start_func
+    bot.send_message(user_data["tg_id"], START_MESSAGE.format(user_first_name=user_data["tg_first_name"],
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1800, in send_message
+    apihelper.send_message(
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Unexpected end of name token at byte offset 122
+
+2025-09-15 17:51:58 - INFO - ###############################
+2025-09-15 17:51:58 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 17:51:58 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 17:51:58 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 17:51:58 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 17:51:58 - INFO - LOGGER STARTED
+2025-09-15 17:51:58 - INFO - ###############################
+2025-09-15 17:51:58 - INFO - Stated connect to db
+2025-09-15 17:51:58 - INFO - Users db created/exist
+2025-09-15 17:51:59 - INFO - Start schedule normalization
+2025-09-15 17:52:00 - INFO - Schedule is the same. Cancel.
+2025-09-15 17:52:01 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Unexpected end of name token at byte offset 122
+2025-09-15 17:52:01 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 68, in start_func
+    bot.send_message(user_data["tg_id"], START_MESSAGE.format(user_first_name=user_data["tg_first_name"]),
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1800, in send_message
+    apihelper.send_message(
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Unexpected end of name token at byte offset 122
+
+2025-09-15 17:52:22 - INFO - ###############################
+2025-09-15 17:52:22 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 17:52:22 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 17:52:22 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 17:52:22 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 17:52:22 - INFO - LOGGER STARTED
+2025-09-15 17:52:22 - INFO - ###############################
+2025-09-15 17:52:22 - INFO - Stated connect to db
+2025-09-15 17:52:22 - INFO - Users db created/exist
+2025-09-15 17:52:23 - INFO - Start schedule normalization
+2025-09-15 17:52:23 - INFO - Schedule is the same. Cancel.
+2025-09-15 17:53:24 - INFO - ###############################
+2025-09-15 17:53:24 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 17:53:24 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 17:53:24 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 17:53:24 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 17:53:24 - INFO - LOGGER STARTED
+2025-09-15 17:53:24 - INFO - ###############################
+2025-09-15 17:53:24 - INFO - Stated connect to db
+2025-09-15 17:53:24 - INFO - Users db created/exist
+2025-09-15 17:53:25 - INFO - Start schedule normalization
+2025-09-15 17:53:25 - INFO - Schedule is the same. Cancel.
+2025-09-15 17:53:54 - INFO - ###############################
+2025-09-15 17:53:54 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 17:53:54 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 17:53:54 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 17:53:54 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 17:53:54 - INFO - LOGGER STARTED
+2025-09-15 17:53:54 - INFO - ###############################
+2025-09-15 17:53:54 - INFO - Stated connect to db
+2025-09-15 17:53:54 - INFO - Users db created/exist
+2025-09-15 17:53:56 - INFO - Start schedule normalization
+2025-09-15 17:53:56 - INFO - Schedule is the same. Cancel.
+2025-09-15 17:54:40 - INFO - ###############################
+2025-09-15 17:54:40 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 17:54:40 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 17:54:40 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 17:54:40 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 17:54:40 - INFO - LOGGER STARTED
+2025-09-15 17:54:40 - INFO - ###############################
+2025-09-15 17:54:40 - INFO - Stated connect to db
+2025-09-15 17:54:40 - INFO - Users db created/exist
+2025-09-15 17:54:41 - INFO - Start schedule normalization
+2025-09-15 17:54:41 - INFO - Schedule is the same. Cancel.
+2025-09-15 18:23:52 - INFO - ###############################
+2025-09-15 18:23:52 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 18:23:52 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 18:23:52 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 18:23:52 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 18:23:52 - INFO - LOGGER STARTED
+2025-09-15 18:23:52 - INFO - ###############################
+2025-09-15 18:23:52 - INFO - Stated connect to db
+2025-09-15 18:23:52 - INFO - Users db created/exist
+2025-09-15 18:23:52 - INFO - WS Parser started!
+2025-09-15 18:23:52 - INFO - Getting data from server
+2025-09-15 18:23:54 - INFO - Start schedule normalization
+2025-09-15 18:23:54 - INFO - Schedule is the same. Cancel.
+2025-09-15 18:23:54 - INFO - Data received from server
+2025-09-15 18:24:33 - INFO - 6983370282 used START MESSAGE FUNC
+2025-09-15 18:24:37 - INFO - 6983370282 used CHOICE PARALLEL FUNC
+2025-09-15 18:24:41 - INFO - 6983370282 used CHOICE CLASS FUNC and choice 8 классы
+2025-09-15 18:24:45 - INFO - 6983370282 used SAVE CHOICE CLASS FUNC and choice 8К
+2025-09-15 18:24:51 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Вторник
+2025-09-15 18:24:51 - ERROR - Infinity polling exception: 'NoneType' object has no attribute 'keys'
+2025-09-15 18:24:51 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 257, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 105, in norm_schedule
+    for lesson in schedule.keys():
+                  ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'keys'
+
+2025-09-15 18:26:17 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Вторник
+2025-09-15 18:26:17 - ERROR - Infinity polling exception: 'NoneType' object has no attribute 'keys'
+2025-09-15 18:26:17 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 257, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 105, in norm_schedule
+    for lesson in schedule.keys():
+                  ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'keys'
+
+2025-09-15 18:26:44 - INFO - ###############################
+2025-09-15 18:26:44 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 18:26:44 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 18:26:44 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 18:26:44 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 18:26:44 - INFO - LOGGER STARTED
+2025-09-15 18:26:44 - INFO - ###############################
+2025-09-15 18:26:44 - INFO - Stated connect to db
+2025-09-15 18:26:44 - INFO - Users db created/exist
+2025-09-15 18:26:45 - INFO - WS Parser started!
+2025-09-15 18:26:45 - INFO - Getting data from server
+2025-09-15 18:26:46 - INFO - Start schedule normalization
+2025-09-15 18:26:46 - INFO - Schedule is the same. Cancel.
+2025-09-15 18:26:46 - INFO - Data received from server
+2025-09-15 18:27:10 - INFO - ###############################
+2025-09-15 18:27:10 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 18:27:10 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 18:27:10 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 18:27:10 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 18:27:10 - INFO - LOGGER STARTED
+2025-09-15 18:27:10 - INFO - ###############################
+2025-09-15 18:27:10 - INFO - Stated connect to db
+2025-09-15 18:27:10 - INFO - Users db created/exist
+2025-09-15 18:27:10 - INFO - WS Parser started!
+2025-09-15 18:27:10 - INFO - Getting data from server
+2025-09-15 18:27:11 - INFO - Start schedule normalization
+2025-09-15 18:27:11 - INFO - Schedule normalized
+2025-09-15 18:27:11 - INFO - Data received from server
+2025-09-15 18:27:18 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Вторник
+2025-09-15 18:27:18 - ERROR - Infinity polling exception: 'NoneType' object has no attribute 'keys'
+2025-09-15 18:27:18 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 257, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 105, in norm_schedule
+    for lesson in schedule.keys():
+                  ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'keys'
+
+2025-09-15 18:32:49 - INFO - ###############################
+2025-09-15 18:32:49 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 18:32:49 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 18:32:49 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 18:32:49 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 18:32:49 - INFO - LOGGER STARTED
+2025-09-15 18:32:49 - INFO - ###############################
+2025-09-15 18:32:49 - INFO - Stated connect to db
+2025-09-15 18:32:49 - INFO - Users db created/exist
+2025-09-15 18:32:49 - INFO - WS Parser started!
+2025-09-15 18:32:49 - INFO - Getting data from server
+2025-09-15 18:32:50 - INFO - 6983370282 used START MESSAGE FUNC
+2025-09-15 18:32:51 - INFO - Start schedule normalization
+2025-09-15 18:32:51 - INFO - Schedule is the same. Cancel.
+2025-09-15 18:32:51 - INFO - Data received from server
+2025-09-15 18:32:57 - INFO - 6983370282 used CHOICE PARALLEL FUNC
+2025-09-15 18:32:59 - INFO - 6983370282 used CHOICE CLASS FUNC and choice 8 классы
+2025-09-15 18:33:00 - INFO - 6983370282 used SAVE CHOICE CLASS FUNC and choice 8К
+2025-09-15 18:33:03 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Вторник
+2025-09-15 18:33:03 - ERROR - Infinity polling exception: 'NoneType' object has no attribute 'keys'
+2025-09-15 18:33:03 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 257, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 105, in norm_schedule
+    for lesson in schedule.keys():
+                  ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'keys'
+
+2025-09-15 18:33:05 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Понедельник
+2025-09-15 18:33:06 - ERROR - Infinity polling exception: 'NoneType' object has no attribute 'keys'
+2025-09-15 18:33:06 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 257, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 105, in norm_schedule
+    for lesson in schedule.keys():
+                  ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'keys'
+
+2025-09-15 18:33:06 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Среда
+2025-09-15 18:33:09 - ERROR - Infinity polling exception: 'NoneType' object has no attribute 'keys'
+2025-09-15 18:33:09 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 257, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 105, in norm_schedule
+    for lesson in schedule.keys():
+                  ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'keys'
+
+2025-09-15 18:33:09 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Пятница
+2025-09-15 18:33:09 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Четверг
+2025-09-15 18:33:12 - ERROR - Infinity polling exception: 'NoneType' object has no attribute 'keys'
+2025-09-15 18:33:12 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 257, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], get_ru_day_to_en(message.text)))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 105, in norm_schedule
+    for lesson in schedule.keys():
+                  ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'keys'
+
+2025-09-15 18:37:27 - INFO - ###############################
+2025-09-15 18:37:27 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 18:37:27 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 18:37:27 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 18:37:27 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 18:37:27 - INFO - LOGGER STARTED
+2025-09-15 18:37:27 - INFO - ###############################
+2025-09-15 18:37:27 - INFO - Stated connect to db
+2025-09-15 18:37:27 - INFO - Users db created/exist
+2025-09-15 18:37:27 - INFO - WS Parser started!
+2025-09-15 18:37:27 - INFO - Getting data from server
+2025-09-15 18:37:28 - INFO - Start schedule normalization
+2025-09-15 18:37:29 - INFO - Schedule is the same. Cancel.
+2025-09-15 18:37:29 - INFO - Data received from server
+2025-09-15 18:37:30 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Понедельник
+2025-09-15 18:37:30 - ERROR - Infinity polling exception: 'NoneType' object has no attribute 'keys'
+2025-09-15 18:37:30 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 262, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], en_day))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 105, in norm_schedule
+    for lesson in schedule.keys():
+                  ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'keys'
+
+2025-09-15 18:38:25 - INFO - ###############################
+2025-09-15 18:38:25 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 18:38:25 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 18:38:25 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 18:38:25 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 18:38:25 - INFO - LOGGER STARTED
+2025-09-15 18:38:25 - INFO - ###############################
+2025-09-15 18:38:25 - INFO - Stated connect to db
+2025-09-15 18:38:25 - INFO - Users db created/exist
+2025-09-15 18:38:25 - INFO - WS Parser started!
+2025-09-15 18:38:25 - INFO - Getting data from server
+2025-09-15 18:38:26 - INFO - Start schedule normalization
+2025-09-15 18:38:27 - INFO - Schedule is the same. Cancel.
+2025-09-15 18:38:27 - INFO - Data received from server
+2025-09-15 18:38:30 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Понедельник
+2025-09-15 18:38:30 - ERROR - Infinity polling exception: 'NoneType' object has no attribute 'keys'
+2025-09-15 18:38:30 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 262, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], en_day))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 105, in norm_schedule
+    for lesson in schedule.keys():
+                  ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'keys'
+
+2025-09-15 18:38:42 - INFO - ###############################
+2025-09-15 18:38:42 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 18:38:42 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 18:38:42 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 18:38:42 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 18:38:42 - INFO - LOGGER STARTED
+2025-09-15 18:38:42 - INFO - ###############################
+2025-09-15 18:38:42 - INFO - Stated connect to db
+2025-09-15 18:38:42 - INFO - Users db created/exist
+2025-09-15 18:38:42 - INFO - WS Parser started!
+2025-09-15 18:38:42 - INFO - Getting data from server
+2025-09-15 18:38:44 - INFO - Start schedule normalization
+2025-09-15 18:38:44 - INFO - Schedule normalized
+2025-09-15 18:38:44 - INFO - Data received from server
+2025-09-15 18:38:51 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Понедельник
+2025-09-15 18:38:51 - ERROR - Infinity polling exception: 'NoneType' object has no attribute 'keys'
+2025-09-15 18:38:51 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 262, in get_schedule_for_user
+    norm_schedule(user_data["worked_class"], en_day))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\ws_parser.py", line 105, in norm_schedule
+    for lesson in schedule.keys():
+                  ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'keys'
+
+2025-09-15 18:42:35 - INFO - ###############################
+2025-09-15 18:42:35 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 18:42:35 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 18:42:35 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 18:42:35 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 18:42:35 - INFO - LOGGER STARTED
+2025-09-15 18:42:35 - INFO - ###############################
+2025-09-15 18:42:35 - INFO - Stated connect to db
+2025-09-15 18:42:35 - INFO - Users db created/exist
+2025-09-15 18:42:35 - INFO - WS Parser started!
+2025-09-15 18:42:35 - INFO - Getting data from server
+2025-09-15 18:42:36 - INFO - Start schedule normalization
+2025-09-15 18:42:36 - INFO - Schedule is the same. Cancel.
+2025-09-15 18:42:36 - INFO - Data received from server
+2025-09-15 18:42:40 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Понедельник
+2025-09-15 18:42:44 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Вторник
+2025-09-15 18:42:46 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Среда
+2025-09-15 18:42:47 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Четверг
+2025-09-15 18:42:48 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Пятница
+2025-09-15 18:43:36 - INFO - ###############################
+2025-09-15 18:43:36 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 18:43:36 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 18:43:36 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 18:43:36 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 18:43:36 - INFO - LOGGER STARTED
+2025-09-15 18:43:36 - INFO - ###############################
+2025-09-15 18:43:36 - INFO - Stated connect to db
+2025-09-15 18:43:36 - INFO - Users db created/exist
+2025-09-15 18:43:36 - INFO - WS Parser started!
+2025-09-15 18:43:36 - INFO - Getting data from server
+2025-09-15 18:43:38 - INFO - Start schedule normalization
+2025-09-15 18:43:38 - INFO - Schedule is the same. Cancel.
+2025-09-15 18:43:38 - INFO - Data received from server
+2025-09-15 18:43:39 - INFO - 6983370282 used START MESSAGE FUNC
+2025-09-15 18:43:40 - INFO - 6983370282 used CHOICE PARALLEL FUNC
+2025-09-15 18:43:41 - INFO - 6983370282 used CHOICE CLASS FUNC and choice 8 классы
+2025-09-15 18:43:44 - INFO - 6983370282 used SAVE CHOICE CLASS FUNC and choice 8К
+2025-09-15 18:43:46 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Вторник
+2025-09-15 18:43:51 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Среда
+2025-09-15 18:43:52 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Четверг
+2025-09-15 18:43:53 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Пятница
+2025-09-15 18:43:57 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Вторник
+2025-09-15 18:51:36 - INFO - ###############################
+2025-09-15 18:51:36 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 18:51:36 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 18:51:36 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 18:51:36 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 18:51:36 - INFO - LOGGER STARTED
+2025-09-15 18:51:36 - INFO - ###############################
+2025-09-15 18:51:36 - INFO - Stated connect to db
+2025-09-15 18:51:36 - INFO - Users db created/exist
+2025-09-15 18:51:36 - INFO - WS Parser started!
+2025-09-15 18:51:36 - INFO - Getting data from server
+2025-09-15 18:51:37 - INFO - Start schedule normalization
+2025-09-15 18:51:37 - INFO - Schedule is the same. Cancel.
+2025-09-15 18:51:37 - INFO - Data received from server
+2025-09-15 18:51:43 - INFO - 6983370282 used START MESSAGE FUNC
+2025-09-15 18:51:50 - INFO - 6983370282 used CHOICE PARALLEL FUNC
+2025-09-15 18:51:52 - INFO - 6983370282 used CHOICE CLASS FUNC and choice 8 классы
+2025-09-15 18:51:54 - INFO - 6983370282 used SAVE CHOICE CLASS FUNC and choice 8К
+2025-09-15 18:51:59 - INFO - 6983370282 used CHOICE PARALLEL FUNC
+2025-09-15 18:52:01 - INFO - 6983370282 used CHOICE CLASS FUNC and choice 8 классы
+2025-09-15 18:52:02 - INFO - 6983370282 used SAVE CHOICE CLASS FUNC and choice 8К
+2025-09-15 18:52:04 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Пятница
+2025-09-15 18:52:07 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Понедельник
+2025-09-15 18:52:49 - INFO - ###############################
+2025-09-15 18:52:49 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 18:52:49 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 18:52:49 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 18:52:49 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 18:52:49 - INFO - LOGGER STARTED
+2025-09-15 18:52:49 - INFO - ###############################
+2025-09-15 18:52:49 - INFO - Stated connect to db
+2025-09-15 18:52:49 - INFO - Users db created/exist
+2025-09-15 18:52:49 - INFO - WS Parser started!
+2025-09-15 18:52:49 - INFO - Getting data from server
+2025-09-15 18:52:50 - INFO - Start schedule normalization
+2025-09-15 18:52:50 - INFO - Schedule is the same. Cancel.
+2025-09-15 18:52:50 - INFO - Data received from server
+2025-09-15 18:57:50 - INFO - Getting data from server
+2025-09-15 18:57:51 - INFO - Start schedule normalization
+2025-09-15 18:57:51 - INFO - Schedule is the same. Cancel.
+2025-09-15 18:57:51 - INFO - Data received from server
+2025-09-15 18:58:07 - INFO - 7804831715 used START MESSAGE FUNC
+2025-09-15 18:58:07 - ERROR - Infinity polling exception: 'site'
+2025-09-15 18:58:07 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 80, in start_func
+    bot.send_message(user_data["tg_id"], START_MESSAGE.format(user_first_name=user_data["tg_first_name"],
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'site'
+
+2025-09-15 18:58:19 - INFO - 7804831715 used START MESSAGE FUNC
+2025-09-15 18:58:19 - ERROR - Infinity polling exception: 'site'
+2025-09-15 18:58:19 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 80, in start_func
+    bot.send_message(user_data["tg_id"], START_MESSAGE.format(user_first_name=user_data["tg_first_name"],
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'site'
+
+2025-09-15 18:59:09 - INFO - ###############################
+2025-09-15 18:59:09 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 18:59:09 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 18:59:09 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 18:59:09 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 18:59:09 - INFO - LOGGER STARTED
+2025-09-15 18:59:09 - INFO - ###############################
+2025-09-15 18:59:09 - INFO - Stated connect to db
+2025-09-15 18:59:09 - INFO - Users db created/exist
+2025-09-15 18:59:09 - INFO - WS Parser started!
+2025-09-15 18:59:09 - INFO - Getting data from server
+2025-09-15 18:59:10 - INFO - Start schedule normalization
+2025-09-15 18:59:10 - INFO - Schedule is the same. Cancel.
+2025-09-15 18:59:10 - INFO - Data received from server
+2025-09-15 18:59:18 - INFO - 7804831715 used START MESSAGE FUNC
+2025-09-15 18:59:33 - INFO - 7804831715 used GET HELP FUNC
+2025-09-15 18:59:39 - INFO - 7804831715 used GET HELP FUNC 2
+2025-09-15 18:59:48 - INFO - 7804831715 used START MESSAGE FUNC
+2025-09-15 18:59:51 - INFO - 7804831715 used CHOICE PARALLEL FUNC
+2025-09-15 18:59:53 - INFO - 7804831715 used CHOICE CLASS FUNC and choice 5 классы
+2025-09-15 18:59:55 - INFO - 7804831715 used SAVE CHOICE CLASS FUNC and choice 5Д
+2025-09-15 18:59:59 - INFO - 7804831715 used GET SCHEDULE FUNC and choice Среда
+2025-09-15 19:00:07 - INFO - 7804831715 used GET SCHEDULE FUNC and choice Пятница
+2025-09-15 19:00:09 - INFO - 7804831715 used CHOICE PARALLEL FUNC
+2025-09-15 19:00:11 - INFO - 7804831715 used CHOICE CLASS FUNC and choice 9 классы
+2025-09-15 19:00:13 - INFO - 7804831715 used SAVE CHOICE CLASS FUNC and choice 9Б
+2025-09-15 19:00:17 - INFO - 7804831715 used GET SCHEDULE FUNC and choice Четверг
+2025-09-15 19:00:39 - INFO - 7720293751 used START MESSAGE FUNC
+2025-09-15 19:00:47 - INFO - 7720293751 used CHOICE PARALLEL FUNC
+2025-09-15 19:00:50 - INFO - 7720293751 used CHOICE CLASS FUNC and choice 8 классы
+2025-09-15 19:00:53 - INFO - 7720293751 used SAVE CHOICE CLASS FUNC and choice 8К
+2025-09-15 19:00:57 - INFO - 7720293751 used GET SCHEDULE FUNC and choice Вторник
+2025-09-15 19:03:03 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Вторник
+2025-09-15 19:04:10 - INFO - Getting data from server
+2025-09-15 19:04:12 - INFO - Start schedule normalization
+2025-09-15 19:04:12 - INFO - Schedule is the same. Cancel.
+2025-09-15 19:04:12 - INFO - Data received from server
+2025-09-15 19:09:12 - INFO - Getting data from server
+2025-09-15 19:09:13 - INFO - Start schedule normalization
+2025-09-15 19:09:13 - INFO - Schedule is the same. Cancel.
+2025-09-15 19:09:13 - INFO - Data received from server
+2025-09-15 19:14:13 - INFO - Getting data from server
+2025-09-15 19:14:15 - INFO - Start schedule normalization
+2025-09-15 19:14:15 - INFO - Schedule is the same. Cancel.
+2025-09-15 19:14:15 - INFO - Data received from server
+2025-09-15 19:19:15 - INFO - Getting data from server
+2025-09-15 19:19:16 - INFO - Start schedule normalization
+2025-09-15 19:19:16 - INFO - Schedule is the same. Cancel.
+2025-09-15 19:19:16 - INFO - Data received from server
+2025-09-15 19:24:16 - INFO - Getting data from server
+2025-09-15 19:24:18 - INFO - Start schedule normalization
+2025-09-15 19:24:18 - INFO - Schedule is the same. Cancel.
+2025-09-15 19:24:18 - INFO - Data received from server
+2025-09-15 19:26:17 - INFO - 5695330854 used GET SCHEDULE FUNC and choice Вторник
+2025-09-15 19:26:20 - INFO - 5695330854 used GET SCHEDULE FUNC and choice Вторник
+2025-09-15 19:29:18 - INFO - Getting data from server
+2025-09-15 19:29:19 - INFO - Start schedule normalization
+2025-09-15 19:29:19 - INFO - Schedule is the same. Cancel.
+2025-09-15 19:29:19 - INFO - Data received from server
+2025-09-15 19:34:19 - INFO - Getting data from server
+2025-09-15 19:34:21 - INFO - Start schedule normalization
+2025-09-15 19:34:21 - INFO - Schedule is the same. Cancel.
+2025-09-15 19:34:21 - INFO - Data received from server
+2025-09-15 19:34:21 - INFO - 5695330854 used START MESSAGE FUNC
+2025-09-15 19:34:26 - INFO - 5695330854 used CHOICE PARALLEL FUNC
+2025-09-15 19:34:42 - INFO - 5695330854 used START MESSAGE FUNC
+2025-09-15 19:34:44 - INFO - 5695330854 used CHOICE PARALLEL FUNC
+2025-09-15 19:34:46 - ERROR - Infinity polling exception: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-09-15 19:34:46 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connection.py", line 565, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kazak\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+  File "C:\Users\kazak\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kazak\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connection.py", line 565, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kazak\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+  File "C:\Users\kazak\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kazak\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 192, in get_choice_parallel
+    bot.send_message(message.from_user.id, CHOICE_PARALLEL_MESSAGE, reply_markup=markup_parallel)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1800, in send_message
+    apihelper.send_message(
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+    result = _get_req_session().request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+2025-09-15 19:34:46 - INFO - 5695330854 used CHOICE CLASS FUNC and choice 8 классы
+2025-09-15 19:34:49 - INFO - 5695330854 used SAVE CHOICE CLASS FUNC and choice 8К
+2025-09-15 19:34:53 - INFO - 5695330854 used GET SCHEDULE FUNC and choice Вторник
+2025-09-15 19:35:34 - INFO - 6983370282 used START MESSAGE FUNC
+2025-09-15 19:35:37 - INFO - 6983370282 used CHOICE PARALLEL FUNC
+2025-09-15 19:35:39 - INFO - 6983370282 used CHOICE CLASS FUNC and choice 8 классы
+2025-09-15 19:35:43 - INFO - 6983370282 used SAVE CHOICE CLASS FUNC and choice 8К
+2025-09-15 19:35:45 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Вторник
+2025-09-15 19:39:21 - INFO - Getting data from server
+2025-09-15 19:39:22 - INFO - Start schedule normalization
+2025-09-15 19:39:22 - INFO - Schedule is the same. Cancel.
+2025-09-15 19:39:22 - INFO - Data received from server
+2025-09-15 19:44:22 - INFO - Getting data from server
+2025-09-15 19:44:24 - INFO - Start schedule normalization
+2025-09-15 19:44:24 - INFO - Schedule is the same. Cancel.
+2025-09-15 19:44:24 - INFO - Data received from server
+2025-09-15 19:49:24 - INFO - Getting data from server
+2025-09-15 19:49:25 - INFO - Start schedule normalization
+2025-09-15 19:49:26 - INFO - Schedule is the same. Cancel.
+2025-09-15 19:49:26 - INFO - Data received from server
+2025-09-15 19:54:26 - INFO - Getting data from server
+2025-09-15 19:54:27 - INFO - Start schedule normalization
+2025-09-15 19:54:27 - INFO - Schedule is the same. Cancel.
+2025-09-15 19:54:27 - INFO - Data received from server
+2025-09-15 20:00:39 - INFO - ###############################
+2025-09-15 20:00:39 - INFO - TEST INFO LOGGING FINALLY
+2025-09-15 20:00:39 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-15 20:00:39 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-15 20:00:39 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-15 20:00:39 - INFO - LOGGER STARTED
+2025-09-15 20:00:39 - INFO - ###############################
+2025-09-15 20:00:39 - INFO - Stated connect to db
+2025-09-15 20:00:39 - INFO - Users db created/exist
+2025-09-15 20:00:39 - INFO - WS Parser started!
+2025-09-15 20:00:39 - INFO - Getting data from server
+2025-09-15 20:00:40 - INFO - Start schedule normalization
+2025-09-15 20:00:40 - INFO - Schedule is the same. Cancel.
+2025-09-15 20:00:40 - INFO - Data received from server
+2025-09-15 20:05:40 - INFO - Getting data from server
+2025-09-15 20:05:42 - INFO - Start schedule normalization
+2025-09-15 20:05:42 - INFO - Schedule is the same. Cancel.
+2025-09-15 20:05:42 - INFO - Data received from server
+2025-09-15 20:10:42 - INFO - Getting data from server
+2025-09-15 20:10:43 - INFO - Start schedule normalization
+2025-09-15 20:10:43 - INFO - Schedule is the same. Cancel.
+2025-09-15 20:10:43 - INFO - Data received from server
+2025-09-15 20:15:43 - INFO - Getting data from server
+2025-09-15 20:15:45 - INFO - Start schedule normalization
+2025-09-15 20:15:45 - INFO - Schedule is the same. Cancel.
+2025-09-15 20:15:45 - INFO - Data received from server
+2025-09-15 20:20:45 - INFO - Getting data from server
+2025-09-15 20:20:46 - INFO - Start schedule normalization
+2025-09-15 20:20:46 - INFO - Schedule is the same. Cancel.
+2025-09-15 20:20:46 - INFO - Data received from server
+2025-09-15 20:25:46 - INFO - Getting data from server
+2025-09-15 20:25:48 - INFO - Start schedule normalization
+2025-09-15 20:25:48 - INFO - Schedule is the same. Cancel.
+2025-09-15 20:25:48 - INFO - Data received from server
+2025-09-15 20:30:48 - INFO - Getting data from server
+2025-09-15 20:30:49 - INFO - Start schedule normalization
+2025-09-15 20:30:49 - INFO - Schedule is the same. Cancel.
+2025-09-15 20:30:49 - INFO - Data received from server
+2025-09-15 20:34:40 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Вторник
+2025-09-15 20:35:49 - INFO - Getting data from server
+2025-09-15 20:35:51 - INFO - Start schedule normalization
+2025-09-15 20:35:51 - INFO - Schedule is the same. Cancel.
+2025-09-15 20:35:51 - INFO - Data received from server
+2025-09-15 20:40:51 - INFO - Getting data from server
+2025-09-15 20:40:52 - INFO - Start schedule normalization
+2025-09-15 20:40:52 - INFO - Schedule is the same. Cancel.
+2025-09-15 20:40:52 - INFO - Data received from server
+2025-09-15 20:45:52 - INFO - Getting data from server
+2025-09-15 20:45:54 - INFO - Start schedule normalization
+2025-09-15 20:45:54 - INFO - Schedule is the same. Cancel.
+2025-09-15 20:45:54 - INFO - Data received from server
+2025-09-15 20:50:24 - INFO - 321729372 used START MESSAGE FUNC
+2025-09-15 20:50:54 - INFO - Getting data from server
+2025-09-15 20:50:55 - INFO - Start schedule normalization
+2025-09-15 20:50:55 - INFO - Schedule is the same. Cancel.
+2025-09-15 20:50:55 - INFO - Data received from server
+2025-09-15 20:51:01 - INFO - 321729372 used CHOICE PARALLEL FUNC
+2025-09-15 20:51:53 - INFO - 321729372 used CHOICE CLASS FUNC and choice 8 классы
+2025-09-15 20:51:58 - INFO - 321729372 used SAVE CHOICE CLASS FUNC and choice 8К
+2025-09-15 20:52:00 - INFO - 321729372 used GET SCHEDULE FUNC and choice Вторник
+2025-09-15 20:52:44 - INFO - 321729372 used GET SCHEDULE FUNC and choice Понедельник
+2025-09-15 20:52:46 - INFO - 321729372 used GET SCHEDULE FUNC and choice Среда
+2025-09-15 20:53:23 - INFO - 321729372 used GET SCHEDULE FUNC and choice Четверг
+2025-09-15 20:53:27 - INFO - 321729372 used GET SCHEDULE FUNC and choice Пятница
+2025-09-15 20:55:56 - INFO - Getting data from server
+2025-09-15 20:55:57 - INFO - Start schedule normalization
+2025-09-15 20:55:57 - INFO - Schedule is the same. Cancel.
+2025-09-15 20:55:57 - INFO - Data received from server
+2025-09-15 21:00:57 - INFO - Getting data from server
+2025-09-15 21:00:58 - INFO - Start schedule normalization
+2025-09-15 21:00:59 - INFO - Schedule is the same. Cancel.
+2025-09-15 21:00:59 - INFO - Data received from server
+2025-09-15 21:05:59 - INFO - Getting data from server
+2025-09-15 21:06:00 - INFO - Start schedule normalization
+2025-09-15 21:06:00 - INFO - Schedule is the same. Cancel.
+2025-09-15 21:06:00 - INFO - Data received from server
+2025-09-15 21:11:00 - INFO - Getting data from server
+2025-09-15 21:11:01 - INFO - Start schedule normalization
+2025-09-15 21:11:02 - INFO - Schedule is the same. Cancel.
+2025-09-15 21:11:02 - INFO - Data received from server

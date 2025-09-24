@@ -1,0 +1,80 @@
+2025-09-05 07:34:57 - INFO - ###############################
+2025-09-05 07:34:57 - INFO - TEST INFO LOGGING FINALLY
+2025-09-05 07:34:57 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-05 07:34:57 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-05 07:34:57 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-05 07:34:57 - INFO - LOGGER STARTED
+2025-09-05 07:34:57 - INFO - ###############################
+2025-09-05 07:34:57 - INFO - Stated connect to db
+2025-09-05 07:34:57 - INFO - Users db created/exist
+2025-09-05 07:34:59 - INFO - Start schedule normalization
+2025-09-05 07:34:59 - INFO - Schedule normalized
+2025-09-05 14:56:54 - INFO - ###############################
+2025-09-05 14:56:54 - INFO - TEST INFO LOGGING FINALLY
+2025-09-05 14:56:54 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-05 14:56:54 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-05 14:56:54 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-05 14:56:54 - INFO - LOGGER STARTED
+2025-09-05 14:56:54 - INFO - ###############################
+2025-09-05 14:56:54 - INFO - Stated connect to db
+2025-09-05 14:56:54 - INFO - Users db created/exist
+2025-09-05 14:56:56 - INFO - Start schedule normalization
+2025-09-05 14:56:56 - INFO - Schedule normalized
+2025-09-05 14:57:19 - ERROR - Infinity polling: polling exited
+2025-09-05 14:57:19 - ERROR - Break infinity polling
+2025-09-05 15:41:29 - INFO - ###############################
+2025-09-05 15:41:29 - INFO - TEST INFO LOGGING FINALLY
+2025-09-05 15:41:29 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-05 15:41:29 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-05 15:41:29 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-05 15:41:29 - INFO - LOGGER STARTED
+2025-09-05 15:41:29 - INFO - ###############################
+2025-09-05 15:41:29 - INFO - Stated connect to db
+2025-09-05 15:41:29 - INFO - Users db created/exist
+2025-09-05 15:41:31 - INFO - Start schedule normalization
+2025-09-05 15:41:31 - INFO - Schedule is the same. Cancel.
+2025-09-05 15:42:47 - INFO - ###############################
+2025-09-05 15:42:47 - INFO - TEST INFO LOGGING FINALLY
+2025-09-05 15:42:47 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-05 15:42:47 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-05 15:42:47 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-05 15:42:47 - INFO - LOGGER STARTED
+2025-09-05 15:42:47 - INFO - ###############################
+2025-09-05 15:42:47 - INFO - Stated connect to db
+2025-09-05 15:42:47 - INFO - Users db created/exist
+2025-09-05 15:42:48 - INFO - Start schedule normalization
+2025-09-05 15:42:48 - INFO - Schedule is the same. Cancel.
+2025-09-05 15:43:06 - ERROR - Infinity polling: polling exited
+2025-09-05 15:43:06 - ERROR - Break infinity polling
+2025-09-05 15:43:09 - INFO - ###############################
+2025-09-05 15:43:09 - INFO - TEST INFO LOGGING FINALLY
+2025-09-05 15:43:09 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-05 15:43:09 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-05 15:43:09 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-05 15:43:09 - INFO - LOGGER STARTED
+2025-09-05 15:43:09 - INFO - ###############################
+2025-09-05 15:43:09 - INFO - Stated connect to db
+2025-09-05 15:43:09 - INFO - Users db created/exist
+2025-09-05 15:43:10 - INFO - Start schedule normalization
+2025-09-05 15:43:10 - INFO - Schedule is the same. Cancel.
+2025-09-05 16:16:15 - INFO - ###############################
+2025-09-05 16:16:15 - INFO - TEST INFO LOGGING FINALLY
+2025-09-05 16:16:15 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-05 16:16:15 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-05 16:16:15 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-05 16:16:15 - INFO - LOGGER STARTED
+2025-09-05 16:16:15 - INFO - ###############################
+2025-09-05 16:16:15 - INFO - Stated connect to db
+2025-09-05 16:16:15 - INFO - Users db created/exist
+2025-09-05 16:16:16 - INFO - Start schedule normalization
+2025-09-05 16:16:16 - INFO - Schedule is the same. Cancel.
+2025-09-05 16:16:31 - INFO - Start schedule normalization
+2025-09-05 16:16:31 - INFO - Schedule is the same. Cancel.
+2025-09-05 16:16:38 - ERROR - Infinity polling: polling exited
+2025-09-05 16:16:38 - ERROR - Break infinity polling

@@ -1,0 +1,39 @@
+2025-09-11 19:12:44 - INFO - ###############################
+2025-09-11 19:12:44 - INFO - TEST INFO LOGGING FINALLY
+2025-09-11 19:12:44 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-11 19:12:44 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-11 19:12:44 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-11 19:12:44 - INFO - LOGGER STARTED
+2025-09-11 19:12:44 - INFO - ###############################
+2025-09-11 19:12:44 - INFO - Stated connect to db
+2025-09-11 19:12:44 - INFO - Users db created/exist
+2025-09-11 19:12:46 - INFO - Start schedule normalization
+2025-09-11 19:12:46 - INFO - Schedule normalized
+2025-09-11 19:15:00 - ERROR - Infinity polling exception: name 'timedelta' is not defined
+2025-09-11 19:15:01 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 359, in <lambda>
+    bot.register_next_step_handler(message, lambda m: process_ban_duration(m, user_id))
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 367, in process_ban_duration
+    ban_user_by_id(user_id, duration)
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 423, in ban_user_by_id
+    ban_user(from_user, duration_minutes, "Администратор")
+  File "K:\Scedule_Bot_1.0\utils\sql_use.py", line 158, in ban_user
+    ban_end_time = (dt.now() + timedelta(minutes=ban_duration_minutes)).strftime("%Y-%m-%d %H:%M:%S")
+                               ^^^^^^^^^
+NameError: name 'timedelta' is not defined
+

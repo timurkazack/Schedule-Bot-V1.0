@@ -114,7 +114,7 @@ def get_user_data(message):
                 return None
 
     except sq.Error as e:
-        my_logger.error(e, "sql")
+        my_logger.error(e)
         return None
 
 

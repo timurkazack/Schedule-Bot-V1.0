@@ -1,0 +1,1158 @@
+2025-09-22 07:11:45 - INFO - ###############################
+2025-09-22 07:11:45 - INFO - TEST INFO LOGGING FINALLY
+2025-09-22 07:11:45 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-22 07:11:45 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-22 07:11:45 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-22 07:11:45 - INFO - LOGGER STARTED
+2025-09-22 07:11:45 - INFO - ###############################
+2025-09-22 07:11:45 - INFO - Stated connect to db
+2025-09-22 07:11:45 - INFO - Users db created/exist
+2025-09-22 07:11:46 - INFO - WS Parser started!
+2025-09-22 07:11:46 - INFO - Getting data from server
+2025-09-22 07:11:46 - INFO - 2045262706 used CHOICE PARALLEL FUNC
+2025-09-22 07:11:46 - ERROR - Infinity polling exception: 'utf-8' codec can't decode byte 0x82 in position 9: invalid start byte
+2025-09-22 07:11:46 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9759, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 192, in get_choice_parallel
+    for parallel in get_classes():
+                    ^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\utils\get_schedule.py", line 20, in get_classes
+    return json.load(f)["classes_list"]
+           ^^^^^^^^^^^^
+  File "C:\Users\kazak\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+                 ^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x82 in position 9: invalid start byte
+
+2025-09-22 07:11:47 - INFO - Start schedule normalization
+2025-09-22 07:11:47 - ERROR - Error to: utils.normalizer_data_from_server | Index: 8
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\utils\normalizer_data_from_server.py", line 85, in normalizer_data_from_server
+    md5 = json.load(f)["md5"]
+          ^^^^^^^^^^^^
+  File "C:\Users\kazak\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+                 ^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x82 in position 9: invalid start byte
+2025-09-22 07:11:47 - INFO - Data received from server
+2025-09-22 07:14:44 - ERROR - Infinity polling exception: 'utf-8' codec can't decode byte 0x82 in position 9: invalid start byte
+2025-09-22 07:14:44 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9755, in _run_middlewares_and_handler
+    if self._test_message_handler(handler, message):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9684, in _test_message_handler
+    if not self._test_filter(message_filter, filter_value, message):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 9708, in _test_filter
+    return filter_value(message)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\telegram_bot\main.py", line 210, in <lambda>
+    @bot.message_handler(func=lambda message: message.text in [f"{key} {classes_text}" for key in get_classes()])
+                                                                                                  ^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\utils\get_schedule.py", line 20, in get_classes
+    return json.load(f)["classes_list"]
+           ^^^^^^^^^^^^
+  File "C:\Users\kazak\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+                 ^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x82 in position 9: invalid start byte
+
+2025-09-22 07:15:48 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Понедельник
+2025-09-22 07:16:00 - ERROR - Infinity polling: polling exited
+2025-09-22 07:16:00 - ERROR - Break infinity polling
+2025-09-22 07:16:00 - INFO - ###############################
+2025-09-22 07:16:00 - INFO - TEST INFO LOGGING FINALLY
+2025-09-22 07:16:00 - WARNING - TEST WARNING LOGGING FINALLY
+2025-09-22 07:16:00 - ERROR - Error to: utils.my_logger | Index: 0
+NoneType: None
+2025-09-22 07:16:00 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-09-22 07:16:00 - INFO - LOGGER STARTED
+2025-09-22 07:16:00 - INFO - ###############################
+2025-09-22 07:16:00 - INFO - Stated connect to db
+2025-09-22 07:16:00 - INFO - Users db created/exist
+2025-09-22 07:16:00 - INFO - WS Parser started!
+2025-09-22 07:16:00 - INFO - Getting data from server
+2025-09-22 07:16:01 - INFO - Start schedule normalization
+2025-09-22 07:16:01 - INFO - Schedule normalized
+2025-09-22 07:16:02 - INFO - Data received from server
+2025-09-22 07:16:14 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Понедельник
+2025-09-22 07:16:15 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Вторник
+2025-09-22 07:21:02 - INFO - Getting data from server
+2025-09-22 07:21:03 - INFO - Start schedule normalization
+2025-09-22 07:21:03 - INFO - Schedule is the same. Cancel.
+2025-09-22 07:21:03 - INFO - Data received from server
+2025-09-22 07:26:03 - INFO - Getting data from server
+2025-09-22 07:26:05 - INFO - Start schedule normalization
+2025-09-22 07:26:05 - INFO - Schedule normalized
+2025-09-22 07:26:05 - INFO - Data received from server
+2025-09-22 07:31:05 - INFO - Getting data from server
+2025-09-22 07:31:06 - INFO - Start schedule normalization
+2025-09-22 07:31:07 - INFO - Schedule is the same. Cancel.
+2025-09-22 07:31:07 - INFO - Data received from server
+2025-09-22 07:36:07 - INFO - Getting data from server
+2025-09-22 07:36:08 - INFO - Start schedule normalization
+2025-09-22 07:36:08 - INFO - Schedule is the same. Cancel.
+2025-09-22 07:36:08 - INFO - Data received from server
+2025-09-22 07:41:08 - INFO - Getting data from server
+2025-09-22 07:41:09 - INFO - Start schedule normalization
+2025-09-22 07:41:10 - INFO - Schedule is the same. Cancel.
+2025-09-22 07:41:10 - INFO - Data received from server
+2025-09-22 07:46:10 - INFO - Getting data from server
+2025-09-22 07:46:11 - INFO - Start schedule normalization
+2025-09-22 07:46:11 - INFO - Schedule is the same. Cancel.
+2025-09-22 07:46:11 - INFO - Data received from server
+2025-09-22 07:51:11 - INFO - Getting data from server
+2025-09-22 07:51:13 - INFO - Start schedule normalization
+2025-09-22 07:51:13 - INFO - Schedule normalized
+2025-09-22 07:51:13 - INFO - Data received from server
+2025-09-22 07:56:13 - INFO - Getting data from server
+2025-09-22 07:56:14 - INFO - Start schedule normalization
+2025-09-22 07:56:14 - INFO - Schedule is the same. Cancel.
+2025-09-22 07:56:14 - INFO - Data received from server
+2025-09-22 08:01:14 - INFO - Getting data from server
+2025-09-22 08:01:16 - INFO - Start schedule normalization
+2025-09-22 08:01:16 - INFO - Schedule is the same. Cancel.
+2025-09-22 08:01:16 - INFO - Data received from server
+2025-09-22 08:06:16 - INFO - Getting data from server
+2025-09-22 08:06:17 - INFO - Start schedule normalization
+2025-09-22 08:06:17 - INFO - Schedule is the same. Cancel.
+2025-09-22 08:06:17 - INFO - Data received from server
+2025-09-22 08:11:17 - INFO - Getting data from server
+2025-09-22 08:11:19 - INFO - Start schedule normalization
+2025-09-22 08:11:19 - INFO - Schedule is the same. Cancel.
+2025-09-22 08:11:19 - INFO - Data received from server
+2025-09-22 08:16:19 - INFO - Getting data from server
+2025-09-22 08:16:20 - INFO - Start schedule normalization
+2025-09-22 08:16:20 - INFO - Schedule is the same. Cancel.
+2025-09-22 08:16:20 - INFO - Data received from server
+2025-09-22 08:21:20 - INFO - Getting data from server
+2025-09-22 08:21:22 - INFO - Start schedule normalization
+2025-09-22 08:21:22 - INFO - Schedule is the same. Cancel.
+2025-09-22 08:21:22 - INFO - Data received from server
+2025-09-22 08:26:22 - INFO - Getting data from server
+2025-09-22 08:26:23 - INFO - Start schedule normalization
+2025-09-22 08:26:23 - INFO - Schedule is the same. Cancel.
+2025-09-22 08:26:23 - INFO - Data received from server
+2025-09-22 08:31:23 - INFO - Getting data from server
+2025-09-22 08:31:25 - INFO - Start schedule normalization
+2025-09-22 08:31:25 - INFO - Schedule is the same. Cancel.
+2025-09-22 08:31:25 - INFO - Data received from server
+2025-09-22 08:36:25 - INFO - Getting data from server
+2025-09-22 08:36:26 - INFO - Start schedule normalization
+2025-09-22 08:36:26 - INFO - Schedule is the same. Cancel.
+2025-09-22 08:36:26 - INFO - Data received from server
+2025-09-22 08:41:26 - INFO - Getting data from server
+2025-09-22 08:41:28 - INFO - Start schedule normalization
+2025-09-22 08:41:28 - INFO - Schedule is the same. Cancel.
+2025-09-22 08:41:28 - INFO - Data received from server
+2025-09-22 08:46:28 - INFO - Getting data from server
+2025-09-22 08:46:29 - INFO - Start schedule normalization
+2025-09-22 08:46:29 - INFO - Schedule is the same. Cancel.
+2025-09-22 08:46:29 - INFO - Data received from server
+2025-09-22 08:51:29 - INFO - Getting data from server
+2025-09-22 08:51:31 - INFO - Start schedule normalization
+2025-09-22 08:51:31 - INFO - Schedule is the same. Cancel.
+2025-09-22 08:51:31 - INFO - Data received from server
+2025-09-22 08:56:31 - INFO - Getting data from server
+2025-09-22 08:56:32 - INFO - Start schedule normalization
+2025-09-22 08:56:32 - INFO - Schedule is the same. Cancel.
+2025-09-22 08:56:32 - INFO - Data received from server
+2025-09-22 09:01:32 - INFO - Getting data from server
+2025-09-22 09:01:34 - INFO - Start schedule normalization
+2025-09-22 09:01:34 - INFO - Schedule is the same. Cancel.
+2025-09-22 09:01:34 - INFO - Data received from server
+2025-09-22 09:06:34 - INFO - Getting data from server
+2025-09-22 09:06:35 - INFO - Start schedule normalization
+2025-09-22 09:06:35 - INFO - Schedule is the same. Cancel.
+2025-09-22 09:06:35 - INFO - Data received from server
+2025-09-22 09:11:35 - INFO - Getting data from server
+2025-09-22 09:11:37 - INFO - Start schedule normalization
+2025-09-22 09:11:37 - INFO - Schedule is the same. Cancel.
+2025-09-22 09:11:37 - INFO - Data received from server
+2025-09-22 09:16:37 - INFO - Getting data from server
+2025-09-22 09:16:38 - INFO - Start schedule normalization
+2025-09-22 09:16:39 - INFO - Schedule is the same. Cancel.
+2025-09-22 09:16:39 - INFO - Data received from server
+2025-09-22 09:21:39 - INFO - Getting data from server
+2025-09-22 09:21:40 - INFO - Start schedule normalization
+2025-09-22 09:21:40 - INFO - Schedule is the same. Cancel.
+2025-09-22 09:21:40 - INFO - Data received from server
+2025-09-22 09:26:40 - INFO - Getting data from server
+2025-09-22 09:26:42 - INFO - Start schedule normalization
+2025-09-22 09:26:42 - INFO - Schedule is the same. Cancel.
+2025-09-22 09:26:42 - INFO - Data received from server
+2025-09-22 09:31:42 - INFO - Getting data from server
+2025-09-22 09:31:43 - INFO - Start schedule normalization
+2025-09-22 09:31:43 - INFO - Schedule is the same. Cancel.
+2025-09-22 09:31:43 - INFO - Data received from server
+2025-09-22 09:36:43 - INFO - Getting data from server
+2025-09-22 09:36:45 - INFO - Start schedule normalization
+2025-09-22 09:36:45 - INFO - Schedule is the same. Cancel.
+2025-09-22 09:36:45 - INFO - Data received from server
+2025-09-22 09:41:45 - INFO - Getting data from server
+2025-09-22 09:41:46 - INFO - Start schedule normalization
+2025-09-22 09:41:46 - INFO - Schedule is the same. Cancel.
+2025-09-22 09:41:46 - INFO - Data received from server
+2025-09-22 09:46:46 - INFO - Getting data from server
+2025-09-22 09:46:47 - INFO - Start schedule normalization
+2025-09-22 09:46:48 - INFO - Schedule is the same. Cancel.
+2025-09-22 09:46:48 - INFO - Data received from server
+2025-09-22 09:51:48 - INFO - Getting data from server
+2025-09-22 09:51:49 - INFO - Start schedule normalization
+2025-09-22 09:51:49 - INFO - Schedule is the same. Cancel.
+2025-09-22 09:51:49 - INFO - Data received from server
+2025-09-22 09:56:49 - INFO - Getting data from server
+2025-09-22 09:56:51 - INFO - Start schedule normalization
+2025-09-22 09:56:51 - INFO - Schedule is the same. Cancel.
+2025-09-22 09:56:51 - INFO - Data received from server
+2025-09-22 10:01:51 - INFO - Getting data from server
+2025-09-22 10:01:52 - INFO - Start schedule normalization
+2025-09-22 10:01:52 - INFO - Schedule is the same. Cancel.
+2025-09-22 10:01:52 - INFO - Data received from server
+2025-09-22 10:06:52 - INFO - Getting data from server
+2025-09-22 10:06:54 - INFO - Start schedule normalization
+2025-09-22 10:06:54 - INFO - Schedule is the same. Cancel.
+2025-09-22 10:06:54 - INFO - Data received from server
+2025-09-22 10:11:54 - INFO - Getting data from server
+2025-09-22 10:11:55 - INFO - Start schedule normalization
+2025-09-22 10:11:55 - INFO - Schedule is the same. Cancel.
+2025-09-22 10:11:55 - INFO - Data received from server
+2025-09-22 10:16:55 - INFO - Getting data from server
+2025-09-22 10:16:57 - INFO - Start schedule normalization
+2025-09-22 10:16:57 - INFO - Schedule is the same. Cancel.
+2025-09-22 10:16:57 - INFO - Data received from server
+2025-09-22 10:21:57 - INFO - Getting data from server
+2025-09-22 10:21:58 - INFO - Start schedule normalization
+2025-09-22 10:21:58 - INFO - Schedule is the same. Cancel.
+2025-09-22 10:21:58 - INFO - Data received from server
+2025-09-22 10:26:58 - INFO - Getting data from server
+2025-09-22 10:27:00 - INFO - Start schedule normalization
+2025-09-22 10:27:00 - INFO - Schedule is the same. Cancel.
+2025-09-22 10:27:00 - INFO - Data received from server
+2025-09-22 10:32:00 - INFO - Getting data from server
+2025-09-22 10:32:01 - INFO - Start schedule normalization
+2025-09-22 10:32:01 - INFO - Schedule is the same. Cancel.
+2025-09-22 10:32:01 - INFO - Data received from server
+2025-09-22 10:37:01 - INFO - Getting data from server
+2025-09-22 10:37:03 - INFO - Start schedule normalization
+2025-09-22 10:37:03 - INFO - Schedule is the same. Cancel.
+2025-09-22 10:37:03 - INFO - Data received from server
+2025-09-22 10:42:03 - INFO - Getting data from server
+2025-09-22 10:42:04 - INFO - Start schedule normalization
+2025-09-22 10:42:05 - INFO - Schedule is the same. Cancel.
+2025-09-22 10:42:05 - INFO - Data received from server
+2025-09-22 10:47:05 - INFO - Getting data from server
+2025-09-22 10:47:07 - INFO - Start schedule normalization
+2025-09-22 10:47:07 - INFO - Schedule is the same. Cancel.
+2025-09-22 10:47:07 - INFO - Data received from server
+2025-09-22 10:52:07 - INFO - Getting data from server
+2025-09-22 10:52:08 - INFO - Start schedule normalization
+2025-09-22 10:52:08 - INFO - Schedule is the same. Cancel.
+2025-09-22 10:52:08 - INFO - Data received from server
+2025-09-22 10:57:08 - INFO - Getting data from server
+2025-09-22 10:57:10 - INFO - Start schedule normalization
+2025-09-22 10:57:10 - INFO - Schedule is the same. Cancel.
+2025-09-22 10:57:10 - INFO - Data received from server
+2025-09-22 11:02:10 - INFO - Getting data from server
+2025-09-22 11:02:11 - INFO - Start schedule normalization
+2025-09-22 11:02:11 - INFO - Schedule is the same. Cancel.
+2025-09-22 11:02:11 - INFO - Data received from server
+2025-09-22 11:07:11 - INFO - Getting data from server
+2025-09-22 11:07:13 - INFO - Start schedule normalization
+2025-09-22 11:07:13 - INFO - Schedule is the same. Cancel.
+2025-09-22 11:07:13 - INFO - Data received from server
+2025-09-22 11:12:13 - INFO - Getting data from server
+2025-09-22 11:12:14 - INFO - Start schedule normalization
+2025-09-22 11:12:14 - INFO - Schedule is the same. Cancel.
+2025-09-22 11:12:14 - INFO - Data received from server
+2025-09-22 11:17:14 - INFO - Getting data from server
+2025-09-22 11:17:16 - INFO - Start schedule normalization
+2025-09-22 11:17:16 - INFO - Schedule is the same. Cancel.
+2025-09-22 11:17:16 - INFO - Data received from server
+2025-09-22 11:17:47 - ERROR - Infinity polling exception: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8004422788:***********************************/getUpdates?offset=218512209&timeout=20 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF9A47FFB0>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2025-09-22 11:17:47 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kazak\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x000001AF9A47FFB0>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8004422788:***********************************/getUpdates?offset=218512209&timeout=20 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF9A47FFB0>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+    result = _get_req_session().request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8004422788:***********************************/getUpdates?offset=218512209&timeout=20 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF9A47FFB0>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+
+2025-09-22 11:17:50 - ERROR - Infinity polling exception: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8004422788:***********************************/getUpdates?offset=218512209&timeout=20 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF9A518770>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2025-09-22 11:17:50 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kazak\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x000001AF9A518770>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8004422788:***********************************/getUpdates?offset=218512209&timeout=20 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF9A518770>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+    result = _get_req_session().request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8004422788:***********************************/getUpdates?offset=218512209&timeout=20 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF9A518770>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+
+2025-09-22 11:17:53 - ERROR - Infinity polling exception: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8004422788:***********************************/getUpdates?offset=218512209&timeout=20 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF9A54B230>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2025-09-22 11:17:53 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kazak\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x000001AF9A54B230>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8004422788:***********************************/getUpdates?offset=218512209&timeout=20 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF9A54B230>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+    result = _get_req_session().request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8004422788:***********************************/getUpdates?offset=218512209&timeout=20 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF9A54B230>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+
+2025-09-22 11:17:56 - ERROR - Infinity polling exception: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8004422788:***********************************/getUpdates?offset=218512209&timeout=20 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF9A5181D0>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2025-09-22 11:17:56 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kazak\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x000001AF9A5181D0>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8004422788:***********************************/getUpdates?offset=218512209&timeout=20 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF9A5181D0>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+    result = _get_req_session().request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "K:\Scedule_Bot_1.0\.venv\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8004422788:***********************************/getUpdates?offset=218512209&timeout=20 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001AF9A5181D0>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+
+2025-09-22 11:22:16 - INFO - Getting data from server
+2025-09-22 11:22:17 - INFO - Start schedule normalization
+2025-09-22 11:22:17 - INFO - Schedule is the same. Cancel.
+2025-09-22 11:22:17 - INFO - Data received from server
+2025-09-22 11:27:17 - INFO - Getting data from server
+2025-09-22 11:27:19 - INFO - Start schedule normalization
+2025-09-22 11:27:19 - INFO - Schedule is the same. Cancel.
+2025-09-22 11:27:19 - INFO - Data received from server
+2025-09-22 11:32:19 - INFO - Getting data from server
+2025-09-22 11:32:20 - INFO - Start schedule normalization
+2025-09-22 11:32:21 - INFO - Schedule is the same. Cancel.
+2025-09-22 11:32:21 - INFO - Data received from server
+2025-09-22 11:37:21 - INFO - Getting data from server
+2025-09-22 11:37:22 - INFO - Start schedule normalization
+2025-09-22 11:37:22 - INFO - Schedule is the same. Cancel.
+2025-09-22 11:37:22 - INFO - Data received from server
+2025-09-22 11:42:22 - INFO - Getting data from server
+2025-09-22 11:42:24 - INFO - Start schedule normalization
+2025-09-22 11:42:24 - INFO - Schedule is the same. Cancel.
+2025-09-22 11:42:24 - INFO - Data received from server
+2025-09-22 11:47:24 - INFO - Getting data from server
+2025-09-22 11:47:26 - INFO - Start schedule normalization
+2025-09-22 11:47:26 - INFO - Schedule is the same. Cancel.
+2025-09-22 11:47:26 - INFO - Data received from server
+2025-09-22 11:52:26 - INFO - Getting data from server
+2025-09-22 11:52:27 - INFO - Start schedule normalization
+2025-09-22 11:52:27 - INFO - Schedule is the same. Cancel.
+2025-09-22 11:52:27 - INFO - Data received from server
+2025-09-22 11:57:27 - INFO - Getting data from server
+2025-09-22 11:57:29 - INFO - Start schedule normalization
+2025-09-22 11:57:29 - INFO - Schedule is the same. Cancel.
+2025-09-22 11:57:29 - INFO - Data received from server
+2025-09-22 12:02:29 - INFO - Getting data from server
+2025-09-22 12:02:30 - INFO - Start schedule normalization
+2025-09-22 12:02:30 - INFO - Schedule is the same. Cancel.
+2025-09-22 12:02:30 - INFO - Data received from server
+2025-09-22 12:07:30 - INFO - Getting data from server
+2025-09-22 12:07:32 - INFO - Start schedule normalization
+2025-09-22 12:07:32 - INFO - Schedule is the same. Cancel.
+2025-09-22 12:07:32 - INFO - Data received from server
+2025-09-22 12:12:32 - INFO - Getting data from server
+2025-09-22 12:12:33 - INFO - Start schedule normalization
+2025-09-22 12:12:33 - INFO - Schedule is the same. Cancel.
+2025-09-22 12:12:33 - INFO - Data received from server
+2025-09-22 12:17:33 - INFO - Getting data from server
+2025-09-22 12:17:35 - INFO - Start schedule normalization
+2025-09-22 12:17:35 - INFO - Schedule is the same. Cancel.
+2025-09-22 12:17:35 - INFO - Data received from server
+2025-09-22 12:22:35 - INFO - Getting data from server
+2025-09-22 12:22:36 - INFO - Start schedule normalization
+2025-09-22 12:22:36 - INFO - Schedule is the same. Cancel.
+2025-09-22 12:22:36 - INFO - Data received from server
+2025-09-22 12:27:36 - INFO - Getting data from server
+2025-09-22 12:27:38 - INFO - Start schedule normalization
+2025-09-22 12:27:38 - INFO - Schedule is the same. Cancel.
+2025-09-22 12:27:38 - INFO - Data received from server
+2025-09-22 12:32:38 - INFO - Getting data from server
+2025-09-22 12:32:39 - INFO - Start schedule normalization
+2025-09-22 12:32:39 - INFO - Schedule is the same. Cancel.
+2025-09-22 12:32:39 - INFO - Data received from server
+2025-09-22 12:37:39 - INFO - Getting data from server
+2025-09-22 12:37:41 - INFO - Start schedule normalization
+2025-09-22 12:37:41 - INFO - Schedule is the same. Cancel.
+2025-09-22 12:37:41 - INFO - Data received from server
+2025-09-22 12:42:41 - INFO - Getting data from server
+2025-09-22 12:42:42 - INFO - Start schedule normalization
+2025-09-22 12:42:42 - INFO - Schedule is the same. Cancel.
+2025-09-22 12:42:42 - INFO - Data received from server
+2025-09-22 12:47:42 - INFO - Getting data from server
+2025-09-22 12:47:44 - INFO - Start schedule normalization
+2025-09-22 12:47:44 - INFO - Schedule is the same. Cancel.
+2025-09-22 12:47:44 - INFO - Data received from server
+2025-09-22 12:52:44 - INFO - Getting data from server
+2025-09-22 12:52:45 - INFO - Start schedule normalization
+2025-09-22 12:52:45 - INFO - Schedule is the same. Cancel.
+2025-09-22 12:52:45 - INFO - Data received from server
+2025-09-22 12:57:45 - INFO - Getting data from server
+2025-09-22 12:57:47 - INFO - Start schedule normalization
+2025-09-22 12:57:47 - INFO - Schedule is the same. Cancel.
+2025-09-22 12:57:47 - INFO - Data received from server
+2025-09-22 13:02:47 - INFO - Getting data from server
+2025-09-22 13:02:48 - INFO - Start schedule normalization
+2025-09-22 13:02:48 - INFO - Schedule is the same. Cancel.
+2025-09-22 13:02:48 - INFO - Data received from server
+2025-09-22 13:07:48 - INFO - Getting data from server
+2025-09-22 13:07:49 - INFO - Start schedule normalization
+2025-09-22 13:07:50 - INFO - Schedule is the same. Cancel.
+2025-09-22 13:07:50 - INFO - Data received from server
+2025-09-22 13:12:50 - INFO - Getting data from server
+2025-09-22 13:12:51 - INFO - Start schedule normalization
+2025-09-22 13:12:51 - INFO - Schedule is the same. Cancel.
+2025-09-22 13:12:51 - INFO - Data received from server
+2025-09-22 13:17:51 - INFO - Getting data from server
+2025-09-22 13:17:52 - INFO - Start schedule normalization
+2025-09-22 13:17:52 - INFO - Schedule is the same. Cancel.
+2025-09-22 13:17:52 - INFO - Data received from server
+2025-09-22 13:22:52 - INFO - Getting data from server
+2025-09-22 13:22:54 - INFO - Start schedule normalization
+2025-09-22 13:22:54 - INFO - Schedule is the same. Cancel.
+2025-09-22 13:22:54 - INFO - Data received from server
+2025-09-22 13:27:54 - INFO - Getting data from server
+2025-09-22 13:27:55 - INFO - Start schedule normalization
+2025-09-22 13:27:55 - INFO - Schedule is the same. Cancel.
+2025-09-22 13:27:55 - INFO - Data received from server
+2025-09-22 13:32:55 - INFO - Getting data from server
+2025-09-22 13:32:57 - INFO - Start schedule normalization
+2025-09-22 13:32:57 - INFO - Schedule is the same. Cancel.
+2025-09-22 13:32:57 - INFO - Data received from server
+2025-09-22 13:37:57 - INFO - Getting data from server
+2025-09-22 13:37:59 - INFO - Start schedule normalization
+2025-09-22 13:37:59 - INFO - Schedule is the same. Cancel.
+2025-09-22 13:37:59 - INFO - Data received from server
+2025-09-22 13:42:59 - INFO - Getting data from server
+2025-09-22 13:43:00 - INFO - Start schedule normalization
+2025-09-22 13:43:00 - INFO - Schedule is the same. Cancel.
+2025-09-22 13:43:00 - INFO - Data received from server
+2025-09-22 13:48:00 - INFO - Getting data from server
+2025-09-22 13:48:02 - INFO - Start schedule normalization
+2025-09-22 13:48:02 - INFO - Schedule is the same. Cancel.
+2025-09-22 13:48:02 - INFO - Data received from server
+2025-09-22 13:53:02 - INFO - Getting data from server
+2025-09-22 13:53:03 - INFO - Start schedule normalization
+2025-09-22 13:53:03 - INFO - Schedule is the same. Cancel.
+2025-09-22 13:53:03 - INFO - Data received from server
+2025-09-22 13:58:03 - INFO - Getting data from server
+2025-09-22 13:58:04 - INFO - Start schedule normalization
+2025-09-22 13:58:05 - INFO - Schedule is the same. Cancel.
+2025-09-22 13:58:05 - INFO - Data received from server
+2025-09-22 14:03:05 - INFO - Getting data from server
+2025-09-22 14:03:06 - INFO - Start schedule normalization
+2025-09-22 14:03:06 - INFO - Schedule is the same. Cancel.
+2025-09-22 14:03:06 - INFO - Data received from server
+2025-09-22 14:08:06 - INFO - Getting data from server
+2025-09-22 14:08:07 - INFO - Start schedule normalization
+2025-09-22 14:08:08 - INFO - Schedule is the same. Cancel.
+2025-09-22 14:08:08 - INFO - Data received from server
+2025-09-22 14:13:08 - INFO - Getting data from server
+2025-09-22 14:13:09 - INFO - Start schedule normalization
+2025-09-22 14:13:09 - INFO - Schedule is the same. Cancel.
+2025-09-22 14:13:09 - INFO - Data received from server
+2025-09-22 14:18:09 - INFO - Getting data from server
+2025-09-22 14:18:10 - INFO - Start schedule normalization
+2025-09-22 14:18:10 - INFO - Schedule normalized
+2025-09-22 14:18:10 - INFO - Data received from server
+2025-09-22 14:23:10 - INFO - Getting data from server
+2025-09-22 14:23:12 - INFO - Start schedule normalization
+2025-09-22 14:23:12 - INFO - Schedule is the same. Cancel.
+2025-09-22 14:23:12 - INFO - Data received from server
+2025-09-22 14:28:12 - INFO - Getting data from server
+2025-09-22 14:28:13 - INFO - Start schedule normalization
+2025-09-22 14:28:13 - INFO - Schedule is the same. Cancel.
+2025-09-22 14:28:13 - INFO - Data received from server
+2025-09-22 14:33:13 - INFO - Getting data from server
+2025-09-22 14:33:15 - INFO - Start schedule normalization
+2025-09-22 14:33:15 - INFO - Schedule is the same. Cancel.
+2025-09-22 14:33:15 - INFO - Data received from server
+2025-09-22 14:38:15 - INFO - Getting data from server
+2025-09-22 14:38:16 - INFO - Start schedule normalization
+2025-09-22 14:38:16 - INFO - Schedule is the same. Cancel.
+2025-09-22 14:38:16 - INFO - Data received from server
+2025-09-22 14:43:16 - INFO - Getting data from server
+2025-09-22 14:43:17 - INFO - Start schedule normalization
+2025-09-22 14:43:18 - INFO - Schedule is the same. Cancel.
+2025-09-22 14:43:18 - INFO - Data received from server
+2025-09-22 14:48:18 - INFO - Getting data from server
+2025-09-22 14:48:19 - INFO - Start schedule normalization
+2025-09-22 14:48:19 - INFO - Schedule is the same. Cancel.
+2025-09-22 14:48:19 - INFO - Data received from server
+2025-09-22 14:53:19 - INFO - Getting data from server
+2025-09-22 14:53:21 - INFO - Start schedule normalization
+2025-09-22 14:53:21 - INFO - Schedule is the same. Cancel.
+2025-09-22 14:53:21 - INFO - Data received from server
+2025-09-22 14:58:21 - INFO - Getting data from server
+2025-09-22 14:58:22 - INFO - Start schedule normalization
+2025-09-22 14:58:22 - INFO - Schedule is the same. Cancel.
+2025-09-22 14:58:22 - INFO - Data received from server
+2025-09-22 15:03:22 - INFO - Getting data from server
+2025-09-22 15:03:24 - INFO - Start schedule normalization
+2025-09-22 15:03:24 - INFO - Schedule is the same. Cancel.
+2025-09-22 15:03:24 - INFO - Data received from server
+2025-09-22 15:08:24 - INFO - Getting data from server
+2025-09-22 15:08:25 - INFO - Start schedule normalization
+2025-09-22 15:08:25 - INFO - Schedule is the same. Cancel.
+2025-09-22 15:08:25 - INFO - Data received from server
+2025-09-22 15:13:25 - INFO - Getting data from server
+2025-09-22 15:13:27 - INFO - Start schedule normalization
+2025-09-22 15:13:27 - INFO - Schedule is the same. Cancel.
+2025-09-22 15:13:27 - INFO - Data received from server
+2025-09-22 15:18:27 - INFO - Getting data from server
+2025-09-22 15:18:28 - INFO - Start schedule normalization
+2025-09-22 15:18:28 - INFO - Schedule is the same. Cancel.
+2025-09-22 15:18:28 - INFO - Data received from server
+2025-09-22 15:23:28 - INFO - Getting data from server
+2025-09-22 15:23:30 - INFO - Start schedule normalization
+2025-09-22 15:23:30 - INFO - Schedule is the same. Cancel.
+2025-09-22 15:23:30 - INFO - Data received from server
+2025-09-22 15:28:30 - INFO - Getting data from server
+2025-09-22 15:28:31 - INFO - Start schedule normalization
+2025-09-22 15:28:31 - INFO - Schedule is the same. Cancel.
+2025-09-22 15:28:31 - INFO - Data received from server
+2025-09-22 15:33:31 - INFO - Getting data from server
+2025-09-22 15:33:33 - INFO - Start schedule normalization
+2025-09-22 15:33:33 - INFO - Schedule is the same. Cancel.
+2025-09-22 15:33:33 - INFO - Data received from server
+2025-09-22 15:38:33 - INFO - Getting data from server
+2025-09-22 15:38:34 - INFO - Start schedule normalization
+2025-09-22 15:38:34 - INFO - Schedule is the same. Cancel.
+2025-09-22 15:38:34 - INFO - Data received from server
+2025-09-22 15:43:34 - INFO - Getting data from server
+2025-09-22 15:43:36 - INFO - Start schedule normalization
+2025-09-22 15:43:36 - INFO - Schedule normalized
+2025-09-22 15:43:36 - INFO - Data received from server
+2025-09-22 15:48:36 - INFO - Getting data from server
+2025-09-22 15:48:37 - INFO - Start schedule normalization
+2025-09-22 15:48:37 - INFO - Schedule is the same. Cancel.
+2025-09-22 15:48:37 - INFO - Data received from server
+2025-09-22 15:53:37 - INFO - Getting data from server
+2025-09-22 15:53:39 - INFO - Start schedule normalization
+2025-09-22 15:53:39 - INFO - Schedule is the same. Cancel.
+2025-09-22 15:53:39 - INFO - Data received from server
+2025-09-22 15:58:39 - INFO - Getting data from server
+2025-09-22 15:58:40 - INFO - Start schedule normalization
+2025-09-22 15:58:40 - INFO - Schedule is the same. Cancel.
+2025-09-22 15:58:40 - INFO - Data received from server
+2025-09-22 16:03:40 - INFO - Getting data from server
+2025-09-22 16:03:42 - INFO - Start schedule normalization
+2025-09-22 16:03:42 - INFO - Schedule is the same. Cancel.
+2025-09-22 16:03:42 - INFO - Data received from server
+2025-09-22 16:08:42 - INFO - Getting data from server
+2025-09-22 16:08:43 - INFO - Start schedule normalization
+2025-09-22 16:08:43 - INFO - Schedule is the same. Cancel.
+2025-09-22 16:08:43 - INFO - Data received from server
+2025-09-22 16:13:43 - INFO - Getting data from server
+2025-09-22 16:13:45 - INFO - Start schedule normalization
+2025-09-22 16:13:45 - INFO - Schedule is the same. Cancel.
+2025-09-22 16:13:45 - INFO - Data received from server
+2025-09-22 16:18:45 - INFO - Getting data from server
+2025-09-22 16:19:06 - INFO - Data received from server
+2025-09-22 16:24:06 - INFO - Getting data from server
+2025-09-22 16:24:07 - INFO - Start schedule normalization
+2025-09-22 16:24:07 - INFO - Schedule normalized
+2025-09-22 16:24:07 - INFO - Data received from server
+2025-09-22 16:29:07 - INFO - Getting data from server
+2025-09-22 16:29:09 - INFO - Start schedule normalization
+2025-09-22 16:29:09 - INFO - Schedule is the same. Cancel.
+2025-09-22 16:29:09 - INFO - Data received from server
+2025-09-22 16:34:09 - INFO - Getting data from server
+2025-09-22 16:34:10 - INFO - Start schedule normalization
+2025-09-22 16:34:10 - INFO - Schedule is the same. Cancel.
+2025-09-22 16:34:10 - INFO - Data received from server
+2025-09-22 16:39:10 - INFO - Getting data from server
+2025-09-22 16:39:12 - INFO - Start schedule normalization
+2025-09-22 16:39:12 - INFO - Schedule is the same. Cancel.
+2025-09-22 16:39:12 - INFO - Data received from server
+2025-09-22 16:44:12 - INFO - Getting data from server
+2025-09-22 16:44:14 - INFO - Start schedule normalization
+2025-09-22 16:44:14 - INFO - Schedule is the same. Cancel.
+2025-09-22 16:44:14 - INFO - Data received from server
+2025-09-22 16:49:14 - INFO - Getting data from server
+2025-09-22 16:49:15 - INFO - Start schedule normalization
+2025-09-22 16:49:15 - INFO - Schedule is the same. Cancel.
+2025-09-22 16:49:15 - INFO - Data received from server
+2025-09-22 16:54:15 - INFO - Getting data from server
+2025-09-22 16:54:17 - INFO - Start schedule normalization
+2025-09-22 16:54:17 - INFO - Schedule is the same. Cancel.
+2025-09-22 16:54:17 - INFO - Data received from server
+2025-09-22 16:59:17 - INFO - Getting data from server
+2025-09-22 16:59:18 - INFO - Start schedule normalization
+2025-09-22 16:59:18 - INFO - Schedule normalized
+2025-09-22 16:59:18 - INFO - Data received from server
+2025-09-22 17:04:18 - INFO - Getting data from server
+2025-09-22 17:04:20 - INFO - Start schedule normalization
+2025-09-22 17:04:20 - INFO - Schedule is the same. Cancel.
+2025-09-22 17:04:20 - INFO - Data received from server
+2025-09-22 17:09:20 - INFO - Getting data from server
+2025-09-22 17:09:21 - INFO - Start schedule normalization
+2025-09-22 17:09:21 - INFO - Schedule is the same. Cancel.
+2025-09-22 17:09:21 - INFO - Data received from server
+2025-09-22 17:14:21 - INFO - Getting data from server
+2025-09-22 17:14:23 - INFO - Start schedule normalization
+2025-09-22 17:14:23 - INFO - Schedule is the same. Cancel.
+2025-09-22 17:14:23 - INFO - Data received from server
+2025-09-22 17:19:23 - INFO - Getting data from server
+2025-09-22 17:19:24 - INFO - Start schedule normalization
+2025-09-22 17:19:24 - INFO - Schedule is the same. Cancel.
+2025-09-22 17:19:24 - INFO - Data received from server
+2025-09-22 17:24:24 - INFO - Getting data from server
+2025-09-22 17:24:26 - INFO - Start schedule normalization
+2025-09-22 17:24:26 - INFO - Schedule is the same. Cancel.
+2025-09-22 17:24:26 - INFO - Data received from server
+2025-09-22 17:29:26 - INFO - Getting data from server
+2025-09-22 17:29:27 - INFO - Start schedule normalization
+2025-09-22 17:29:27 - INFO - Schedule is the same. Cancel.
+2025-09-22 17:29:27 - INFO - Data received from server
+2025-09-22 17:34:27 - INFO - Getting data from server
+2025-09-22 17:34:29 - INFO - Start schedule normalization
+2025-09-22 17:34:29 - INFO - Schedule is the same. Cancel.
+2025-09-22 17:34:29 - INFO - Data received from server
+2025-09-22 17:39:29 - INFO - Getting data from server
+2025-09-22 17:39:30 - INFO - Start schedule normalization
+2025-09-22 17:39:30 - INFO - Schedule is the same. Cancel.
+2025-09-22 17:39:30 - INFO - Data received from server
+2025-09-22 17:44:30 - INFO - Getting data from server
+2025-09-22 17:44:32 - INFO - Start schedule normalization
+2025-09-22 17:44:32 - INFO - Schedule is the same. Cancel.
+2025-09-22 17:44:32 - INFO - Data received from server
+2025-09-22 17:49:32 - INFO - Getting data from server
+2025-09-22 17:49:33 - INFO - Start schedule normalization
+2025-09-22 17:49:33 - INFO - Schedule is the same. Cancel.
+2025-09-22 17:49:33 - INFO - Data received from server
+2025-09-22 17:54:33 - INFO - Getting data from server
+2025-09-22 17:54:55 - INFO - Data received from server
+2025-09-22 17:59:55 - INFO - Getting data from server
+2025-09-22 17:59:56 - INFO - Start schedule normalization
+2025-09-22 17:59:56 - INFO - Schedule is the same. Cancel.
+2025-09-22 17:59:56 - INFO - Data received from server
+2025-09-22 18:04:56 - INFO - Getting data from server
+2025-09-22 18:04:57 - INFO - Start schedule normalization
+2025-09-22 18:04:57 - INFO - Schedule is the same. Cancel.
+2025-09-22 18:04:57 - INFO - Data received from server
+2025-09-22 18:09:57 - INFO - Getting data from server
+2025-09-22 18:09:59 - INFO - Start schedule normalization
+2025-09-22 18:09:59 - INFO - Schedule is the same. Cancel.
+2025-09-22 18:09:59 - INFO - Data received from server
+2025-09-22 18:13:22 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Вторник
+2025-09-22 18:14:59 - INFO - Getting data from server
+2025-09-22 18:15:00 - INFO - Start schedule normalization
+2025-09-22 18:15:00 - INFO - Schedule is the same. Cancel.
+2025-09-22 18:15:00 - INFO - Data received from server
+2025-09-22 18:20:00 - INFO - Getting data from server
+2025-09-22 18:20:02 - INFO - Start schedule normalization
+2025-09-22 18:20:02 - INFO - Schedule is the same. Cancel.
+2025-09-22 18:20:02 - INFO - Data received from server
+2025-09-22 18:25:02 - INFO - Getting data from server
+2025-09-22 18:25:04 - INFO - Start schedule normalization
+2025-09-22 18:25:04 - INFO - Schedule is the same. Cancel.
+2025-09-22 18:25:04 - INFO - Data received from server
+2025-09-22 18:30:04 - INFO - Getting data from server
+2025-09-22 18:30:05 - INFO - Start schedule normalization
+2025-09-22 18:30:05 - INFO - Schedule is the same. Cancel.
+2025-09-22 18:30:05 - INFO - Data received from server
+2025-09-22 18:35:05 - INFO - Getting data from server
+2025-09-22 18:35:07 - INFO - Start schedule normalization
+2025-09-22 18:35:07 - INFO - Schedule is the same. Cancel.
+2025-09-22 18:35:07 - INFO - Data received from server
+2025-09-22 18:40:07 - INFO - Getting data from server
+2025-09-22 18:40:08 - INFO - Start schedule normalization
+2025-09-22 18:40:08 - INFO - Schedule is the same. Cancel.
+2025-09-22 18:40:08 - INFO - Data received from server
+2025-09-22 18:45:08 - INFO - Getting data from server
+2025-09-22 18:45:10 - INFO - Start schedule normalization
+2025-09-22 18:45:10 - INFO - Schedule is the same. Cancel.
+2025-09-22 18:45:10 - INFO - Data received from server
+2025-09-22 18:50:10 - INFO - Getting data from server
+2025-09-22 18:50:12 - INFO - Start schedule normalization
+2025-09-22 18:50:12 - INFO - Schedule is the same. Cancel.
+2025-09-22 18:50:12 - INFO - Data received from server
+2025-09-22 18:55:12 - INFO - Getting data from server
+2025-09-22 18:55:13 - INFO - Start schedule normalization
+2025-09-22 18:55:13 - INFO - Schedule is the same. Cancel.
+2025-09-22 18:55:13 - INFO - Data received from server
+2025-09-22 19:00:13 - INFO - Getting data from server
+2025-09-22 19:00:15 - INFO - Start schedule normalization
+2025-09-22 19:00:15 - INFO - Schedule is the same. Cancel.
+2025-09-22 19:00:15 - INFO - Data received from server
+2025-09-22 19:05:15 - INFO - Getting data from server
+2025-09-22 19:05:16 - INFO - Start schedule normalization
+2025-09-22 19:05:16 - INFO - Schedule is the same. Cancel.
+2025-09-22 19:05:16 - INFO - Data received from server
+2025-09-22 19:10:16 - INFO - Getting data from server
+2025-09-22 19:10:17 - INFO - Start schedule normalization
+2025-09-22 19:10:17 - INFO - Schedule is the same. Cancel.
+2025-09-22 19:10:17 - INFO - Data received from server
+2025-09-22 19:15:17 - INFO - Getting data from server
+2025-09-22 19:15:19 - INFO - Start schedule normalization
+2025-09-22 19:15:19 - INFO - Schedule is the same. Cancel.
+2025-09-22 19:15:19 - INFO - Data received from server
+2025-09-22 19:20:19 - INFO - Getting data from server
+2025-09-22 19:20:20 - INFO - Start schedule normalization
+2025-09-22 19:20:20 - INFO - Schedule is the same. Cancel.
+2025-09-22 19:20:20 - INFO - Data received from server
+2025-09-22 19:25:20 - INFO - Getting data from server
+2025-09-22 19:25:22 - INFO - Start schedule normalization
+2025-09-22 19:25:22 - INFO - Schedule is the same. Cancel.
+2025-09-22 19:25:22 - INFO - Data received from server
+2025-09-22 19:30:22 - INFO - Getting data from server
+2025-09-22 19:30:23 - INFO - Start schedule normalization
+2025-09-22 19:30:23 - INFO - Schedule is the same. Cancel.
+2025-09-22 19:30:23 - INFO - Data received from server
+2025-09-22 19:35:23 - INFO - Getting data from server
+2025-09-22 19:35:25 - INFO - Start schedule normalization
+2025-09-22 19:35:25 - INFO - Schedule is the same. Cancel.
+2025-09-22 19:35:25 - INFO - Data received from server
+2025-09-22 19:40:25 - INFO - Getting data from server
+2025-09-22 19:40:26 - INFO - Start schedule normalization
+2025-09-22 19:40:26 - INFO - Schedule is the same. Cancel.
+2025-09-22 19:40:26 - INFO - Data received from server
+2025-09-22 19:45:26 - INFO - Getting data from server
+2025-09-22 19:45:27 - INFO - Start schedule normalization
+2025-09-22 19:45:27 - INFO - Schedule is the same. Cancel.
+2025-09-22 19:45:27 - INFO - Data received from server
+2025-09-22 19:50:27 - INFO - Getting data from server
+2025-09-22 19:50:29 - INFO - Start schedule normalization
+2025-09-22 19:50:29 - INFO - Schedule is the same. Cancel.
+2025-09-22 19:50:29 - INFO - Data received from server
+2025-09-22 19:55:29 - INFO - Getting data from server
+2025-09-22 19:55:30 - INFO - Start schedule normalization
+2025-09-22 19:55:30 - INFO - Schedule is the same. Cancel.
+2025-09-22 19:55:30 - INFO - Data received from server
+2025-09-22 20:00:30 - INFO - Getting data from server
+2025-09-22 20:00:32 - INFO - Start schedule normalization
+2025-09-22 20:00:32 - INFO - Schedule is the same. Cancel.
+2025-09-22 20:00:32 - INFO - Data received from server
+2025-09-22 20:05:32 - INFO - Getting data from server
+2025-09-22 20:05:33 - INFO - Start schedule normalization
+2025-09-22 20:05:33 - INFO - Schedule is the same. Cancel.
+2025-09-22 20:05:33 - INFO - Data received from server
+2025-09-22 20:10:33 - INFO - Getting data from server
+2025-09-22 20:10:35 - INFO - Start schedule normalization
+2025-09-22 20:10:35 - INFO - Schedule is the same. Cancel.
+2025-09-22 20:10:35 - INFO - Data received from server
+2025-09-22 20:15:35 - INFO - Getting data from server
+2025-09-22 20:15:36 - INFO - Start schedule normalization
+2025-09-22 20:15:36 - INFO - Schedule is the same. Cancel.
+2025-09-22 20:15:36 - INFO - Data received from server
+2025-09-22 20:20:36 - INFO - Getting data from server
+2025-09-22 20:20:38 - INFO - Start schedule normalization
+2025-09-22 20:20:38 - INFO - Schedule is the same. Cancel.
+2025-09-22 20:20:38 - INFO - Data received from server
+2025-09-22 20:25:38 - INFO - Getting data from server
+2025-09-22 20:25:39 - INFO - Start schedule normalization
+2025-09-22 20:25:39 - INFO - Schedule is the same. Cancel.
+2025-09-22 20:25:39 - INFO - Data received from server
+2025-09-22 20:30:39 - INFO - Getting data from server
+2025-09-22 20:30:40 - INFO - Start schedule normalization
+2025-09-22 20:30:41 - INFO - Schedule is the same. Cancel.
+2025-09-22 20:30:41 - INFO - Data received from server
+2025-09-22 20:35:41 - INFO - Getting data from server
+2025-09-22 20:35:42 - INFO - Start schedule normalization
+2025-09-22 20:35:42 - INFO - Schedule is the same. Cancel.
+2025-09-22 20:35:42 - INFO - Data received from server
+2025-09-22 20:40:42 - INFO - Getting data from server
+2025-09-22 20:40:43 - INFO - Start schedule normalization
+2025-09-22 20:40:43 - INFO - Schedule is the same. Cancel.
+2025-09-22 20:40:43 - INFO - Data received from server
+2025-09-22 20:45:43 - INFO - Getting data from server
+2025-09-22 20:45:45 - INFO - Start schedule normalization
+2025-09-22 20:45:45 - INFO - Schedule is the same. Cancel.
+2025-09-22 20:45:45 - INFO - Data received from server
+2025-09-22 20:50:45 - INFO - Getting data from server
+2025-09-22 20:50:46 - INFO - Start schedule normalization
+2025-09-22 20:50:46 - INFO - Schedule is the same. Cancel.
+2025-09-22 20:50:46 - INFO - Data received from server
+2025-09-22 20:55:46 - INFO - Getting data from server
+2025-09-22 20:55:48 - INFO - Start schedule normalization
+2025-09-22 20:55:48 - INFO - Schedule is the same. Cancel.
+2025-09-22 20:55:48 - INFO - Data received from server
+2025-09-22 21:00:48 - INFO - Getting data from server
+2025-09-22 21:00:49 - INFO - Start schedule normalization
+2025-09-22 21:00:49 - INFO - Schedule is the same. Cancel.
+2025-09-22 21:00:49 - INFO - Data received from server
+2025-09-22 21:05:49 - INFO - Getting data from server
+2025-09-22 21:05:51 - INFO - Start schedule normalization
+2025-09-22 21:05:51 - INFO - Schedule is the same. Cancel.
+2025-09-22 21:05:51 - INFO - Data received from server
+2025-09-22 21:10:51 - INFO - Getting data from server
+2025-09-22 21:10:53 - INFO - Start schedule normalization
+2025-09-22 21:10:53 - INFO - Schedule is the same. Cancel.
+2025-09-22 21:10:53 - INFO - Data received from server
+2025-09-22 21:15:53 - INFO - Getting data from server
+2025-09-22 21:15:54 - INFO - Start schedule normalization
+2025-09-22 21:15:54 - INFO - Schedule is the same. Cancel.
+2025-09-22 21:15:54 - INFO - Data received from server
+2025-09-22 21:20:54 - INFO - Getting data from server
+2025-09-22 21:20:56 - INFO - Start schedule normalization
+2025-09-22 21:20:56 - INFO - Schedule is the same. Cancel.
+2025-09-22 21:20:56 - INFO - Data received from server
+2025-09-22 21:25:56 - INFO - Getting data from server
+2025-09-22 21:25:57 - INFO - Start schedule normalization
+2025-09-22 21:25:57 - INFO - Schedule is the same. Cancel.
+2025-09-22 21:25:57 - INFO - Data received from server
+2025-09-22 21:30:57 - INFO - Getting data from server
+2025-09-22 21:30:59 - INFO - Start schedule normalization
+2025-09-22 21:30:59 - INFO - Schedule is the same. Cancel.
+2025-09-22 21:30:59 - INFO - Data received from server
+2025-09-22 21:35:59 - INFO - Getting data from server
+2025-09-22 21:36:00 - INFO - Start schedule normalization
+2025-09-22 21:36:00 - INFO - Schedule is the same. Cancel.
+2025-09-22 21:36:00 - INFO - Data received from server
+2025-09-22 21:41:00 - INFO - Getting data from server
+2025-09-22 21:41:02 - INFO - Start schedule normalization
+2025-09-22 21:41:02 - INFO - Schedule is the same. Cancel.
+2025-09-22 21:41:02 - INFO - Data received from server
+2025-09-22 21:46:02 - INFO - Getting data from server
+2025-09-22 21:46:03 - INFO - Start schedule normalization
+2025-09-22 21:46:03 - INFO - Schedule is the same. Cancel.
+2025-09-22 21:46:03 - INFO - Data received from server
+2025-09-22 21:51:03 - INFO - Getting data from server
+2025-09-22 21:51:05 - INFO - Start schedule normalization
+2025-09-22 21:51:05 - INFO - Schedule is the same. Cancel.
+2025-09-22 21:51:05 - INFO - Data received from server
+2025-09-22 21:56:05 - INFO - Getting data from server
+2025-09-22 21:56:06 - INFO - Start schedule normalization
+2025-09-22 21:56:06 - INFO - Schedule is the same. Cancel.
+2025-09-22 21:56:06 - INFO - Data received from server
+2025-09-22 22:01:06 - INFO - Getting data from server
+2025-09-22 22:01:07 - INFO - Start schedule normalization
+2025-09-22 22:01:08 - INFO - Schedule is the same. Cancel.
+2025-09-22 22:01:08 - INFO - Data received from server
+2025-09-22 22:06:08 - INFO - Getting data from server
+2025-09-22 22:06:09 - INFO - Start schedule normalization
+2025-09-22 22:06:09 - INFO - Schedule is the same. Cancel.
+2025-09-22 22:06:09 - INFO - Data received from server
+2025-09-22 22:11:09 - INFO - Getting data from server
+2025-09-22 22:11:10 - INFO - Start schedule normalization
+2025-09-22 22:11:10 - INFO - Schedule is the same. Cancel.
+2025-09-22 22:11:10 - INFO - Data received from server
+2025-09-22 22:12:03 - ERROR - Infinity polling: polling exited
+2025-09-22 22:12:03 - ERROR - Break infinity polling

@@ -134,4 +134,4 @@ def normalizer_data_from_server(data):
 
 
     except Exception as e:
-        my_logger.error(e, __name__)
+        my_logger.error(e)
