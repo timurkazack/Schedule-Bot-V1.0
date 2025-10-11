@@ -33,10 +33,10 @@ def get_data_from_server():
 
         lg.debug(f"Getting message from server: {ws.recv()}")
 
-        lg.debug(f"Sending message to server: {utils.get_settings("websocket_parser", "messages")[0]}")
+        lg.debug(f"Sending message to server: {utils.get_settings('websocket_parser', 'messages')[0]}")
         ws.send(utils.get_settings("websocket_parser", "messages")[0])
 
-        lg.debug(f"Sending message to server: {utils.get_settings("websocket_parser", "messages")[1]}")
+        lg.debug(f"Sending message to server: {utils.get_settings('websocket_parser', 'messages')[1]}")
         ws.send(utils.get_settings("websocket_parser", "messages")[1])
 
         lg.debug(f"Getting message from server: {ws.recv()}")
@@ -161,7 +161,7 @@ def norm_schedule(klass, day):
             fill += f"{lesson_num} {room} | {lesson_list[0]}\n"
 
             for i in range(1, len(lesson_list)):
-                fill += f"|  {" " * 8} | {lesson_list[i]}\n"
+                fill += f"|  {' ' * 8} | {lesson_list[i]}\n"
 
 
     return special_ch + label + fill + special_ch1

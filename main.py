@@ -1,8 +1,8 @@
-import os
-
 from telebot import *
 from ws_parser import norm_schedule
 from ws_parser import run_auto_update
+import threading as th
+import time
 import ws_parser
 from utils.sql_use import *
 from utils import api
@@ -54,20 +54,24 @@ SAVE_CLASS_MESSAGE = """Сохранено!
 Выбирайте день недели и получайте расписание👇"""
 
 
-
+def main():
+   bot.polling(none_stop=True)
+   time.sleep(utils.get_settings("telegram_bot", "stop_time_h") * 60 * 60)
+   bot.stop_bot()
+   exit()
 
 @bot.message_handler(commands=["start"])
 def start_func(message):
     update_user_data(message)
     user_data = get_user_data(message)
-    my_logger.info(f"{user_data["tg_id"]} used START MESSAGE FUNC")
+    my_logger.info(f"{user_data['tg_id']} used START MESSAGE FUNC")
 
 
     markup_menu_buttons = types.ReplyKeyboardMarkup(resize_keyboard=True)
     choice_class_menu_button = types.KeyboardButton(choice_class_text)
-    donate_menu_button = types.KeyboardButton(donate_text)
+    #donate_menu_button = types.KeyboardButton(donate_text)
     help_menu_button = types.KeyboardButton(help_text)
-    settings_menu_button = types.KeyboardButton(settings_text)
+    #settings_menu_button = types.KeyboardButton(settings_text)
 
     markup_menu_buttons.row(choice_class_menu_button)
     markup_menu_buttons.row(help_menu_button)#, donate_menu_button)
@@ -89,7 +93,7 @@ def start_func(message):
 def help_func(message):
     update_user_data(message)
     user_data = get_user_data(message)
-    my_logger.info(f"{user_data["tg_id"]} used HELP MESSAGE FUNC")
+    my_logger.info(f"{user_data['tg_id']} used HELP MESSAGE FUNC")
 
 
 
@@ -101,12 +105,29 @@ def help_func(message):
 
 
 
+@bot.message_handler(commands=["get_user_count"])
+def get_users_count(message):
+    update_user_data(message)
+    user_data = get_user_data(message)
+    my_logger.info(f"{user_data['tg_id']} used GET USER COUNT FUNC")
+
+    if user_data["is_admin"] == 1:
+        bot.reply_to(message, f"{get_user_count()} пользователей")
+
+@bot.message_handler(commands=["get_all_users"])
+def get_all_users(message):
+    update_user_data(message)
+    user_data = get_user_data(message)
+    my_logger.info(f"{user_data['tg_id']} used GET ALL USERS FUNC")
+
+    if user_data["is_admin"] == 1:
+        bot.reply_to(message, get_all_sql_users())
 
 @bot.message_handler(commands=["stop"])
 def upd_admin_func(message):
     update_user_data(message)
     user_data = get_user_data(message)
-    my_logger.info(f"{user_data["tg_id"]} used STOP FUNC")
+    my_logger.info(f"{user_data['tg_id']} used STOP FUNC")
 
     if user_data["is_admin"] == 1:
         bot.reply_to(message, "✅")
@@ -118,7 +139,7 @@ def upd_admin_func(message):
 def upd_admin_func(message):
     update_user_data(message)
     user_data = get_user_data(message)
-    my_logger.info(f"{user_data["tg_id"]} used UPD FUNC")
+    my_logger.info(f"{user_data['tg_id']} used UPD FUNC")
 
     if user_data["is_admin"] == 1:
         bot.reply_to(message, "✅")
@@ -128,7 +149,7 @@ def upd_admin_func(message):
 def aus_admin_func(message):
     update_user_data(message)
     user_data = get_user_data(message)
-    my_logger.info(f"{user_data["tg_id"]} used AUTO UPDATE SWAP FUNC")
+    my_logger.info(f"{user_data['tg_id']} used AUTO UPDATE SWAP FUNC")
 
     if user_data["is_admin"] == 1:
         bot.reply_to(message, "✅")
@@ -141,7 +162,7 @@ def aus_admin_func(message):
 def get_help_contact(message):
     update_user_data(message)
     user_data = get_user_data(message)
-    my_logger.info(f"{user_data["tg_id"]} used GET HELP FUNC")
+    my_logger.info(f"{user_data['tg_id']} used GET HELP FUNC")
 
 
     if not opened_to_users:
@@ -157,7 +178,7 @@ def get_help_contact(message):
 def send_to_admin_helper_message(message):
     update_user_data(message)
     user_data = get_user_data(message)
-    my_logger.info(f"{user_data["tg_id"]} used GET HELP FUNC 2")
+    my_logger.info(f"{user_data['tg_id']} used GET HELP FUNC 2")
 
 
     markup = types.InlineKeyboardMarkup()
@@ -182,7 +203,7 @@ def send_to_admin_helper_message(message):
 def get_choice_parallel(message):
     update_user_data(message)
     user_data = get_user_data(message)
-    my_logger.info(f"{user_data["tg_id"]} used CHOICE PARALLEL FUNC")
+    my_logger.info(f"{user_data['tg_id']} used CHOICE PARALLEL FUNC")
 
 
     markup_parallel = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -211,7 +232,7 @@ def get_choice_parallel(message):
 def get_choice_class(message):
     update_user_data(message)
     user_data = get_user_data(message)
-    my_logger.info(f"{user_data["tg_id"]} used CHOICE CLASS FUNC and choice {message.text}")
+    my_logger.info(f"{user_data['tg_id']} used CHOICE CLASS FUNC and choice {message.text}")
 
 
     markup_class = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -235,7 +256,7 @@ def get_choice_class(message):
 def save_choice_class(message):
     update_user_data(message, klass=message.text)
     user_data = get_user_data(message)
-    my_logger.info(f"{user_data["tg_id"]} used SAVE CHOICE CLASS FUNC and choice {message.text}")
+    my_logger.info(f"{user_data['tg_id']} used SAVE CHOICE CLASS FUNC and choice {message.text}")
 
 
     markup_days = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -260,7 +281,7 @@ def save_choice_class(message):
 def get_schedule_for_user(message):
     update_user_data(message)
     user_data = get_user_data(message)
-    my_logger.info(f"{user_data["tg_id"]} used GET SCHEDULE FUNC and choice {message.text}")
+    my_logger.info(f"{user_data['tg_id']} used GET SCHEDULE FUNC and choice {message.text}")
 
     ru_day = message.text
     en_day = get_ru_day_to_en(ru_day)
@@ -273,4 +294,7 @@ def get_schedule_for_user(message):
         bot.send_message(message.from_user.id,
                          norm_schedule(user_data["worked_class"], en_day))
 
-bot.infinity_polling()
+
+bot.remove_webhook()
+th1 = th.Thread(target = main)
+th1.start()

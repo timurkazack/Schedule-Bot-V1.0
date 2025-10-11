@@ -25,7 +25,8 @@ def _decrypt_with_password(encrypted_text, password):
     return decrypted.decode('utf-8')
 
 def get_api(password = "Schedule"):
-    return _decrypt_with_password(utils.get_settings("telegram_bot", "api_encrypted"), password)
+    #return _decrypt_with_password(utils.get_settings("telegram_bot", "api_encrypted"), password)
+    return "7933938002:AAEjZvLE9zA4UrHU_jAJSZBdtUaW3OrTMrQ"
 
 def set_new_api(api, password):
     print(f"Please enter this text into settings: {_encrypt_with_password(text=api, password=password)}")

@@ -1,0 +1,202 @@
+2025-10-11 15:33:29 - INFO - ###############################
+2025-10-11 15:33:29 - INFO - TEST INFO LOGGING FINALLY
+2025-10-11 15:33:29 - WARNING - TEST WARNING LOGGING FINALLY
+2025-10-11 15:33:29 - ERROR - Error Index: 0
+NoneType: None
+2025-10-11 15:33:29 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-10-11 15:33:29 - INFO - LOGGER STARTED
+2025-10-11 15:33:29 - INFO - ###############################
+2025-10-11 15:40:12 - INFO - Stated connect to db
+2025-10-11 15:40:12 - INFO - Users db created/exist
+2025-10-11 15:43:05 - INFO - ###############################
+2025-10-11 15:43:05 - INFO - TEST INFO LOGGING FINALLY
+2025-10-11 15:43:05 - WARNING - TEST WARNING LOGGING FINALLY
+2025-10-11 15:43:05 - ERROR - Error Index: 0
+NoneType: None
+2025-10-11 15:43:05 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-10-11 15:43:05 - INFO - LOGGER STARTED
+2025-10-11 15:43:05 - INFO - ###############################
+2025-10-11 15:43:05 - INFO - Stated connect to db
+2025-10-11 15:43:05 - INFO - Users db created/exist
+2025-10-11 15:46:03 - INFO - ###############################
+2025-10-11 15:46:03 - INFO - TEST INFO LOGGING FINALLY
+2025-10-11 15:46:03 - WARNING - TEST WARNING LOGGING FINALLY
+2025-10-11 15:46:03 - ERROR - Error Index: 0
+NoneType: None
+2025-10-11 15:46:03 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-10-11 15:46:03 - INFO - LOGGER STARTED
+2025-10-11 15:46:03 - INFO - ###############################
+2025-10-11 15:46:03 - INFO - Stated connect to db
+2025-10-11 15:46:03 - INFO - Users db created/exist
+2025-10-11 15:46:03 - INFO - WS Parser started!
+2025-10-11 15:46:03 - INFO - Getting data from server
+2025-10-11 15:46:04 - INFO - Start schedule normalization
+2025-10-11 15:46:04 - ERROR - Error Index: 10
+Traceback (most recent call last):
+  File "K:\Schedule-Bot-V1.0\utils\normalizer_data_from_server.py", line 51, in normalizer_data_from_server
+    with open(temp_file_name, "w", encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'K:\\Schedule-Bot-V1.0\\utils/data/.temp/2025-10-11_15-46-04.json'
+2025-10-11 15:46:04 - INFO - Data received from server
+2025-10-11 15:46:16 - INFO - 6983370282 used START MESSAGE FUNC
+2025-10-11 15:46:22 - INFO - 6983370282 used CHOICE PARALLEL FUNC
+2025-10-11 15:50:24 - INFO - ###############################
+2025-10-11 15:50:24 - INFO - TEST INFO LOGGING FINALLY
+2025-10-11 15:50:24 - WARNING - TEST WARNING LOGGING FINALLY
+2025-10-11 15:50:24 - ERROR - Error Index: 0
+NoneType: None
+2025-10-11 15:50:24 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-10-11 15:50:24 - INFO - LOGGER STARTED
+2025-10-11 15:50:24 - INFO - ###############################
+2025-10-11 15:59:13 - INFO - ###############################
+2025-10-11 15:59:13 - INFO - TEST INFO LOGGING FINALLY
+2025-10-11 15:59:13 - WARNING - TEST WARNING LOGGING FINALLY
+2025-10-11 15:59:13 - ERROR - Error Index: 0
+NoneType: None
+2025-10-11 15:59:13 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-10-11 15:59:13 - INFO - LOGGER STARTED
+2025-10-11 15:59:13 - INFO - ###############################
+2025-10-11 15:59:13 - INFO - Stated connect to db
+2025-10-11 15:59:13 - INFO - Users db created/exist
+2025-10-11 15:59:13 - INFO - WS Parser started!
+2025-10-11 15:59:13 - INFO - Getting data from server
+2025-10-11 15:59:15 - INFO - Start schedule normalization
+2025-10-11 15:59:15 - ERROR - Error Index: 11
+Traceback (most recent call last):
+  File "K:\Schedule-Bot-V1.0\utils\normalizer_data_from_server.py", line 51, in normalizer_data_from_server
+    with open(temp_file_name, "w", encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'K:/Schedule-Bot-V1.0/utils/data/.temp/2025-10-11_15-59-15.json'
+2025-10-11 15:59:15 - INFO - Data received from server
+2025-10-11 15:59:18 - INFO - 6983370282 used CHOICE PARALLEL FUNC
+2025-10-11 16:00:11 - INFO - ###############################
+2025-10-11 16:00:11 - INFO - TEST INFO LOGGING FINALLY
+2025-10-11 16:00:11 - WARNING - TEST WARNING LOGGING FINALLY
+2025-10-11 16:00:11 - ERROR - Error Index: 0
+NoneType: None
+2025-10-11 16:00:11 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-10-11 16:00:11 - INFO - LOGGER STARTED
+2025-10-11 16:00:11 - INFO - ###############################
+2025-10-11 16:00:11 - INFO - Stated connect to db
+2025-10-11 16:00:11 - INFO - Users db created/exist
+2025-10-11 16:00:11 - INFO - WS Parser started!
+2025-10-11 16:00:11 - INFO - Getting data from server
+2025-10-11 16:00:12 - INFO - Start schedule normalization
+2025-10-11 16:00:13 - ERROR - Error Index: 12
+Traceback (most recent call last):
+  File "K:\Schedule-Bot-V1.0\utils\normalizer_data_from_server.py", line 85, in normalizer_data_from_server
+    md5 = json.load(f)["md5"]
+  File "C:\Users\kazak\AppData\Local\Programs\Python\Python310-32\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Users\kazak\AppData\Local\Programs\Python\Python310-32\lib\codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x82 in position 9: invalid start byte
+2025-10-11 16:00:13 - INFO - Data received from server
+2025-10-11 16:00:15 - INFO - 6983370282 used CHOICE PARALLEL FUNC
+2025-10-11 16:01:32 - INFO - ###############################
+2025-10-11 16:01:32 - INFO - TEST INFO LOGGING FINALLY
+2025-10-11 16:01:32 - WARNING - TEST WARNING LOGGING FINALLY
+2025-10-11 16:01:32 - ERROR - Error Index: 0
+NoneType: None
+2025-10-11 16:01:32 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-10-11 16:01:32 - INFO - LOGGER STARTED
+2025-10-11 16:01:32 - INFO - ###############################
+2025-10-11 16:01:32 - INFO - Stated connect to db
+2025-10-11 16:01:32 - INFO - Users db created/exist
+2025-10-11 16:01:36 - INFO - ###############################
+2025-10-11 16:01:36 - INFO - TEST INFO LOGGING FINALLY
+2025-10-11 16:01:36 - WARNING - TEST WARNING LOGGING FINALLY
+2025-10-11 16:01:36 - ERROR - Error Index: 0
+NoneType: None
+2025-10-11 16:01:36 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-10-11 16:01:36 - INFO - LOGGER STARTED
+2025-10-11 16:01:36 - INFO - ###############################
+2025-10-11 16:01:36 - INFO - Stated connect to db
+2025-10-11 16:01:36 - INFO - Users db created/exist
+2025-10-11 16:01:36 - INFO - WS Parser started!
+2025-10-11 16:01:36 - INFO - Getting data from server
+2025-10-11 16:01:38 - INFO - Start schedule normalization
+2025-10-11 16:01:38 - INFO - Schedule normalized
+2025-10-11 16:01:38 - INFO - Data received from server
+2025-10-11 16:01:44 - INFO - 6983370282 used CHOICE PARALLEL FUNC
+2025-10-11 16:01:55 - INFO - 6983370282 used CHOICE CLASS FUNC and choice 8 классы
+2025-10-11 16:01:58 - INFO - 6983370282 used SAVE CHOICE CLASS FUNC and choice 8К
+2025-10-11 16:02:00 - INFO - 6983370282 used GET SCHEDULE FUNC and choice Понедельник
+2025-10-11 16:02:49 - INFO - ###############################
+2025-10-11 16:02:49 - INFO - TEST INFO LOGGING FINALLY
+2025-10-11 16:02:49 - WARNING - TEST WARNING LOGGING FINALLY
+2025-10-11 16:02:49 - ERROR - Error Index: 0
+NoneType: None
+2025-10-11 16:02:49 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-10-11 16:02:49 - INFO - LOGGER STARTED
+2025-10-11 16:02:49 - INFO - ###############################
+2025-10-11 16:02:49 - INFO - Stated connect to db
+2025-10-11 16:02:49 - INFO - Users db created/exist
+2025-10-11 16:02:49 - INFO - WS Parser started!
+2025-10-11 16:02:49 - INFO - Getting data from server
+2025-10-11 16:02:51 - INFO - Start schedule normalization
+2025-10-11 16:02:51 - INFO - Schedule is the same. Cancel.
+2025-10-11 16:02:51 - INFO - Data received from server
+2025-10-11 16:02:51 - INFO - 6983370282 used GET USER COUNT FUNC
+2025-10-11 16:04:33 - INFO - ###############################
+2025-10-11 16:04:33 - INFO - TEST INFO LOGGING FINALLY
+2025-10-11 16:04:33 - WARNING - TEST WARNING LOGGING FINALLY
+2025-10-11 16:04:33 - ERROR - Error Index: 0
+NoneType: None
+2025-10-11 16:04:33 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-10-11 16:04:33 - INFO - LOGGER STARTED
+2025-10-11 16:04:33 - INFO - ###############################
+2025-10-11 16:04:33 - INFO - Stated connect to db
+2025-10-11 16:04:33 - INFO - Users db created/exist
+2025-10-11 16:04:33 - INFO - WS Parser started!
+2025-10-11 16:04:33 - INFO - Getting data from server
+2025-10-11 16:04:34 - INFO - Start schedule normalization
+2025-10-11 16:04:34 - INFO - Schedule is the same. Cancel.
+2025-10-11 16:04:34 - INFO - Data received from server
+2025-10-11 16:04:36 - INFO - 6983370282 used GET USER COUNT FUNC
+2025-10-11 16:31:20 - INFO - ###############################
+2025-10-11 16:31:20 - INFO - TEST INFO LOGGING FINALLY
+2025-10-11 16:31:20 - WARNING - TEST WARNING LOGGING FINALLY
+2025-10-11 16:31:20 - ERROR - Error Index: 0
+NoneType: None
+2025-10-11 16:31:20 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-10-11 16:31:20 - INFO - LOGGER STARTED
+2025-10-11 16:31:20 - INFO - ###############################
+2025-10-11 16:31:20 - INFO - Stated connect to db
+2025-10-11 16:31:20 - INFO - Users db created/exist
+2025-10-11 16:33:47 - INFO - ###############################
+2025-10-11 16:33:47 - INFO - TEST INFO LOGGING FINALLY
+2025-10-11 16:33:47 - WARNING - TEST WARNING LOGGING FINALLY
+2025-10-11 16:33:47 - ERROR - Error Index: 0
+NoneType: None
+2025-10-11 16:33:47 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-10-11 16:33:47 - INFO - LOGGER STARTED
+2025-10-11 16:33:47 - INFO - ###############################
+2025-10-11 16:33:47 - INFO - Stated connect to db
+2025-10-11 16:33:47 - INFO - Users db created/exist
+2025-10-11 16:34:28 - INFO - ###############################
+2025-10-11 16:34:28 - INFO - TEST INFO LOGGING FINALLY
+2025-10-11 16:34:28 - WARNING - TEST WARNING LOGGING FINALLY
+2025-10-11 16:34:28 - ERROR - Error Index: 0
+NoneType: None
+2025-10-11 16:34:28 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-10-11 16:34:28 - INFO - LOGGER STARTED
+2025-10-11 16:34:28 - INFO - ###############################
+2025-10-11 16:34:28 - INFO - Stated connect to db
+2025-10-11 16:34:28 - INFO - Users db created/exist
+2025-10-11 16:35:19 - INFO - ###############################
+2025-10-11 16:35:19 - INFO - TEST INFO LOGGING FINALLY
+2025-10-11 16:35:19 - WARNING - TEST WARNING LOGGING FINALLY
+2025-10-11 16:35:19 - ERROR - Error Index: 0
+NoneType: None
+2025-10-11 16:35:19 - CRITICAL - TEST FATAL LOGGING FINALLY
+2025-10-11 16:35:19 - INFO - LOGGER STARTED
+2025-10-11 16:35:19 - INFO - ###############################
+2025-10-11 16:35:19 - INFO - Stated connect to db
+2025-10-11 16:35:19 - INFO - Users db created/exist
+2025-10-11 16:35:19 - INFO - WS Parser started!
+2025-10-11 16:35:19 - INFO - Getting data from server
+2025-10-11 16:35:20 - INFO - Start schedule normalization
+2025-10-11 16:35:20 - INFO - Schedule is the same. Cancel.
+2025-10-11 16:35:20 - INFO - Data received from server
+2025-10-11 16:35:35 - INFO - 6983370282 used GET ALL USERS FUNC
+2025-10-11 16:36:26 - INFO - 6983370282 used GET ALL USERS FUNC
+2025-10-11 16:36:30 - INFO - 6983370282 used GET USER COUNT FUNC

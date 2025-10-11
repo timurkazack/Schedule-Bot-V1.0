@@ -10,7 +10,7 @@ from .api import *
 
 def get_settings(module, setting):
 
-    with open(f"{os.path.dirname(__file__)}\\settings.json", "r", encoding="utf-8") as f:
+    with open(f"{os.path.dirname(__file__)}/settings.json".replace("\\", "/"), "r", encoding="utf-8") as f:
         if not setting: return json.load(f)[module]
         else: return json.load(f)[module][setting]
 
@@ -21,10 +21,10 @@ def setup():
 
 
 
-    dirs = [f"{os.path.dirname(__file__)}\\data",
-            f"{os.path.dirname(__file__)}\\data\\logs",
-            f"{os.path.dirname(__file__)}\\data\\.temp",
-            f"{os.path.dirname(__file__)}\\data\\caches"]
+    dirs = [f"{os.path.dirname(__file__)}/data".replace("\\", "/"),
+            f"{os.path.dirname(__file__)}/data/logs".replace("\\", "/"),
+            f"{os.path.dirname(__file__)}/data/.temp".replace("\\", "/"),
+            f"{os.path.dirname(__file__)}/data/caches".replace("\\", "/")]
 
     for dir in dirs:
         try:

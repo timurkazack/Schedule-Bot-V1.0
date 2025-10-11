@@ -3,7 +3,7 @@ import os
 from utils import my_logger
 from datetime import datetime as dt
 
-users_db = f"{os.path.dirname(__file__)}\\data\\users\\users_db.db"
+users_db = f"{os.path.dirname(__file__)}/data/users/users_db.db".replace("\\", "/")
 
 def setup():
     my_logger.info("Stated connect to db")
@@ -117,6 +117,32 @@ def get_user_data(message):
         my_logger.error(e)
         return None
 
+
+def get_user_count():
+    conn_us = sq.connect(users_db)
+    cur_us = conn_us.cursor()
+
+    cur_us.execute("SELECT COUNT(*) FROM users;")
+    result = cur_us.fetchone()
+    count = result[0]
+
+    cur_us.close()
+    conn_us.close()
+
+    return count
+
+
+def get_all_sql_users():
+    conn_us = sq.connect(users_db)
+    cur_us = conn_us.cursor()
+
+    cur_us.execute("SELECT * FROM users;")
+    result = cur_us.fetchall()
+
+    cur_us.close()
+    conn_us.close()
+
+    return result
 
 
 setup()

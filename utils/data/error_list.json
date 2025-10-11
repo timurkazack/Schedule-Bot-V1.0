@@ -7,6 +7,8 @@
   "Object of type set is not JSON serializable": "5",
   "Expecting value: line 67 column 11 (char 827)": "7",
   "'dict' object has no attribute 'sort'": "7",
-  "'utf-8' codec can't decode byte 0x82 in position 9: invalid start byte": "8",
-  "name 'gfvhbjhn' is not defined": "9"
+  "'utf-8' codec can't decode byte 0x82 in position 9: invalid start byte": "12",
+  "name 'gfvhbjhn' is not defined": "9",
+  "[Errno 2] No such file or directory: 'K:\\\\Schedule-Bot-V1.0\\\\utils/data/.temp/2025-10-11_15-46-04.json'": "10",
+  "[Errno 2] No such file or directory: 'K:/Schedule-Bot-V1.0/utils/data/.temp/2025-10-11_15-59-15.json'": "11"
 }

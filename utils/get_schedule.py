@@ -5,7 +5,7 @@ import utils
 
 
 def get_classes():
-    cache_path = f"{os.path.dirname(__file__)}\\data\\caches\\"
+    cache_path = f"{os.path.dirname(__file__)}/data/caches/".replace("\\", "/")
     caches = os.listdir(cache_path)
 
     if caches:
@@ -20,7 +20,7 @@ def get_classes():
         return json.load(f)["classes_list"]
 
 def get_day(klass, day):
-    cache_path = f"{os.path.dirname(__file__)}\\data\\caches\\"
+    cache_path = f"{os.path.dirname(__file__)}/data/caches/".replace("\\", "/")
     caches = os.listdir(cache_path)
 
     if caches:
@@ -45,7 +45,7 @@ def get_day(klass, day):
 
 
 def get_days():
-    cache_path = f"{os.path.dirname(__file__)}\\data\\caches\\"
+    cache_path = f"{os.path.dirname(__file__)}/data/caches/".replace("\\", "/")
     caches = os.listdir(cache_path)
 
     if caches:

@@ -24,7 +24,7 @@ def setup():
     # Обработчик для файла
     log_filename = f"{dt.now().strftime('%Y-%m-%d')}.log"
     file_handler = logging.FileHandler(
-        filename=os.path.join(os.path.dirname(__file__) + "\\data\\logs", log_filename),
+        filename=f"{os.path.dirname(__file__)}/data/logs/{log_filename}".replace("\\", "/"),
         encoding="utf-8"
     )
     file_handler.setFormatter(formatter)

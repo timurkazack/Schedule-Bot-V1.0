@@ -1,7 +1,7 @@
 import json
 import os
 
-ERROR_LIST_PATH = os.path.join(os.path.dirname(__file__), "data\\error_list.json")
+ERROR_LIST_PATH = f"{os.path.dirname(__file__)}/data/error_list.json".replace("\\", "/")
 
 def add_error_to_list(error):
     error = str(error)

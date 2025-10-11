@@ -17,7 +17,7 @@ def hyphen_r(text):
 
 
     except Exception as e:
-        my_logger.error(e, __name__)
+        my_logger.error(e)
         return text
 
 
@@ -42,9 +42,9 @@ def normalizer_data_from_server(data):
         my_logger.info("Start schedule normalization")
 
         # Пути для папки с кешами, к temp файлу и конечному файлу кеша
-        cache_path = f"{os.path.dirname(__file__)}\\data\\caches\\"
-        temp_file_name = f"{os.path.dirname(__file__)}\\data\\.temp\\{dt.now().strftime("%Y-%m-%d_%H-%M-%S")}.json"
-        out_file_name = f"{cache_path}{dt.now().strftime("%Y-%m-%d_%H-%M")}.json"
+        cache_path = f"{os.path.dirname(__file__)}/data/caches/".replace("\\", "/")
+        temp_file_name = f"{os.path.dirname(__file__)}/data/.temp/{dt.now().strftime('%Y-%m-%d_%H-%M-%S')}.json".replace("\\", "/")
+        out_file_name = f"{cache_path}{dt.now().strftime('%Y-%m-%d_%H-%M')}.json".replace("\\", "/")
 
         # Здесь нормализация расписания из str строки данных в json
         # через write который убирает "", затем уже открываем это как json
@@ -116,10 +116,9 @@ def normalizer_data_from_server(data):
                     normal_json["schedule"][cl_cur["grade"]][cl_sub["subjectDay"].lower()] = {}
 
                 # Сохранение в кеше структуры: Предмет: Кабинет
-                normal_json["schedule"][cl_cur["grade"]][cl_sub["subjectDay"].lower()][
-                    (f"{len(normal_json["schedule"]
-                           [cl_cur["grade"]][cl_sub["subjectDay"].lower()])+1}. "
-                     f"{hyphen_r(cl_sub["lesson"])}")] = hyphen_r(cl_sub["room"])
+                normal_json['schedule'][cl_cur['grade']][cl_sub['subjectDay'].lower()][
+                    (f"{len(normal_json['schedule'][cl_cur['grade']][cl_sub['subjectDay'].lower()])+1}. "
+                     f"{hyphen_r(cl_sub['lesson'])}")] = hyphen_r(cl_sub['room'])
 
 
 

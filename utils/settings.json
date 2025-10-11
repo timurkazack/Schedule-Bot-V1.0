@@ -23,6 +23,7 @@
   },
 
   "telegram_bot": {
-    "api_encrypted": "gAAAAABos9M3qkuDCTCqpBEq02SzVi3C0i_WjljPFkdZLlN_C36y6uzrrpJDMPvHomJPPZHB5JgQxAv32FmgEoJUC7_vOTHbCIc0EC4164GYEiivjezwmJhOGUMTIp3oAPLVBPPOUzFy"
+    "api_encrypted": "gAAAAABos9M3qkuDCTCqpBEq02SzVi3C0i_WjljPFkdZLlN_C36y6uzrrpJDMPvHomJPPZHB5JgQxAv32FmgEoJUC7_vOTHbCIc0EC4164GYEiivjezwmJhOGUMTIp3oAPLVBPPOUzFy",
+    "stop_time_h": 5
   }
 }
