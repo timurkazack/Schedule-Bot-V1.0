@@ -4,4 +4,5 @@ __pycache__
 utils/__pycache__
 utils/data/.temp
 utils/data/users/*
+utils/api.py
 telegram_bot/api.txt
