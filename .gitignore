@@ -3,6 +3,7 @@
 __pycache__
 utils/__pycache__
 utils/data/users/*
+utils/data/.temp/*
 utils/data/logs/*
 utils/data/caches/*
 utils/api.py

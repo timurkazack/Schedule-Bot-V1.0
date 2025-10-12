@@ -47,6 +47,12 @@ HELP_MESSAGE = """Справка по боту:
 Дни недели/классы отображаются в соответствии с расписанием школы.
 Если какого-то дня/класса нет в меню выбора, значит его нет и в расписании на сайте"""
 
+FROM_CHAT_START_MESSAGE = """Всем привет!
+Админу: 
+/set_class (Установить класс для получения расписания)
+/set_newsletter_time (Задать время рассылки. Напиши данную команду и через пробел время в часах)
+/disable_newsletter_time (Отменить рассылку в это время. Напиши данную команду и через пробел время в часах)"""
+
 HELPER_MESSAGE = "Напишите своё обращение:"
 CHOICE_PARALLEL_MESSAGE = "Выберете параллель👇"
 CHOICE_CLASS_MESSAGE = "Выберете класс👇"
@@ -66,7 +72,7 @@ def start_func(message):
     user_data = get_user_data(message)
     my_logger.info(f"{user_data['tg_id']} used START MESSAGE FUNC")
 
-
+    #from users
     markup_menu_buttons = types.ReplyKeyboardMarkup(resize_keyboard=True)
     choice_class_menu_button = types.KeyboardButton(choice_class_text)
     #donate_menu_button = types.KeyboardButton(donate_text)
@@ -78,11 +84,18 @@ def start_func(message):
     #markup_menu_buttons.row(settings_menu_button)
 
 
+
     if not opened_to_users:
         if user_data["is_admin"] == 1:
             bot.send_message(user_data["tg_id"], START_MESSAGE.format(user_first_name=user_data["tg_first_name"]), reply_markup=markup_menu_buttons)
     else:
-        bot.send_message(user_data["tg_id"], START_MESSAGE.format(user_first_name=user_data["tg_first_name"]), reply_markup=markup_menu_buttons)
+        if message.chat.type not in ["group", "supergroup"]:
+            bot.send_message(user_data["tg_id"], START_MESSAGE.format(user_first_name=user_data["tg_first_name"]), reply_markup=markup_menu_buttons)
+        else:
+            chat_member = bot.get_chat_member(message.chat.id, message.from_user.id)
+            if chat_member.status in ["creator", "administrator"]:
+                msg = bot.send_message(message.chat.id, "привет админ")
+            bot.delete_message(message.chat.id, message.message_id)
 
 
 
@@ -121,7 +134,25 @@ def get_all_users(message):
     my_logger.info(f"{user_data['tg_id']} used GET ALL USERS FUNC")
 
     if user_data["is_admin"] == 1:
-        bot.reply_to(message, get_all_sql_users())
+        with open(get_all_sql_users(), "r", encoding="utf-8") as f:
+            bot.send_document(message.from_user.id, f)
+
+@bot.message_handler(commands=["post"])
+def post1(message):
+    update_user_data(message)
+    user_data = get_user_data(message)
+    my_logger.info(f"{user_data['tg_id']} used POST FUNC")
+
+    if user_data["is_admin"] == 1:
+        bot.reply_to(message, "✅\nНапиши пост!")
+        bot.register_next_step_handler(message, post2)
+
+def post2(message):
+    user_data = get_user_data(message)
+    if user_data["is_admin"] == 1:
+        for id in get_all_users_id():
+            bot.forward_message(id, user_data['tg_id'], message.message_id)
+            my_logger.info(f"Forward post to {id}")
 
 @bot.message_handler(commands=["stop"])
 def upd_admin_func(message):

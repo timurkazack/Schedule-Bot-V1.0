@@ -26,6 +26,9 @@ def setup():
         donated_money REAL)
     """)
 
+    cur_us.execute("""CREATE TABLE IF NOT EXISTS newsletter(
+    chat_id INTEGER PRIMARY KEY,
+    time TEXT)""")
 
     conn_us.commit()
     conn_us.close()
@@ -36,10 +39,10 @@ def update_user_data(message_from_user, klass=None,
                      is_admin=None, is_baned=None,
                      ban_time=None, ban_time_left=None,
                      donated_money=None):
-    tg_id = int(message_from_user.from_user.id)
-    tg_first_name = str(message_from_user.from_user.first_name)
-    tg_last_name = str(message_from_user.from_user.last_name)
-    tg_user_name = str(message_from_user.from_user.username)
+    tg_id = int(message_from_user.chat.id)
+    tg_first_name = str(message_from_user.chat.first_name)
+    tg_last_name = str(message_from_user.chat.last_name)
+    tg_user_name = str(message_from_user.chat.username)
 
     # Получаем текущее время в формате строки
     current_time = dt.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -142,7 +145,47 @@ def get_all_sql_users():
     cur_us.close()
     conn_us.close()
 
+    file = f"{os.path.dirname(__file__)}/data/.temp/all.txt".replace('\\', '/')
+
+    with open(file, "w", encoding="utf-8") as f:
+        text = ""
+
+        for user in result:
+
+            line = ""
+            for obj in user[:7]:
+                line += str(obj) + "\t"
+            text += line + "\n"
+        f.write(text)
+
+    return file
+
+
+def get_all_users_id():
+    conn_us = sq.connect(users_db)
+    cur_us = conn_us.cursor()
+
+    cur_us.execute("SELECT tg_id FROM users;")
+    result = cur_us.fetchall()
+    result = [item[0] for item in result]
+
+
+    cur_us.close()
+    conn_us.close()
+
     return result
 
+
+def add_time(chat_id, time):
+    #conn_us = sq.connect(users_db)
+    #cur_us = conn_us.cursor()
+
+    #cur_us.execute("""
+    #INSERT INTO newsletter (
+    #chat_id, time) VALUES (?, ?)""", (chat_id, time))
+
+    #cur_us.close()
+    #conn_us.close()
+    pass
 
 setup()
