@@ -110,10 +110,7 @@ def help_func(message):
 
 
 
-    if not opened_to_users:
-        if user_data["is_admin"] == 1:
-            bot.send_message(message.from_user.id, HELP_MESSAGE)
-    else:
+    if opened_to_users or user_data["is_admin"] == 1:
         bot.send_message(message.from_user.id, HELP_MESSAGE)
 
 
@@ -149,20 +146,20 @@ def post1(message):
 
 def post2(message):
     user_data = get_user_data(message)
+
     if user_data["is_admin"] == 1:
         for id in get_all_users_id():
             bot.forward_message(id, user_data['tg_id'], message.message_id)
             my_logger.info(f"Forward post to {id}")
 
 @bot.message_handler(commands=["stop"])
-def upd_admin_func(message):
+def stop_admin_func(message):
     update_user_data(message)
     user_data = get_user_data(message)
     my_logger.info(f"{user_data['tg_id']} used STOP FUNC")
 
     if user_data["is_admin"] == 1:
         bot.reply_to(message, "✅")
-        os.system("shutdown /s /t 60")
         exit()
 
 
@@ -196,11 +193,7 @@ def get_help_contact(message):
     my_logger.info(f"{user_data['tg_id']} used GET HELP FUNC")
 
 
-    if not opened_to_users:
-        if user_data["is_admin"] == 1:
-            bot.send_message(message.from_user.id, HELPER_MESSAGE)
-            bot.register_next_step_handler(message, send_to_admin_helper_message)
-    else:
+    if opened_to_users or user_data["is_admin"] == 1:
         bot.send_message(message.from_user.id, HELPER_MESSAGE)
         bot.register_next_step_handler(message, send_to_admin_helper_message)
 
@@ -218,13 +211,9 @@ def send_to_admin_helper_message(message):
         types.InlineKeyboardButton("Забанить", callback_data=f"ban_{message.from_user.id}"))
 
 
-    if not opened_to_users:
-        if user_data["is_admin"] == 1:
-            bot.send_message(admin_id, f"Новое обращение ({message.from_user.id}):\n{message.text}", reply_markup=markup)
-            bot.send_message(message.from_user.id, "Отправлено. Ожидайте ответа")
-    else:
-        bot.send_message(admin_id, f"Новое обращение ({message.from_user.id}):\n{message.text}", reply_markup=markup)
-        bot.send_message(message.from_user.id, "Отправлено. Ожидайте ответа")
+    if opened_to_users or user_data["is_admin"] == 1:
+        bot.send_message(admin_id, f"Новое обращение ({message.from_user.id}):\n{message.text}")#, reply_markup=markup)
+        bot.send_message(message.from_user.id, "Отправлено.")
 
 
 
@@ -248,10 +237,7 @@ def get_choice_parallel(message):
     markup_parallel.add(*buttons)
 
 
-    if not opened_to_users:
-        if user_data["is_admin"] == 1:
-            bot.send_message(message.from_user.id, CHOICE_PARALLEL_MESSAGE, reply_markup=markup_parallel)
-    else:
+    if opened_to_users or user_data["is_admin"] == 1:
         bot.send_message(message.from_user.id, CHOICE_PARALLEL_MESSAGE, reply_markup=markup_parallel)
 
 
@@ -276,10 +262,7 @@ def get_choice_class(message):
 
     markup_class.add(*buttons)
 
-    if not opened_to_users:
-        if user_data["is_admin"] == 1:
-            bot.send_message(message.from_user.id, CHOICE_CLASS_MESSAGE, reply_markup=markup_class)
-    else:
+    if opened_to_users or user_data["is_admin"] == 1:
         bot.send_message(message.from_user.id, CHOICE_CLASS_MESSAGE, reply_markup=markup_class)
 
 
@@ -301,10 +284,7 @@ def save_choice_class(message):
     markup_days.add(*buttons)
     markup_days.row(choice_class_again_text)
 
-    if not opened_to_users:
-        if user_data["is_admin"] == 1:
-            bot.send_message(message.from_user.id, SAVE_CLASS_MESSAGE, reply_markup=markup_days)
-    else:
+    if opened_to_users or user_data["is_admin"] == 1:
         bot.send_message(message.from_user.id, SAVE_CLASS_MESSAGE, reply_markup=markup_days)
 
 
@@ -317,11 +297,7 @@ def get_schedule_for_user(message):
     ru_day = message.text
     en_day = get_ru_day_to_en(ru_day)
 
-    if not opened_to_users:
-        if user_data["is_admin"] == 1:
-            bot.send_message(message.from_user.id,
-                             norm_schedule(user_data["worked_class"], en_day))
-    else:
+    if opened_to_users or user_data["is_admin"] == 1:
         bot.send_message(message.from_user.id,
                          norm_schedule(user_data["worked_class"], en_day))
 
