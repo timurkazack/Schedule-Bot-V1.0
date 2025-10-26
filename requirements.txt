@@ -4,7 +4,8 @@
 # python.exe -m pip install --upgrade pip
 # pip install -r requirements.txt
 
-websocket-client # Parser
+websocket-client==1.9.0 # Parser
 
-pytelegrambotapi # tg bot
-cryptography     # for api use
+pytelegrambotapi==4.29.1 # tg bot
+cryptography==46.0.2     # for api use
+asyncio==4.0.0

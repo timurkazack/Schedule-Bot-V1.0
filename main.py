@@ -1,13 +1,13 @@
 from telebot import *
+import ws_parser
 from ws_parser import norm_schedule
 from ws_parser import run_auto_update
 import threading as th
 import time
-import ws_parser
 from utils.sql_use import *
 from utils import api
 from utils.get_schedule import *
-
+from utils import my_logger
 
 #password = input("PASSWORD > ")
 api = api.get_api() #password
@@ -148,9 +148,20 @@ def post2(message):
     user_data = get_user_data(message)
 
     if user_data["is_admin"] == 1:
-        for id in get_all_users_id():
-            bot.forward_message(id, user_data['tg_id'], message.message_id)
-            my_logger.info(f"Forward post to {id}")
+        am = bot.send_message(admin_id, "START")
+
+        ids = get_all_users_id()
+
+        for id in ids:
+            time.sleep(0.5)
+            #bot.forward_message(id, user_data['tg_id'], message.message_id)
+            my_logger.info(f"Forward post to {id} [{ids.index(id)+1}/{len(ids)}]")
+
+            bot.edit_message_text(f"[{ids.index(id)+1}/{len(ids)}]", admin_id, am.message_id)
+
+        logger.info("Forwards complete")
+        bot.edit_message_text("COMPLETE", admin_id, am.message_id)
+
 
 @bot.message_handler(commands=["stop"])
 def stop_admin_func(message):
@@ -160,7 +171,10 @@ def stop_admin_func(message):
 
     if user_data["is_admin"] == 1:
         bot.reply_to(message, "✅")
-        exit()
+        bot.stop_polling()
+        import os
+
+        os._exit(0)
 
 
 @bot.message_handler(commands=["upd"])

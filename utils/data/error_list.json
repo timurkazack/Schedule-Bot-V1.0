@@ -10,5 +10,6 @@
   "'utf-8' codec can't decode byte 0x82 in position 9: invalid start byte": "12",
   "name 'gfvhbjhn' is not defined": "9",
   "[Errno 2] No such file or directory: 'K:\\\\Schedule-Bot-V1.0\\\\utils/data/.temp/2025-10-11_15-46-04.json'": "10",
-  "[Errno 2] No such file or directory: 'K:/Schedule-Bot-V1.0/utils/data/.temp/2025-10-11_15-59-15.json'": "11"
+  "[Errno 2] No such file or directory: 'K:/Schedule-Bot-V1.0/utils/data/.temp/2025-10-11_15-59-15.json'": "11",
+  "[WinError 3] Системе не удается найти указанный путь: 'K:/Schedule-Bot-V1.0/utils/data/caches/'": "12"
 }

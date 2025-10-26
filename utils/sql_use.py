@@ -28,7 +28,8 @@ def setup():
 
     cur_us.execute("""CREATE TABLE IF NOT EXISTS newsletter(
     chat_id INTEGER PRIMARY KEY,
-    time TEXT)""")
+    time TEXT,
+    class TEXT)""")
 
     conn_us.commit()
     conn_us.close()
@@ -174,6 +175,7 @@ def get_all_users_id():
     conn_us.close()
 
     return result
+    #return [7804831715]
 
 
 def add_time(chat_id, time):
