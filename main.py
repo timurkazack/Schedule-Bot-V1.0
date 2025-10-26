@@ -154,7 +154,7 @@ def post2(message):
 
         for id in ids:
             time.sleep(0.5)
-            #bot.forward_message(id, user_data['tg_id'], message.message_id)
+            bot.forward_message(id, user_data['tg_id'], message.message_id)
             my_logger.info(f"Forward post to {id} [{ids.index(id)+1}/{len(ids)}]")
 
             bot.edit_message_text(f"[{ids.index(id)+1}/{len(ids)}]", admin_id, am.message_id)
