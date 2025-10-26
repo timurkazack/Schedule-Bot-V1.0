@@ -63,8 +63,10 @@ SAVE_CLASS_MESSAGE = """Сохранено!
 def main():
    bot.polling(none_stop=True)
    time.sleep(utils.get_settings("telegram_bot", "stop_time_h") * 60 * 60)
-   bot.stop_bot()
-   exit()
+   bot.stop_polling()
+   import os
+
+   os._exit(0)
 
 @bot.message_handler(commands=["start"])
 def start_func(message):
