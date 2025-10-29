@@ -4,320 +4,529 @@ from ws_parser import norm_schedule
 from ws_parser import run_auto_update
 import threading as th
 import time
+import traceback
+import signal
+import sys
 from utils.sql_use import *
 from utils import api
 from utils.get_schedule import *
 from utils import my_logger
 
 
-api = api.get_api()
-
-opened_to_users = True
-
-admin_id = 6983370282
-
-bot = telebot.TeleBot(api, parse_mode="HTML")
-
-run_auto_update()
-
-
-choice_class_text = "📖 Выбрать класс"
-choice_class_again_text = "◀️ Выбрать класс заново"
-donate_text = "💸 Донат"
-help_text = "❓ Написать в поддержку"
-settings_text = "⚙️ Настройки"
-classes_text = "классы"
-
-
-site = "https://nextler.ru/6zk8zL1lsy.html?companyid=-mzPgPOgmP0hOUbHwopNk&tableid=-DpPW1Nus2Ypi6avVpfzu"
-
-
-START_MESSAGE = """👋 Привет {user_first_name}
+class ScheduleBot:
+    def __init__(self):
+        self.api = api.get_api()
+        self.opened_to_users = True
+        self.admin_id = 6983370282
+        self.bot = telebot.TeleBot(self.api, parse_mode="HTML")
+        self._running = True
+        self._stop_event = th.Event()
+        
+        # Текстовые константы
+        self.TEXTS = {
+            "choice_class": "📖 Выбрать класс",
+            "choice_class_again": "◀️ Выбрать класс заново",
+            "donate": "💸 Донат",
+            "help": "❓ Написать в поддержку",
+            "settings": "⚙️ Настройки",
+            "classes": "классы",
+            "site": "https://nextler.ru/6zk8zL1lsy.html?companyid=-mzPgPOgmP0hOUbHwopNk&tableid=-DpPW1Nus2Ypi6avVpfzu",
+            
+            "start_message": """👋 Привет {user_first_name}
 На сайте расписания школы трудно найти свой класс?
 <a href="https://nextler.ru/6zk8zL1lsy.html?companyid=-mzPgPOgmP0hOUbHwopNk&tableid=-DpPW1Nus2Ypi6avVpfzu">Сайт</a> долго грузит?
 
 Я помогу тебе!
-Тебе всего лишь надо выбрать свой класс, для этого используй клавиатуру👇"""
-
-HELP_MESSAGE = """Справка по боту:
+Тебе всего лишь надо выбрать свой класс, для этого используй клавиатуру👇""",
+            
+            "help_message": """Справка по боту:
 /start - Перезапустить бота (Придётся заново выбрать класс)
 /help - Получить эту справку
 /proposal - Написать в поддержку
 
 Дни недели/классы отображаются в соответствии с расписанием школы.
-Если какого-то дня/класса нет в меню выбора, значит его нет и в расписании на сайте"""
-
-FROM_CHAT_START_MESSAGE = """Всем привет!
+Если какого-то дня/класса нет в меню выбора, значит его нет и в расписании на сайте""",
+            
+            "from_chat_start": """Всем привет!
 Админу: 
 /set_class (Установить класс для получения расписания)
 /set_newsletter_time (Задать время рассылки. Напиши данную команду и через пробел время в часах)
-/disable_newsletter_time (Отменить рассылку в это время. Напиши данную команду и через пробел время в часах)"""
-
-HELPER_MESSAGE = "Напишите своё обращение:"
-CHOICE_PARALLEL_MESSAGE = "Выберете параллель👇"
-CHOICE_CLASS_MESSAGE = "Выберете класс👇"
-SAVE_CLASS_MESSAGE = """Сохранено!
-Выбирайте день недели и получайте расписание👇"""
+/disable_newsletter_time (Отменить рассылку в это время. Напиши данную команду и через пробел время в часах)""",
+            
+            "helper_message": "Напишите своё обращение:",
+            "choice_parallel": "Выберете параллель👇",
+            "choice_class": "Выберете класс👇",
+            "save_class": "Сохранено!\nВыбирайте день недели и получайте расписание👇"
+        }
+        
+        self._setup_handlers()
+        self._setup_signal_handlers()
+    
+    def _setup_signal_handlers(self):
+        """Настройка обработчиков сигналов для graceful shutdown"""
+        def signal_handler(signum, frame):
+            my_logger.info(f"Received signal {signum}, shutting down...")
+            self.stop()
+        
+        signal.signal(signal.SIGINT, signal_handler)
+        signal.signal(signal.SIGTERM, signal_handler)
+    
+    def _setup_handlers(self):
+        """Настройка обработчиков сообщений"""
+        # Команды
+        self.bot.message_handler(commands=["start"])(self._handle_start)
+        self.bot.message_handler(commands=["help"])(self._handle_help)
+        self.bot.message_handler(commands=["get_users_count"])(self._handle_get_users_count)
+        self.bot.message_handler(commands=["get_all_users"])(self._handle_get_all_users)
+        self.bot.message_handler(commands=["post"])(self._handle_post)
+        self.bot.message_handler(commands=["stop"])(self._handle_stop)
+        self.bot.message_handler(commands=["upd"])(self._handle_update)
+        self.bot.message_handler(commands=["aus"])(self._handle_auto_update_swap)
+        self.bot.message_handler(commands=["proposal"])(self._handle_proposal)
+        
+        # Текстовые обработчики
+        self.bot.message_handler(func=lambda message: message.text == self.TEXTS["help"])(self._handle_help_contact)
+        self.bot.message_handler(
+            func=lambda message: message.text in [self.TEXTS["choice_class"], self.TEXTS["choice_class_again"]]
+        )(self._handle_choice_parallel)
+        
+        self.bot.message_handler(
+            func=lambda message: message.text in [f"{key} {self.TEXTS['classes']}" for key in get_classes()]
+        )(self._handle_choice_class)
+        
+        self.bot.message_handler(
+            func=lambda message: any(message.text in classes for classes in get_classes().values())
+        )(self._handle_save_class)
+        
+        self.bot.message_handler(
+            func=lambda message: message.text in russian_days()
+        )(self._handle_get_schedule)
+    
+    def _log_user_action(self, user_data, action, details=""):
+        """Логирование действий пользователя"""
+        log_message = f"{user_data['tg_id']} used {action}"
+        if details:
+            log_message += f" and choice {details}"
+        my_logger.info(log_message)
+    
+    def _check_access(self, user_data, message=None):
+        """Проверка доступа пользователя"""
+        if not self.opened_to_users and user_data.get("is_admin") != 1:
+            if message:
+                self.bot.reply_to(message, "❌ Бот временно недоступен")
+            return False
+        
+        if message and message.chat.type in ["group", "supergroup"]:
+            if user_data.get("is_admin") != 1:
+                self.bot.delete_message(message.chat.id, message.message_id)
+                return False
+        
+        return True
+    
+    def _handle_start(self, message):
+        """Обработка команды /start"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "START MESSAGE FUNC")
+            
+            markup = self._create_main_menu()
+            
+            if not self._check_access(user_data, message):
+                return
+            
+            if message.chat.type not in ["group", "supergroup"]:
+                self.bot.send_message(
+                    user_data["tg_id"], 
+                    self.TEXTS["start_message"].format(user_first_name=user_data["tg_first_name"]), 
+                    reply_markup=markup
+                )
+            else:
+                chat_member = self.bot.get_chat_member(message.chat.id, message.from_user.id)
+                if chat_member.status in ["creator", "administrator"]:
+                    self.bot.send_message(message.chat.id, "привет админ")
+                self.bot.delete_message(message.chat.id, message.message_id)
+                
+        except Exception as e:
+            my_logger.error(f"Error in start handler: {e}\n{traceback.format_exc()}")
+            if 'message' in locals():
+                self.bot.reply_to(message, "❌ Произошла ошибка при запуске бота")
+    
+    def _handle_help(self, message):
+        """Обработка команды /help"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "HELP MESSAGE FUNC")
+            
+            if self._check_access(user_data):
+                self.bot.send_message(message.from_user.id, self.TEXTS["help_message"])
+                
+        except Exception as e:
+            my_logger.error(f"Error in help handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Произошла ошибка при получении справки")
+    
+    def _handle_get_users_count(self, message):
+        """Обработка команды /get_users_count (только для админа)"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "GET USER COUNT FUNC")
+            
+            if user_data.get("is_admin") == 1:
+                count = get_users_count()
+                self.bot.reply_to(message, f"👥 Пользователей: {count}")
+                
+        except Exception as e:
+            my_logger.error(f"Error in get_users_count handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при получении количества пользователей")
+    
+    def _handle_get_all_users(self, message):
+        """Обработка команды /get_all_users (только для админа)"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "GET ALL USERS FUNC")
+            
+            if user_data.get("is_admin") == 1:
+                with open(get_all_users_data(), "r", encoding="utf-8") as f:
+                    self.bot.send_document(message.from_user.id, f)
+                    
+        except Exception as e:
+            my_logger.error(f"Error in get_all_users handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при получении данных пользователей")
+    
+    def _handle_post(self, message):
+        """Обработка команды /post (только для админа)"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "POST FUNC")
+            
+            if user_data.get("is_admin") == 1:
+                self.bot.reply_to(message, "✅\nНапиши пост!")
+                self.bot.register_next_step_handler(message, self._handle_post_step2)
+                
+        except Exception as e:
+            my_logger.error(f"Error in post handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при создании рассылки")
+    
+    def _handle_post_step2(self, message):
+        """Второй шаг обработки рассылки"""
+        try:
+            user_data = get_user_data(message)
+            
+            if user_data.get("is_admin") == 1:
+                am = self.bot.send_message(self.admin_id, "🔄 Начинаю рассылку...")
+                
+                ids = get_all_users_ids()
+                success_count = 0
+                
+                for user_id in ids:
+                    try:
+                        time.sleep(0.5)
+                        self.bot.forward_message(user_id, user_data['tg_id'], message.message_id)
+                        success_count += 1
+                        my_logger.info(f"Forward post to {user_id} [{ids.index(user_id)+1}/{len(ids)}]")
+                        
+                        self.bot.edit_message_text(
+                            f"📤 [{ids.index(user_id)+1}/{len(ids)}] Успешно: {success_count}", 
+                            self.admin_id, 
+                            am.message_id
+                        )
+                    except Exception as e:
+                        my_logger.error(f"Failed to send to {user_id}: {e}")
+                
+                my_logger.info("Forwards complete")
+                self.bot.edit_message_text(
+                    f"✅ Рассылка завершена! Отправлено: {success_count}/{len(ids)}", 
+                    self.admin_id, 
+                    am.message_id
+                )
+                
+        except Exception as e:
+            my_logger.error(f"Error in post step2: {e}\n{traceback.format_exc()}")
+    
+    def _handle_stop(self, message):
+        """Обработка команды /stop (только для админа)"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "STOP FUNC")
+            
+            if user_data.get("is_admin") == 1:
+                stop_db()
+                self.bot.reply_to(message, "🛑 Останавливаю бота...")
+                self.stop()
+                
+        except Exception as e:
+            my_logger.error(f"Error in stop handler: {e}\n{traceback.format_exc()}")
+    
+    def _handle_update(self, message):
+        """Обработка команды /upd (только для админа)"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "UPD FUNC")
+            
+            if user_data.get("is_admin") == 1:
+                self.bot.reply_to(message, "🔄 Обновляю расписание...")
+                ws_parser.get_data_from_server()
+                self.bot.reply_to(message, "✅ Расписание обновлено")
+                
+        except Exception as e:
+            my_logger.error(f"Error in update handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при обновлении расписания")
+    
+    def _handle_auto_update_swap(self, message):
+        """Обработка команды /aus (только для админа)"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "AUTO UPDATE SWAP FUNC")
+            
+            if user_data.get("is_admin") == 1:
+                ws_parser.updates = not ws_parser.updates
+                status = "включено" if ws_parser.updates else "выключено"
+                self.bot.reply_to(message, f"✅ Автообновление {status}")
+                
+        except Exception as e:
+            my_logger.error(f"Error in auto update swap handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при изменении настроек автообновления")
+    
+    def _handle_proposal(self, message):
+        """Обработка команды /proposal"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "PROPOSAL FUNC")
+            
+            if self._check_access(user_data):
+                self.bot.send_message(message.from_user.id, self.TEXTS["helper_message"])
+                self.bot.register_next_step_handler(message, self._send_to_admin_helper_message)
+                
+        except Exception as e:
+            my_logger.error(f"Error in proposal handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при отправке обращения")
+    
+    def _send_to_admin_helper_message(self, message):
+        """Отправка обращения администратору"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "HELPER MESSAGE FUNC")
+            
+            if self._check_access(user_data):
+                markup = types.InlineKeyboardMarkup()
+                markup.add(
+                    types.InlineKeyboardButton("Ответить", callback_data=f"help_{message.from_user.id}"),
+                    types.InlineKeyboardButton("Забанить", callback_data=f"ban_{message.from_user.id}")
+                )
+                
+                self.bot.send_message(
+                    self.admin_id, 
+                    f"📩 Новое обращение от {message.from_user.id} ({user_data['tg_first_name']}):\n{message.text}",
+                    reply_markup=markup
+                )
+                self.bot.send_message(message.from_user.id, "✅ Ваше обращение отправлено администратору")
+                
+        except Exception as e:
+            my_logger.error(f"Error in send to admin helper: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при отправке обращения")
+    
+    def _handle_help_contact(self, message):
+        """Обработка кнопки помощи"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "GET HELP FUNC")
+            
+            if self._check_access(user_data):
+                self.bot.send_message(message.from_user.id, self.TEXTS["helper_message"])
+                self.bot.register_next_step_handler(message, self._send_to_admin_helper_message)
+                
+        except Exception as e:
+            my_logger.error(f"Error in help contact handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при обращении в поддержку")
+    
+    def _handle_choice_parallel(self, message):
+        """Обработка выбора параллели"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "CHOICE PARALLEL FUNC")
+            
+            if self._check_access(user_data):
+                markup = self._create_parallel_markup()
+                self.bot.send_message(message.from_user.id, self.TEXTS["choice_parallel"], reply_markup=markup)
+                
+        except Exception as e:
+            my_logger.error(f"Error in choice parallel handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при выборе параллели")
+    
+    def _handle_choice_class(self, message):
+        """Обработка выбора класса"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            parallel = message.text.replace(f" {self.TEXTS['classes']}", "")
+            self._log_user_action(user_data, "CHOICE CLASS FUNC", parallel)
+            
+            if self._check_access(user_data):
+                markup = self._create_class_markup(parallel)
+                self.bot.send_message(message.from_user.id, self.TEXTS["choice_class"], reply_markup=markup)
+                
+        except Exception as e:
+            my_logger.error(f"Error in choice class handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при выборе класса")
+    
+    def _handle_save_class(self, message):
+        """Сохранение выбранного класса"""
+        try:
+            update_user_data(message, klass=message.text)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "SAVE CHOICE CLASS FUNC", message.text)
+            
+            if self._check_access(user_data):
+                markup = self._create_days_markup()
+                self.bot.send_message(message.from_user.id, self.TEXTS["save_class"], reply_markup=markup)
+                
+        except Exception as e:
+            my_logger.error(f"Error in save class handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при сохранении класса")
+    
+    def _handle_get_schedule(self, message):
+        """Получение расписания"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "GET SCHEDULE FUNC", message.text)
+            
+            if self._check_access(user_data):
+                ru_day = message.text
+                en_day = get_ru_day_to_en(ru_day)
+                
+                if not en_day:
+                    self.bot.reply_to(message, "❌ Ошибка: день недели не распознан")
+                    return
+                
+                schedule_text = norm_schedule(user_data["worked_class"], en_day)
+                self.bot.send_message(message.from_user.id, schedule_text)
+                
+        except Exception as e:
+            my_logger.error(f"Error in get schedule handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при получении расписания")
+    
+    def _create_main_menu(self):
+        """Создание главного меню"""
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        markup.row(types.KeyboardButton(self.TEXTS["choice_class"]))
+        markup.row(types.KeyboardButton(self.TEXTS["help"]))
+        return markup
+    
+    def _create_parallel_markup(self):
+        """Создание клавиатуры с параллелями"""
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        buttons = [types.KeyboardButton(parallel + f" {self.TEXTS['classes']}") 
+                  for parallel in get_classes()]
+        markup.add(*buttons)
+        return markup
+    
+    def _create_class_markup(self, parallel):
+        """Создание клавиатуры с классами параллели"""
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        classes = get_classes()
+        if parallel in classes:
+            buttons = [types.KeyboardButton(klass) for klass in classes[parallel]]
+            markup.add(*buttons)
+        return markup
+    
+    def _create_days_markup(self):
+        """Создание клавиатуры с днями недели"""
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        buttons = [types.KeyboardButton(day) for day in russian_days()]
+        markup.add(*buttons)
+        markup.row(types.KeyboardButton(self.TEXTS["choice_class_again"]))
+        return markup
+    
+    def stop(self):
+        """Остановка бота"""
+        my_logger.info("Stopping bot...")
+        self._running = False
+        self._stop_event.set()
+        try:
+            self.bot.stop_polling()
+        except Exception as e:
+            my_logger.error(f"Error stopping bot: {e}")
+    
+    def run(self):
+        """Запуск бота"""
+        try:
+            my_logger.info("Starting bot...")
+            run_auto_update()
+            self.bot.remove_webhook()
+            
+            # Запуск в отдельном потоке
+            self.bot_thread = th.Thread(target=self._polling_loop, daemon=True)
+            self.bot_thread.start()
+            
+            my_logger.info("Bot started successfully")
+            return self._stop_event
+            
+        except Exception as e:
+            my_logger.error(f"Failed to start bot: {e}\n{traceback.format_exc()}")
+            raise
+    
+    def _polling_loop(self):
+        """Цикл опроса бота с обработкой исключений"""
+        while self._running and not self._stop_event.is_set():
+            try:
+                my_logger.info("Starting bot polling...")
+                self.bot.polling(none_stop=True, timeout=30)
+                
+            except Exception as e:
+                if self._running and not self._stop_event.is_set():
+                    my_logger.error(f"Bot polling error: {e}\n{traceback.format_exc()}")
+                    my_logger.info("Restarting bot in 10 seconds...")
+                    time.sleep(10)
+        
+        my_logger.info("Bot polling loop stopped")
 
 
 def main():
-   bot.polling(none_stop=True)
-   time.sleep(utils.get_settings("telegram_bot", "stop_time_h") * 60 * 60)
-   bot.stop_polling()
-   import os
-
-   os._exit(0)
-
-@bot.message_handler(commands=["start"])
-def start_func(message):
-    update_user_data(message)
-    user_data = get_user_data(message)
-    my_logger.info(f"{user_data['tg_id']} used START MESSAGE FUNC")
-
-    #from users
-    markup_menu_buttons = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    choice_class_menu_button = types.KeyboardButton(choice_class_text)
-    #donate_menu_button = types.KeyboardButton(donate_text)
-    help_menu_button = types.KeyboardButton(help_text)
-    #settings_menu_button = types.KeyboardButton(settings_text)
-
-    markup_menu_buttons.row(choice_class_menu_button)
-    markup_menu_buttons.row(help_menu_button)#, donate_menu_button)
-    #markup_menu_buttons.row(settings_menu_button)
-
-
-
-    if not opened_to_users:
-        if user_data["is_admin"] == 1:
-            bot.send_message(user_data["tg_id"], START_MESSAGE.format(user_first_name=user_data["tg_first_name"]), reply_markup=markup_menu_buttons)
-    else:
-        if message.chat.type not in ["group", "supergroup"]:
-            bot.send_message(user_data["tg_id"], START_MESSAGE.format(user_first_name=user_data["tg_first_name"]), reply_markup=markup_menu_buttons)
+    """Основная функция запуска с автоматическим выключением по времени"""
+    bot = None
+    try:
+        bot = ScheduleBot()
+        stop_event = bot.run()
+        
+        # Получаем время остановки из настроек
+        stop_time_h = utils.get_settings("telegram_bot", "stop_time_h")
+        
+        if stop_time_h:
+            my_logger.info(f"Bot will auto-stop after {stop_time_h} hours")
+            
+            # Ожидаем либо сигнала остановки, либо истечения времени
+            stopped = stop_event.wait(stop_time_h * 60 * 60)
+            
+            if stopped:
+                my_logger.info("Bot stopped by stop event")
+            else:
+                my_logger.info(f"Bot auto-stopped after {stop_time_h} hours")
         else:
-            chat_member = bot.get_chat_member(message.chat.id, message.from_user.id)
-            if chat_member.status in ["creator", "administrator"]:
-                msg = bot.send_message(message.chat.id, "привет админ")
-            bot.delete_message(message.chat.id, message.message_id)
-
-
-
-
-
-
-@bot.message_handler(commands=["help"])
-def help_func(message):
-    update_user_data(message)
-    user_data = get_user_data(message)
-    my_logger.info(f"{user_data['tg_id']} used HELP MESSAGE FUNC")
-
-
-
-    if opened_to_users or user_data["is_admin"] == 1:
-        bot.send_message(message.from_user.id, HELP_MESSAGE)
-
-
-
-@bot.message_handler(commands=["get_users_count"])
-def get_users_count(message):
-    update_user_data(message)
-    user_data = get_user_data(message)
-    my_logger.info(f"{user_data['tg_id']} used GET USER COUNT FUNC")
-
-    if user_data["is_admin"] == 1:
-        bot.reply_to(message, f"{get_users_count()} пользователей")
-
-@bot.message_handler(commands=["get_all_users"])
-def get_all_users(message):
-    update_user_data(message)
-    user_data = get_user_data(message)
-    my_logger.info(f"{user_data['tg_id']} used GET ALL USERS FUNC")
-
-    if user_data["is_admin"] == 1:
-        with open(get_all_users_data(), "r", encoding="utf-8") as f:
-            bot.send_document(message.from_user.id, f)
-
-@bot.message_handler(commands=["post"])
-def post1(message):
-    update_user_data(message)
-    user_data = get_user_data(message)
-    my_logger.info(f"{user_data['tg_id']} used POST FUNC")
-
-    if user_data["is_admin"] == 1:
-        bot.reply_to(message, "✅\nНапиши пост!")
-        bot.register_next_step_handler(message, post2)
-
-def post2(message):
-    user_data = get_user_data(message)
-
-    if user_data["is_admin"] == 1:
-        am = bot.send_message(admin_id, "START")
-
-        ids = get_all_users_ids()
-
-        for id in ids:
-            time.sleep(0.5)
-            bot.forward_message(id, user_data['tg_id'], message.message_id)
-            my_logger.info(f"Forward post to {id} [{ids.index(id)+1}/{len(ids)}]")
-
-            bot.edit_message_text(f"[{ids.index(id)+1}/{len(ids)}]", admin_id, am.message_id)
-
-        logger.info("Forwards complete")
-        bot.edit_message_text("COMPLETE", admin_id, am.message_id)
-
-
-@bot.message_handler(commands=["stop"])
-def stop_admin_func(message):
-    update_user_data(message)
-    user_data = get_user_data(message)
-    my_logger.info(f"{user_data['tg_id']} used STOP FUNC")
-
-    if user_data["is_admin"] == 1:
-        bot.reply_to(message, "✅")
-        bot.stop_polling()
-        import os
-
-        os._exit(0)
-
-
-@bot.message_handler(commands=["upd"])
-def upd_admin_func(message):
-    update_user_data(message)
-    user_data = get_user_data(message)
-    my_logger.info(f"{user_data['tg_id']} used UPD FUNC")
-
-    if user_data["is_admin"] == 1:
-        bot.reply_to(message, "✅")
-        ws_parser.get_data_from_server()
-
-@bot.message_handler(commands=["aus"])
-def aus_admin_func(message):
-    update_user_data(message)
-    user_data = get_user_data(message)
-    my_logger.info(f"{user_data['tg_id']} used AUTO UPDATE SWAP FUNC")
-
-    if user_data["is_admin"] == 1:
-        bot.reply_to(message, "✅")
-        ws_parser.updates = False if ws_parser.updates else True
-
-
-
-
-@bot.message_handler(func=lambda message: message.text == help_text)
-def get_help_contact(message):
-    update_user_data(message)
-    user_data = get_user_data(message)
-    my_logger.info(f"{user_data['tg_id']} used GET HELP FUNC")
-
-
-    if opened_to_users or user_data["is_admin"] == 1:
-        bot.send_message(message.from_user.id, HELPER_MESSAGE)
-        bot.register_next_step_handler(message, send_to_admin_helper_message)
-
-
-@bot.message_handler(commands=["proposal"])
-def send_to_admin_helper_message(message):
-    update_user_data(message)
-    user_data = get_user_data(message)
-    my_logger.info(f"{user_data['tg_id']} used GET HELP FUNC 2")
-
-
-    markup = types.InlineKeyboardMarkup()
-    markup.add(
-        types.InlineKeyboardButton("Ответить", callback_data=f"help_{message.from_user.id}"),
-        types.InlineKeyboardButton("Забанить", callback_data=f"ban_{message.from_user.id}"))
-
-
-    if opened_to_users or user_data["is_admin"] == 1:
-        bot.send_message(admin_id, f"Новое обращение ({message.from_user.id}):\n{message.text}")#, reply_markup=markup)
-        bot.send_message(message.from_user.id, "Отправлено.")
-
-
-
-
-
-@bot.message_handler(func=lambda message: message.text == choice_class_text or message.text == choice_class_again_text)
-def get_choice_parallel(message):
-    update_user_data(message)
-    user_data = get_user_data(message)
-    my_logger.info(f"{user_data['tg_id']} used CHOICE PARALLEL FUNC")
-
-
-    markup_parallel = types.ReplyKeyboardMarkup(resize_keyboard=True)
-
-    buttons = []
-
-    for parallel in get_classes():
-        buttons.append(
-            types.KeyboardButton(parallel + f" {classes_text}"))
-
-    markup_parallel.add(*buttons)
-
-
-    if opened_to_users or user_data["is_admin"] == 1:
-        bot.send_message(message.from_user.id, CHOICE_PARALLEL_MESSAGE, reply_markup=markup_parallel)
-
-
-
-
-
-
-@bot.message_handler(func=lambda message: message.text in [f"{key} {classes_text}" for key in get_classes()])
-def get_choice_class(message):
-    update_user_data(message)
-    user_data = get_user_data(message)
-    my_logger.info(f"{user_data['tg_id']} used CHOICE CLASS FUNC and choice {message.text}")
-
-
-    markup_class = types.ReplyKeyboardMarkup(resize_keyboard=True)
-
-    buttons = []
-
-    for klass in get_classes()[message.text.replace(f" {classes_text}", "")]:
-        buttons.append(
-            types.KeyboardButton(klass))
-
-    markup_class.add(*buttons)
-
-    if opened_to_users or user_data["is_admin"] == 1:
-        bot.send_message(message.from_user.id, CHOICE_CLASS_MESSAGE, reply_markup=markup_class)
-
-
-@bot.message_handler(func=lambda message: any(message.text in classes for classes in get_classes().values()))
-def save_choice_class(message):
-    update_user_data(message, klass=message.text)
-    user_data = get_user_data(message)
-    my_logger.info(f"{user_data['tg_id']} used SAVE CHOICE CLASS FUNC and choice {message.text}")
-
-
-    markup_days = types.ReplyKeyboardMarkup(resize_keyboard=True)
-
-    buttons = []
-
-    for day in russian_days():
-        buttons.append(
-            types.KeyboardButton(day))
-
-    markup_days.add(*buttons)
-    markup_days.row(choice_class_again_text)
-
-    if opened_to_users or user_data["is_admin"] == 1:
-        bot.send_message(message.from_user.id, SAVE_CLASS_MESSAGE, reply_markup=markup_days)
-
-
-@bot.message_handler(func=lambda message: message.text in russian_days())
-def get_schedule_for_user(message):
-    update_user_data(message)
-    user_data = get_user_data(message)
-    my_logger.info(f"{user_data['tg_id']} used GET SCHEDULE FUNC and choice {message.text}")
-
-    ru_day = message.text
-    en_day = get_ru_day_to_en(ru_day)
-
-    if opened_to_users or user_data["is_admin"] == 1:
-        bot.send_message(message.from_user.id,
-                         norm_schedule(user_data["worked_class"], en_day))
-
-
-bot.remove_webhook()
-th1 = th.Thread(target = main)
-th1.start()
+            my_logger.info("Bot running indefinitely (no stop_time_h setting)")
+            # Если время не задано, ждем бесконечно
+            stop_event.wait()
+            
+    except KeyboardInterrupt:
+        my_logger.info("Bot stopped by user (Ctrl+C)")
+    except Exception as e:
+        my_logger.error(f"Fatal error in main: {e}\n{traceback.format_exc()}")
+    finally:
+        if bot:
+            bot.stop()
+        my_logger.info("Bot shutdown complete")
+
+
+if __name__ == "__main__":
+    main()

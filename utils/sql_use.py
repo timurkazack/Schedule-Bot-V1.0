@@ -54,3 +54,11 @@ def get_all_users_ids():
 
 
    return sq.get_all_users_id()
+
+
+def stop_db():
+
+   # Завершает соеденение с бд
+
+
+   return sq.stop()
