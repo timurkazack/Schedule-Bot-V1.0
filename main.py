@@ -9,8 +9,8 @@ from utils import api
 from utils.get_schedule import *
 from utils import my_logger
 
-#password = input("PASSWORD > ")
-api = api.get_api() #password
+
+api = api.get_api()
 
 opened_to_users = True
 
