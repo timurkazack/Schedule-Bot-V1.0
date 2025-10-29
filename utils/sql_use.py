@@ -5,11 +5,14 @@ from datetime import datetime as dt
 
 users_db = f"{os.path.dirname(__file__)}/data/users/users_db.db".replace("\\", "/")
 
-def setup():
-    my_logger.info("Stated connect to db")
-    conn_us = sq.connect(users_db)
+_connect = None
 
-    cur_us = conn_us.cursor()
+def setup():
+    global _connect
+    my_logger.info("Stated connect to db")
+    _connect = sq.connect(users_db)
+
+    cur_us = _connect.cursor()
 
     cur_us.execute("""CREATE TABLE IF NOT EXISTS users(
         tg_id INTEGER PRIMARY KEY,
@@ -31,8 +34,7 @@ def setup():
     time TEXT,
     class TEXT)""")
 
-    conn_us.commit()
-    conn_us.close()
+    _connect.commit()
     my_logger.info("Users db created/exist")
 
 
@@ -48,8 +50,7 @@ def update_user_data(message_from_user, klass=None,
     # Получаем текущее время в формате строки
     current_time = dt.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    conn_us = sq.connect(users_db)
-    cur_us = conn_us.cursor()
+    cur_us = _connect.cursor()
 
     # 1. Проверяем существует ли пользователь
     cur_us.execute("SELECT * FROM users WHERE tg_id = ?", (tg_id,))
@@ -92,8 +93,7 @@ def update_user_data(message_from_user, klass=None,
             tg_id
         ))
 
-    conn_us.commit()
-    conn_us.close()
+    _connect.commit()
 
 
 def get_user_data(message):
@@ -101,7 +101,7 @@ def get_user_data(message):
     tg_id = int(message.from_user.id)
 
     try:
-        with sq.connect(users_db) as conn_us:
+        with _connect as conn_us:
             cur_us = conn_us.cursor()
 
             cur_us.execute("""
@@ -123,28 +123,24 @@ def get_user_data(message):
 
 
 def get_user_count():
-    conn_us = sq.connect(users_db)
-    cur_us = conn_us.cursor()
+    cur_us = _connect.cursor()
 
     cur_us.execute("SELECT COUNT(*) FROM users;")
     result = cur_us.fetchone()
     count = result[0]
 
-    cur_us.close()
-    conn_us.close()
+    _connect.commit()
 
     return count
 
 
 def get_all_sql_users():
-    conn_us = sq.connect(users_db)
-    cur_us = conn_us.cursor()
+    cur_us = _connect.cursor()
 
     cur_us.execute("SELECT * FROM users;")
     result = cur_us.fetchall()
 
-    cur_us.close()
-    conn_us.close()
+    _connect.commit()
 
     file = f"{os.path.dirname(__file__)}/data/.temp/all.txt".replace('\\', '/')
 
@@ -163,31 +159,27 @@ def get_all_sql_users():
 
 
 def get_all_users_id():
-    conn_us = sq.connect(users_db)
-    cur_us = conn_us.cursor()
+    cur_us = _connect.cursor()
 
     cur_us.execute("SELECT tg_id FROM users;")
     result = cur_us.fetchall()
     result = [item[0] for item in result]
 
 
-    cur_us.close()
-    conn_us.close()
+    _connect.commit()
 
     return result
     #return [7804831715]
 
 
 def add_time(chat_id, time):
-    #conn_us = sq.connect(users_db)
-    #cur_us = conn_us.cursor()
+    #cur_us = _connect.cursor()
 
     #cur_us.execute("""
     #INSERT INTO newsletter (
     #chat_id, time) VALUES (?, ?)""", (chat_id, time))
 
-    #cur_us.close()
-    #conn_us.close()
+    #_connect.commit()
     pass
 
 setup()
