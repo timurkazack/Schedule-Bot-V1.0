@@ -117,14 +117,14 @@ def help_func(message):
 
 
 
-@bot.message_handler(commands=["get_user_count"])
+@bot.message_handler(commands=["get_users_count"])
 def get_users_count(message):
     update_user_data(message)
     user_data = get_user_data(message)
     my_logger.info(f"{user_data['tg_id']} used GET USER COUNT FUNC")
 
     if user_data["is_admin"] == 1:
-        bot.reply_to(message, f"{get_user_count()} пользователей")
+        bot.reply_to(message, f"{get_users_count()} пользователей")
 
 @bot.message_handler(commands=["get_all_users"])
 def get_all_users(message):
@@ -133,7 +133,7 @@ def get_all_users(message):
     my_logger.info(f"{user_data['tg_id']} used GET ALL USERS FUNC")
 
     if user_data["is_admin"] == 1:
-        with open(get_all_sql_users(), "r", encoding="utf-8") as f:
+        with open(get_all_users_data(), "r", encoding="utf-8") as f:
             bot.send_document(message.from_user.id, f)
 
 @bot.message_handler(commands=["post"])
@@ -152,7 +152,7 @@ def post2(message):
     if user_data["is_admin"] == 1:
         am = bot.send_message(admin_id, "START")
 
-        ids = get_all_users_id()
+        ids = get_all_users_ids()
 
         for id in ids:
             time.sleep(0.5)
