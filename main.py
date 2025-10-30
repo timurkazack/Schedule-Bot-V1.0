@@ -82,25 +82,23 @@ class ScheduleBot:
         self.bot.message_handler(commands=["stop"])(self._handle_stop)
         self.bot.message_handler(commands=["upd"])(self._handle_update)
         self.bot.message_handler(commands=["aus"])(self._handle_auto_update_swap)
+        self.bot.message_handler(commands=["otus"])(self._handle_open_to_users_swap)
         self.bot.message_handler(commands=["proposal"])(self._handle_proposal)
         
         # Текстовые обработчики
-        self.bot.message_handler(func=lambda message: message.text == self.TEXTS["help"])(self._handle_help_contact)
+        self.bot.message_handler(func=lambda message: message.text == self.TEXTS["help"])
+        (self._handle_help_contact)
         self.bot.message_handler(
-            func=lambda message: message.text in [self.TEXTS["choice_class"], self.TEXTS["choice_class_again"]]
-        )(self._handle_choice_parallel)
+            func=lambda message: message.text in [self.TEXTS["choice_class"], self.TEXTS["choice_class_again"]])    (self._handle_choice_parallel)
         
         self.bot.message_handler(
-            func=lambda message: message.text in [f"{key} {self.TEXTS['classes']}" for key in get_classes()]
-        )(self._handle_choice_class)
+            func=lambda message: message.text in [f"{key} {self.TEXTS['classes']}" for key in get_classes()])   (self._handle_choice_class)
         
         self.bot.message_handler(
-            func=lambda message: any(message.text in classes for classes in get_classes().values())
-        )(self._handle_save_class)
+            func=lambda message: any(message.text in classes for classes in get_classes().values()))    (self._handle_save_class)
         
         self.bot.message_handler(
-            func=lambda message: message.text in russian_days()
-        )(self._handle_get_schedule)
+            func=lambda message: message.text in russian_days())    (self._handle_get_schedule)
     
     def _log_user_action(self, user_data, action, details=""):
         """Логирование действий пользователя"""
@@ -111,7 +109,9 @@ class ScheduleBot:
     
     def _check_access(self, user_data, message=None):
         """Проверка доступа пользователя"""
-        if not self.opened_to_users and user_data.get("is_admin") != 1:
+        if not self.opened_to_users\
+            and user_data.get("is_admin") != 1\
+            and user_data.get("is_baned") != 1:
             if message:
                 self.bot.reply_to(message, "❌ Бот временно недоступен")
             return False
@@ -293,13 +293,29 @@ class ScheduleBot:
         except Exception as e:
             my_logger.error(f"Error in auto update swap handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при изменении настроек автообновления")
+
+    def _handle_open_to_users_swap(self, message):
+        """Обработка команды /otus (только для админа)"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "OPEN TO USERS SWAP FUNC")
+
+            if user_data.get("is_admin") == 1:
+                self.opened_to_users = not self.opened_to_users
+                status = "включен" if self.opened_to_users else "выключен"
+                self.bot.reply_to(message, f"✅ Доступ для пользователей {status}")
+
+        except Exception as e:
+            my_logger.error(f"Error in open to users swap handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при изменении настроек доступа для пользователей")
     
     def _handle_proposal(self, message):
         """Обработка команды /proposal"""
         try:
             update_user_data(message)
             user_data = get_user_data(message)
-            self._log_user_action(user_data, "PROPOSAL FUNC")
+            #self._log_user_action(user_data, "PROPOSAL FUNC")
             
             if self._check_access(user_data):
                 self.bot.send_message(message.from_user.id, self.TEXTS["helper_message"])
@@ -309,31 +325,8 @@ class ScheduleBot:
             my_logger.error(f"Error in proposal handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при отправке обращения")
     
-    def _send_to_admin_helper_message(self, message):
-        """Отправка обращения администратору"""
-        try:
-            update_user_data(message)
-            user_data = get_user_data(message)
-            self._log_user_action(user_data, "HELPER MESSAGE FUNC")
-            
-            if self._check_access(user_data):
-                markup = types.InlineKeyboardMarkup()
-                markup.add(
-                    types.InlineKeyboardButton("Ответить", callback_data=f"help_{message.from_user.id}"),
-                    types.InlineKeyboardButton("Забанить", callback_data=f"ban_{message.from_user.id}")
-                )
-                
-                self.bot.send_message(
-                    self.admin_id, 
-                    f"📩 Новое обращение от {message.from_user.id} ({user_data['tg_first_name']}):\n{message.text}",
-                    reply_markup=markup
-                )
-                self.bot.send_message(message.from_user.id, "✅ Ваше обращение отправлено администратору")
-                
-        except Exception as e:
-            my_logger.error(f"Error in send to admin helper: {e}\n{traceback.format_exc()}")
-            self.bot.reply_to(message, "❌ Ошибка при отправке обращения")
-    
+    #
+
     def _handle_help_contact(self, message):
         """Обработка кнопки помощи"""
         try:
