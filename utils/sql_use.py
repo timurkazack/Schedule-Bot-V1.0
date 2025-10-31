@@ -56,6 +56,14 @@ def get_all_users_ids():
    return sq.get_all_users_id()
 
 
+def get_ban_users_list():
+
+   # Возвращает отцентрованный список забанненых файлом
+
+
+   return sq.get_ban_users_list()
+
+
 def stop_db():
 
    # Завершает соеденение с бд

@@ -285,6 +285,72 @@ def get_all_users_id():
         my_logger.error(f"Unexpected error in get_all_users_id: {e}")
         return []
 
+def get_ban_users_list():
+    """
+    Получение списка файлом с забаненными пользователями
+    id     name    ban_time    reason
+
+    Returns:
+        file: Список забанненых
+    """
+    try:
+        with get_cursor() as cur_us:
+            cur_us.execute("SELECT tg_id," \
+            "tg_first_name," \
+            "tg_last_name," \
+            "ban_time," \
+            "ban_reason FROM users WHERE is_baned = 0;")
+            result = cur_us.fetchall()
+        
+        # Создание временного файла для экспорта
+        file = f"{os.path.dirname(__file__)}/data/.temp/ban_list.txt".replace('\\', '/')
+
+        # Создание директории, если она не существует
+        os.makedirs(os.path.dirname(file), exist_ok=True)
+
+        with open(file, "w", encoding="utf-8") as f:
+
+            max_len_id = 0
+            max_len_first_name = 0
+            max_len_last_name = 0
+            max_len_ban_time = 0
+
+            for cur_result in result:
+                if len(str(cur_result[0])) > max_len_id:
+                    max_len_id = len(str(cur_result[0]))
+
+                if len(str(cur_result[1])) > max_len_first_name:
+                    max_len_first_name = len(str(cur_result[1]))
+
+                if len(str(cur_result[2])) > max_len_last_name:
+                    max_len_last_name = len(str(cur_result[2]))
+
+                if len(str(cur_result[3])) > max_len_ban_time:
+                    max_len_ban_time = len(str(cur_result[3]))
+
+            for cur_result in result:
+
+                cur_len_id = len(str(cur_result[0]))
+                cur_len_first_name = len(str(cur_result[1]))
+                cur_len_last_name = len(str(cur_result[2]))
+                cur_len_ban_time = len(str(cur_result[3]))
+
+                f.write(f"{cur_result[0]} {' '*(max_len_id-cur_len_id)}")
+                f.write(f"{cur_result[1]} {' '*(max_len_first_name-cur_len_first_name)}")
+                f.write(f"{cur_result[2]} {' '*(max_len_last_name-cur_len_last_name)}")
+                f.write(f"{cur_result[3]} {' '*(max_len_ban_time-cur_len_ban_time)}")
+                f.write(f"{cur_result[4]}\n")
+        
+        my_logger.info(f"Ban users list exported to:{file}")
+        return file
+
+    except sq.Error as e:
+        my_logger.error(f"Error getting ban users: {e}")
+        return []
+    except Exception as e:
+        my_logger.error(f"Unexpected error in get_ban_users_list: {e}")
+        return []
+
 def add_time(chat_id, time):
     """
     Функция для добавления времени рассылки (временно не реализована)

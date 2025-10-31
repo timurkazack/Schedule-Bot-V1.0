@@ -62,6 +62,8 @@ class ScheduleBot:
         self._setup_handlers()
         self._setup_signal_handlers()
     
+
+
     def _setup_signal_handlers(self):
         """Настройка обработчиков сигналов для graceful shutdown"""
         def signal_handler(signum, frame):
@@ -71,6 +73,8 @@ class ScheduleBot:
         signal.signal(signal.SIGINT, signal_handler)
         signal.signal(signal.SIGTERM, signal_handler)
     
+
+
     def _setup_handlers(self):
         """Настройка обработчиков сообщений"""
         # Команды
@@ -83,6 +87,9 @@ class ScheduleBot:
         self.bot.message_handler(commands=["upd"])(self._handle_update)
         self.bot.message_handler(commands=["aus"])(self._handle_auto_update_swap)
         self.bot.message_handler(commands=["otus"])(self._handle_open_to_users_swap)
+        self.bot.message_handler(commands=["ban"])(self._handle_ban_user)
+        self.bot.message_handler(commands=["unban"])(self._handle_unban_user)
+        self.bot.message_handler(commands=["ban_list"])(self._handle_ban_users_list)
         self.bot.message_handler(commands=["proposal"])(self._handle_proposal)
         
         # Текстовые обработчики
@@ -100,10 +107,12 @@ class ScheduleBot:
         self.bot.message_handler(
             func=lambda message: message.text in russian_days())    (self._handle_get_schedule)
         
-        # 
+        # Обработчик обращений
         self.bot.callback_query_handler(
             func=lambda call: call.data[:4]=='help')     (self._handle_admin_help_react_step_1)
     
+
+
     def _log_user_action(self, user_data, action, details=""):
         """Логирование действий пользователя"""
         log_message = f"{user_data['tg_id']} used {action}"
@@ -111,6 +120,8 @@ class ScheduleBot:
             log_message += f" and choice {details}"
         my_logger.info(log_message)
     
+
+
     def _check_access(self, user_data, message=None):
         """Проверка доступа пользователя"""
         if not self.opened_to_users\
@@ -127,6 +138,8 @@ class ScheduleBot:
         
         return True
     
+
+
     def _handle_start(self, message):
         """Обработка команды /start"""
         try:
@@ -156,6 +169,8 @@ class ScheduleBot:
             if 'message' in locals():
                 self.bot.reply_to(message, "❌ Произошла ошибка при запуске бота")
     
+
+
     def _handle_help(self, message):
         """Обработка команды /help"""
         try:
@@ -170,6 +185,8 @@ class ScheduleBot:
             my_logger.error(f"Error in help handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Произошла ошибка при получении справки")
     
+
+
     def _handle_get_users_count(self, message):
         """Обработка команды /get_users_count (только для админа)"""
         try:
@@ -185,6 +202,8 @@ class ScheduleBot:
             my_logger.error(f"Error in get_users_count handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при получении количества пользователей")
     
+
+
     def _handle_get_all_users(self, message):
         """Обработка команды /get_all_users (только для админа)"""
         try:
@@ -200,6 +219,8 @@ class ScheduleBot:
             my_logger.error(f"Error in get_all_users handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при получении данных пользователей")
     
+
+
     def _handle_post(self, message):
         """Обработка команды /post (только для админа)"""
         try:
@@ -215,6 +236,8 @@ class ScheduleBot:
             my_logger.error(f"Error in post handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при создании рассылки")
     
+
+
     def _handle_post_step2(self, message):
         """Второй шаг обработки рассылки"""
         try:
@@ -251,6 +274,8 @@ class ScheduleBot:
         except Exception as e:
             my_logger.error(f"Error in post step2: {e}\n{traceback.format_exc()}")
     
+
+
     def _handle_stop(self, message):
         """Обработка команды /stop (только для админа)"""
         try:
@@ -266,6 +291,8 @@ class ScheduleBot:
         except Exception as e:
             my_logger.error(f"Error in stop handler: {e}\n{traceback.format_exc()}")
     
+
+
     def _handle_update(self, message):
         """Обработка команды /upd (только для админа)"""
         try:
@@ -281,7 +308,9 @@ class ScheduleBot:
         except Exception as e:
             my_logger.error(f"Error in update handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при обновлении расписания")
-    
+
+
+
     def _handle_auto_update_swap(self, message):
         """Обработка команды /aus (только для админа)"""
         try:
@@ -297,6 +326,8 @@ class ScheduleBot:
         except Exception as e:
             my_logger.error(f"Error in auto update swap handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при изменении настроек автообновления")
+
+
 
     def _handle_open_to_users_swap(self, message):
         """Обработка команды /otus (только для админа)"""
@@ -314,6 +345,57 @@ class ScheduleBot:
             my_logger.error(f"Error in open to users swap handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при изменении настроек доступа для пользователей")
     
+
+
+    def _handle_ban_user(self, message):
+        """Обработка команды /ban {tg_id} {time_m} {reason} (только для админа)"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "BAN USER FUNC")
+
+            if user_data.get("is_admin") == 1:
+                pass
+
+        except Exception as e:
+            my_logger.error(f"Error in ban user handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при бане пользователя")
+
+
+
+    def _handle_unban_user(self, message):
+        """Обработка команды /unban {tg_id} (только для админа)"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "UNBAN USER FUNC")
+
+            if user_data.get("is_admin") == 1:
+                pass
+
+        except Exception as e:
+            my_logger.error(f"Error in unban user handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при разбане пользователя")
+
+
+
+    def _handle_ban_users_list(self, message):
+        """Обработка команды /ban_list (только для админа)"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+            self._log_user_action(user_data, "BAN LIST FUNC")
+
+            if user_data.get("is_admin") == 1:
+                with open(get_ban_users_list(), "r", encoding="utf-8") as f:
+                    self.bot.send_document(self.admin_id, f)
+            
+        except Exception as e:
+            my_logger.error(f"Error in ban list handler: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при обработке списка забаненых пользователей")
+
+
+
     def _handle_proposal(self, message):
         """Обработка команды /proposal"""
         try:
@@ -329,6 +411,8 @@ class ScheduleBot:
             my_logger.error(f"Error in proposal handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при отправке обращения")
     
+
+
     def _send_to_admin_helper_message(self, message):
         """Отправка обращения администратору"""
         try:
@@ -352,6 +436,8 @@ class ScheduleBot:
             my_logger.error(f"Error in send to admin helper: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при отправке обращения")
 
+
+
     def _handle_admin_help_react_step_1(self, call):
         """Первый шаг обработки ответа на обращение"""
         try:
@@ -374,6 +460,8 @@ class ScheduleBot:
             my_logger.error(f"Error in admin react help 1: {e}\n{traceback.format_exc()}")
             self.bot.send_message(self.admin_id, "❌ Ошибка при обработке ответа на обращение (1)")
 
+
+
     def _handle_admin_help_react_step_2(self, message, user_id):
         """Второй шаг обработки ответа на обращение - отправка ответа пользователю"""
         try:
@@ -388,6 +476,8 @@ class ScheduleBot:
         except Exception as e:
             my_logger.error(f"Error in admin react help 2: {e}\n{traceback.format_exc()}")
             self.bot.send_message(self.admin_id, "❌ Ошибка при обработке ответа на обращение (2)")
+
+
 
     def _handle_help_contact(self, message):
         """Обработка кнопки помощи"""
@@ -404,6 +494,8 @@ class ScheduleBot:
             my_logger.error(f"Error in help contact handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при обращении в поддержку")
     
+
+
     def _handle_choice_parallel(self, message):
         """Обработка выбора параллели"""
         try:
@@ -419,6 +511,8 @@ class ScheduleBot:
             my_logger.error(f"Error in choice parallel handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при выборе параллели")
     
+
+
     def _handle_choice_class(self, message):
         """Обработка выбора класса"""
         try:
@@ -435,6 +529,8 @@ class ScheduleBot:
             my_logger.error(f"Error in choice class handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при выборе класса")
     
+
+
     def _handle_save_class(self, message):
         """Сохранение выбранного класса"""
         try:
@@ -450,6 +546,8 @@ class ScheduleBot:
             my_logger.error(f"Error in save class handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при сохранении класса")
     
+
+
     def _handle_get_schedule(self, message):
         """Получение расписания"""
         try:
@@ -472,6 +570,8 @@ class ScheduleBot:
             my_logger.error(f"Error in get schedule handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при получении расписания")
     
+
+
     def _create_main_menu(self):
         """Создание главного меню"""
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -479,6 +579,8 @@ class ScheduleBot:
         markup.row(types.KeyboardButton(self.TEXTS["help"]))
         return markup
     
+
+
     def _create_parallel_markup(self):
         """Создание клавиатуры с параллелями"""
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -487,6 +589,8 @@ class ScheduleBot:
         markup.add(*buttons)
         return markup
     
+
+
     def _create_class_markup(self, parallel):
         """Создание клавиатуры с классами параллели"""
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -496,6 +600,8 @@ class ScheduleBot:
             markup.add(*buttons)
         return markup
     
+
+
     def _create_days_markup(self):
         """Создание клавиатуры с днями недели"""
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -504,6 +610,8 @@ class ScheduleBot:
         markup.row(types.KeyboardButton(self.TEXTS["choice_class_again"]))
         return markup
     
+
+
     def stop(self):
         """Остановка бота"""
         my_logger.info("Stopping bot...")
@@ -514,6 +622,8 @@ class ScheduleBot:
         except Exception as e:
             my_logger.error(f"Error stopping bot: {e}")
     
+
+
     def run(self):
         """Запуск бота"""
         try:
@@ -532,6 +642,8 @@ class ScheduleBot:
             my_logger.error(f"Failed to start bot: {e}\n{traceback.format_exc()}")
             raise
     
+
+
     def _polling_loop(self):
         """Цикл опроса бота с обработкой исключений"""
         while self._running and not self._stop_event.is_set():
@@ -546,6 +658,9 @@ class ScheduleBot:
                     time.sleep(10)
         
         my_logger.info("Bot polling loop stopped")
+
+
+
 
 
 def main():
