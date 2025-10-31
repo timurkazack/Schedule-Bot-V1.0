@@ -99,6 +99,10 @@ class ScheduleBot:
         
         self.bot.message_handler(
             func=lambda message: message.text in russian_days())    (self._handle_get_schedule)
+        
+        # 
+        self.bot.callback_query_handler(
+            func=lambda call: call.data[:4]=='help')     (self._handle_admin_help_react_step_1)
     
     def _log_user_action(self, user_data, action, details=""):
         """Логирование действий пользователя"""
@@ -325,7 +329,65 @@ class ScheduleBot:
             my_logger.error(f"Error in proposal handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при отправке обращения")
     
-    #
+    def _send_to_admin_helper_message(self, message):
+        """Отправка обращения администратору"""
+        try:
+            update_user_data(message)
+            user_data = get_user_data(message)
+
+            if self._check_access(user_data):
+                markup = types.InlineKeyboardMarkup()
+                markup.add(
+                    types.InlineKeyboardButton("Ответить", callback_data=f"help_{message.from_user.id}_{message.message_id}")
+                )
+
+                self.bot.send_message(
+                    self.admin_id, 
+                    f"📩 Новое обращение от {message.from_user.id} ({user_data['tg_first_name']}):\n{message.text}",
+                    reply_markup=markup
+                )
+                self.bot.send_message(message.from_user.id, "✅ Ваше обращение отправлено администратору")
+
+        except Exception as e:
+            my_logger.error(f"Error in send to admin helper: {e}\n{traceback.format_exc()}")
+            self.bot.reply_to(message, "❌ Ошибка при отправке обращения")
+
+    def _handle_admin_help_react_step_1(self, call):
+        """Первый шаг обработки ответа на обращение"""
+        try:
+            # Получаем данные из callback
+            data_parts = call.data.split('_')
+            if len(data_parts) != 3:
+                return
+
+            user_id = int(data_parts[1])
+            message_id = int(data_parts[2])
+
+            # Сохраняем данные для следующего шага
+            self.bot.answer_callback_query(call.id, "Напишите ответ пользователю")
+
+            # Регистрируем следующий шаг с передачей user_id
+            msg = self.bot.send_message(self.admin_id, "✏️ Введите ответ для пользователя:")
+            self.bot.register_next_step_handler(msg, self._handle_admin_help_react_step_2, user_id)
+
+        except Exception as e:
+            my_logger.error(f"Error in admin react help 1: {e}\n{traceback.format_exc()}")
+            self.bot.send_message(self.admin_id, "❌ Ошибка при обработке ответа на обращение (1)")
+
+    def _handle_admin_help_react_step_2(self, message, user_id):
+        """Второй шаг обработки ответа на обращение - отправка ответа пользователю"""
+        try:
+            # Проверяем, что сообщение от админа
+            user_data = get_user_data(message)
+            if self._check_access(user_data):
+
+                # Отправляем ответ пользователю
+                self.bot.send_message(user_id, f"📩 Ответ от администратора:\n{message.text}")
+                self.bot.reply_to(message, "✅ Ответ отправлен пользователю")
+
+        except Exception as e:
+            my_logger.error(f"Error in admin react help 2: {e}\n{traceback.format_exc()}")
+            self.bot.send_message(self.admin_id, "❌ Ошибка при обработке ответа на обращение (2)")
 
     def _handle_help_contact(self, message):
         """Обработка кнопки помощи"""

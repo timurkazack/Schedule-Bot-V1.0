@@ -77,7 +77,12 @@ def update_user_data(message_from_user, klass=None,
                      is_admin=None, is_baned=None,
                      ban_time_left=None,  # в минутах
                      ban_reason=None,
-                     donated_money=None):
+                     donated_money=None,
+                     _tg_id=None,
+                     _tg_first_name=None,
+                     _tg_last_name=None,
+                     _tg_user_name=None
+                     ):
     """
     Обновление или создание данных пользователя
     
@@ -92,10 +97,16 @@ def update_user_data(message_from_user, klass=None,
     """
     try:
         # Извлечение данных из объекта сообщения
-        tg_id = int(message_from_user.chat.id)
-        tg_first_name = str(message_from_user.chat.first_name)
-        tg_last_name = str(message_from_user.chat.last_name)
-        tg_user_name = str(message_from_user.chat.username)
+        if message_from_user:
+            tg_id = int(message_from_user.chat.id)
+            tg_first_name = str(message_from_user.chat.first_name)
+            tg_last_name = str(message_from_user.chat.last_name)
+            tg_user_name = str(message_from_user.chat.username)
+        else:
+            tg_id = _tg_id
+            tg_first_name = _tg_first_name
+            tg_last_name = _tg_last_name
+            tg_user_name = _tg_user_name
 
         # Получение текущего времени в формате строки
         current_time = dt.now().strftime("%Y-%m-%d %H:%M:%S")
