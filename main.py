@@ -13,6 +13,7 @@ from utils.get_schedule import *
 from utils import my_logger
 
 
+
 class ScheduleBot:
     def __init__(self):
         self.api = api.get_api()
@@ -87,9 +88,9 @@ class ScheduleBot:
         self.bot.message_handler(commands=["upd"])(self._handle_update)
         self.bot.message_handler(commands=["aus"])(self._handle_auto_update_swap)
         self.bot.message_handler(commands=["otus"])(self._handle_open_to_users_swap)
-        self.bot.message_handler(commands=["ban"])(self._handle_ban_user)
-        self.bot.message_handler(commands=["unban"])(self._handle_unban_user)
-        self.bot.message_handler(commands=["ban_list"])(self._handle_ban_users_list)
+        #self.bot.message_handler(commands=["ban"])(self._handle_ban_user)
+        #self.bot.message_handler(commands=["unban"])(self._handle_unban_user)
+        #self.bot.message_handler(commands=["ban_list"])(self._handle_ban_users_list)
         self.bot.message_handler(commands=["proposal"])(self._handle_proposal)
         
         # Текстовые обработчики
@@ -347,6 +348,7 @@ class ScheduleBot:
     
 
 
+    '''
     def _handle_ban_user(self, message):
         """Обработка команды /ban {tg_id} {time_m} {reason} (только для админа)"""
         try:
@@ -355,7 +357,33 @@ class ScheduleBot:
             self._log_user_action(user_data, "BAN USER FUNC")
 
             if user_data.get("is_admin") == 1:
-                pass
+                arg = message.text.split(" ")
+                if len(arg)<4:
+                    self.bot.reply_to(message, "Неверное кол-во аргементов")
+
+
+                user_id = arg[1]
+                user_data = get_user_data(message=False, _tg_id=user_id)
+                user_first_name = user_data["tg_first_name"]
+                user_last_name = user_data["tg_last_name"]
+                user_tg_name = user_data["tg_user_name"]
+                time_banned = arg[2]
+                reason = arg[3]
+
+                update_user_data(message=None,
+                                 _tg_id=user_id,
+                                 _tg_first_name=user_first_name,
+                                 _tg_last_name=user_last_name,
+                                 _tg_user_name=user_tg_name,
+                                 
+                                 is_baned=1,
+                                 ban_time_left=time_banned,
+                                 ban_reason=reason)
+                
+            self.bot.send_message(user_id, f"""Внимание!
+                                  Вы были заблокированны!
+                                  Времяя до разблокировки: {str(time_banned) if time_banned==9999 else 'вечность'}
+                                  nПричина: {reason}""")
 
         except Exception as e:
             my_logger.error(f"Error in ban user handler: {e}\n{traceback.format_exc()}")
@@ -393,6 +421,7 @@ class ScheduleBot:
         except Exception as e:
             my_logger.error(f"Error in ban list handler: {e}\n{traceback.format_exc()}")
             self.bot.reply_to(message, "❌ Ошибка при обработке списка забаненых пользователей")
+            '''
 
 
 

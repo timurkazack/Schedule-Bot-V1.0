@@ -132,7 +132,7 @@ def update_user_data(message_from_user, klass=None,
                     tg_id, tg_first_name, tg_last_name, tg_user_name,
                     klass, current_time, current_time,
                     is_admin or 0, is_baned or 0,
-                    ban_time, ban_time_left, ban_reason,
+                    current_time, ban_time_left, ban_reason,
                     donated_money or 0.0
                 ))
             else:
@@ -155,7 +155,7 @@ def update_user_data(message_from_user, klass=None,
                 """, (
                     tg_first_name, tg_last_name, tg_user_name,
                     klass, current_time,
-                    is_admin, is_baned, ban_time, ban_time_left, ban_reason, donated_money,
+                    is_admin, is_baned, current_time, ban_time_left, ban_reason, donated_money,
                     tg_id
                 ))
 
@@ -168,7 +168,7 @@ def update_user_data(message_from_user, klass=None,
         my_logger.error(f"Unexpected error in update_user_data: {e}")
         raise
 
-def get_user_data(message):
+def get_user_data(message, _tg_id=None):
     """
     Получение данных пользователя по ID из сообщения
     
@@ -178,7 +178,8 @@ def get_user_data(message):
     Returns:
         dict: Словарь с данными пользователя или None, если пользователь не найден
     """
-    tg_id = int(message.from_user.id)
+    if _tg_id: tg_id = _tg_id
+    else: tg_id = int(message.from_user.id)
 
     try:
         with get_cursor() as cur_us:
@@ -299,7 +300,7 @@ def get_ban_users_list():
             "tg_first_name," \
             "tg_last_name," \
             "ban_time," \
-            "ban_reason FROM users WHERE is_baned = 0;")
+            "ban_reason FROM users WHERE is_baned = 1;")
             result = cur_us.fetchall()
         
         # Создание временного файла для экспорта

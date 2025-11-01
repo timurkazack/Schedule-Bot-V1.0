@@ -23,13 +23,13 @@ def update_user_data(message_from_user, klass=None,
                      donated_money)
 
 
-def get_user_data(message):
+def get_user_data(message, _tg_id=None):
    
     # Возвращает данные пользователя
     # ! message - Сообщение из бота (telebot)
 
 
-   return sq.get_user_data(message)
+   return sq.get_user_data(message, _tg_id)
 
 
 def get_users_count():
