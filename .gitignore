@@ -8,3 +8,4 @@ utils/data/logs/*
 utils/data/caches/*
 utils/api.py
 one_file
+tests

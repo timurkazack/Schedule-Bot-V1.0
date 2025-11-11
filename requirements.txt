@@ -6,6 +6,8 @@
 
 websocket-client==1.9.0 # Parser
 
+websockets==15.0.1
+
 pytelegrambotapi==4.29.1 # tg bot
 cryptography==46.0.2     # for api use
 asyncio==4.0.0
