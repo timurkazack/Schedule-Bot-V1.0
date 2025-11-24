@@ -1,7 +1,8 @@
 import os
 import json
 import hashlib
-from utils import my_logger, get_days
+from . import my_logger
+from .get_schedule import get_days
 from datetime import datetime as dt
 
 
@@ -137,6 +138,8 @@ def normalizer_data_from_server(data):
         # Проверка на одинаковость нового и старого расписания, если нет то сохраняем, если да то дроп
         caches = os.listdir(cache_path)
         last_file = None
+        last_cache_data = None
+
         if caches:
             caches = [os.path.join(cache_path, file) for file in caches]
             caches = [file for file in caches if os.path.isfile(file)]
@@ -144,7 +147,8 @@ def normalizer_data_from_server(data):
             last_file = max(caches, key=os.path.getctime)
 
             with open(last_file, "r", encoding="utf-8") as f:
-                md5 = json.load(f)["md5"]
+                last_cache_data = json.load(f)
+                md5 = last_cache_data["md5"]
 
             if md5 == normal_json["md5"]:
                 my_logger.info("Schedule is the same. Cancel.")
@@ -187,7 +191,7 @@ def normalizer_data_from_server(data):
 
         normal_json["classes_list"] = sort_classes(normal_json["classes_list"])
 
-        redacted_data = check_redacted_data(normal_json, last_file)
+        redacted_data = check_redacted_data(normal_json, last_cache_data)
 
         # Сохранение
         with open(out_file_name, "w", encoding="utf-8") as f:

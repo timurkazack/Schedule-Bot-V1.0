@@ -54,13 +54,15 @@ def get_data_from_server():
 
         lg.debug(f"Out data: {data_str_line}")
 
-        out_from_func, redacted_chedules = normalizer_data_from_server(data_str_line)
+        normalization_result = normalizer_data_from_server(data_str_line)
+        if normalization_result:
+            out_from_func, redacted_chedules = normalization_result
 
-        if out_from_func:
-            latest_cache = out_from_func
-        
-        if redacted_chedules:
-            trigger_func(redacted_chedules)
+            if out_from_func:
+                latest_cache = out_from_func
+            
+            if redacted_chedules and trigger_func:
+                trigger_func(redacted_chedules)
 
     except Exception as e:
         lg.error(e)

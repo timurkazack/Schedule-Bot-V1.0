@@ -1,7 +1,7 @@
 from datetime import datetime as dt
 import logging
 import os
-from utils import error_logger
+from . import error_logger
 
 
 logger = None
