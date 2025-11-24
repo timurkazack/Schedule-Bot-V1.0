@@ -76,3 +76,9 @@ def get_ru_day_to_en(day):
         if ru_day == day:
             return en_day.lower()
     return None
+
+
+def get_en_day_to_ru(day):
+    st_days = utils.get_settings("info", "days")
+    normalized_day = day.lower() if isinstance(day, str) else day
+    return st_days.get(normalized_day, day)

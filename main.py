@@ -1,4 +1,5 @@
 from telebot import *
+from telebot import apihelper as tg_apihelper
 import ws_parser
 from ws_parser import norm_schedule
 from ws_parser import run_auto_update
@@ -153,7 +154,13 @@ class ScheduleBot:
                 return
 
             for klass, days in redacted_chedules.items():
-                formatted_days = "".join(f"• {day}\n" for day in days) if days else "—"
+                formatted_days = ""
+                if days:
+                    for day in days:
+                        ru_day = get_en_day_to_ru(day)
+                        formatted_days += f"• {ru_day}\n"
+                else:
+                    formatted_days = "—"
                 text = (
                     "📢 Расписание изменилось!\n"
                     f"Класс: {klass}\n"
@@ -166,6 +173,18 @@ class ScheduleBot:
                     try:
                         self.bot.send_message(user_id, text)
                         time.sleep(0.5)
+                    except tg_apihelper.ApiTelegramException as send_error:
+                        if (
+                            send_error.error_code == 403
+                            and "blocked" in send_error.description.lower()
+                        ):
+                            my_logger.warning(
+                                f"User {user_id} blocked the bot; skipping notification"
+                            )
+                        else:
+                            my_logger.error(
+                                f"Telegram API error for user {user_id}: {send_error}"
+                            )
                     except Exception as send_error:
                         my_logger.error(
                             f"Failed to notify user {user_id} about schedule update: {send_error}"
