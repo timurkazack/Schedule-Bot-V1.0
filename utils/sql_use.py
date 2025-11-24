@@ -32,6 +32,13 @@ def get_user_data(message, _tg_id=None):
    return sq.get_user_data(message, _tg_id)
 
 
+def get_users_by_class(klass):
+   
+   # Возвращает пользователей по классу
+
+
+   return sq.get_users_by_class(klass)
+
 def get_users_count():
    
    # Возвращает кол-во пользователей

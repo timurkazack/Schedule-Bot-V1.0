@@ -1,5 +1,5 @@
 from utils import logger as lg
-from utils import normalizer_data_from_server as nd
+from utils import normalizer_data_from_server
 from utils import get_schedule as gs
 import utils
 import time
@@ -11,7 +11,7 @@ import websocket as wsocket
 is_update = False
 latest_cache = None
 updates = True
-
+trigger_func = None
 
 lg.info("WS Parser started!")
 
@@ -54,10 +54,13 @@ def get_data_from_server():
 
         lg.debug(f"Out data: {data_str_line}")
 
-        out_from_func = nd(data_str_line)
+        out_from_func, redacted_chedules = normalizer_data_from_server(data_str_line)
 
         if out_from_func:
             latest_cache = out_from_func
+        
+        if redacted_chedules:
+            trigger_func(redacted_chedules)
 
     except Exception as e:
         lg.error(e)

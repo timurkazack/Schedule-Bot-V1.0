@@ -203,6 +203,36 @@ def get_user_data(message, _tg_id=None):
         my_logger.error(f"Unexpected error in get_user_data: {e}")
         return None
 
+
+def get_users_by_class(klass):
+    """
+    Получение списка ID пользователей с указанным классом
+    
+    Args:
+        klass: Класс расписания
+        
+    Returns:
+        list: Список tg_id пользователей с указанным классом
+    """
+    try:
+        with get_cursor() as cur_us:
+            cur_us.execute("SELECT tg_id FROM users WHERE worked_class = ?;", (klass,))
+            result = cur_us.fetchall()
+            
+        # Преобразование результата в плоский список
+        user_ids = [item[0] for item in result]
+        
+        my_logger.info(f"Retrieved {len(user_ids)} user IDs for class: {klass}")
+        return user_ids
+        
+    except sq.Error as e:
+        my_logger.error(f"Error getting users by class {klass}: {e}")
+        return []
+    except Exception as e:
+        my_logger.error(f"Unexpected error in get_users_by_class: {e}")
+        return []
+
+
 def get_user_count():
     """
     Получение общего количества пользователей в базе данных

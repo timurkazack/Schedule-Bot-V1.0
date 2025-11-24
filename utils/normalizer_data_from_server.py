@@ -1,7 +1,7 @@
 import os
 import json
 import hashlib
-from utils import my_logger
+from utils import my_logger, get_days
 from datetime import datetime as dt
 
 
@@ -34,6 +34,67 @@ def sort_classes(classes):
 
     return out
 
+
+
+def check_redacted_data(new_cache, last_cache):
+    redacted_data = {}
+    
+    if last_cache:
+        def get_all_classes(cache):
+            klasses = []
+            for key in cache["classes_list"].keys(): 
+                for content in cache["classes_list"][key]:
+                    klasses.append(content)
+            return set(klasses)
+
+        # Получаем все классы из обоих кешей
+        new_classes = get_all_classes(new_cache)
+        last_classes = get_all_classes(last_cache)
+        
+        # Объединяем все классы (на случай добавления/удаления классов)
+        all_classes = new_classes.union(last_classes)
+        
+        # Получаем все дни из обоих кешей
+        all_days = set(new_cache["days"]).union(set(last_cache["days"]))
+        
+        # Проверяем изменения для каждого класса и каждого дня
+        for class_name in all_classes:
+            changed_days = []
+            
+            # Проверяем, существует ли класс в обоих кешах
+            class_in_new = class_name in new_cache["schedule"]
+            class_in_last = class_name in last_cache["schedule"]
+            
+            # Если класс добавлен или удален - отмечаем все дни как измененные
+            if class_in_new != class_in_last:
+                changed_days = list(all_days)
+            else:
+                # Проверяем изменения по дням
+                for day in all_days:
+                    day_in_new = day in new_cache["schedule"].get(class_name, {})
+                    day_in_last = day in last_cache["schedule"].get(class_name, {})
+                    
+                    # Если день добавлен или удален для этого класса
+                    if day_in_new != day_in_last:
+                        changed_days.append(day)
+                    elif day_in_new and day_in_last:
+                        # Сравниваем расписание для этого дня
+                        new_schedule = new_cache["schedule"][class_name][day]
+                        last_schedule = last_cache["schedule"][class_name][day]
+                        
+                        # Если расписание отличается
+                        if new_schedule != last_schedule:
+                            changed_days.append(day)
+            
+            # Добавляем класс в результат, если есть изменения
+            if changed_days:
+                redacted_data[class_name] = changed_days
+        
+        # Возвращаем None если изменений нет, иначе словарь с изменениями
+        return redacted_data if redacted_data else None
+
+    else:
+        return None
 
 
 def normalizer_data_from_server(data):
@@ -75,6 +136,7 @@ def normalizer_data_from_server(data):
 
         # Проверка на одинаковость нового и старого расписания, если нет то сохраняем, если да то дроп
         caches = os.listdir(cache_path)
+        last_file = None
         if caches:
             caches = [os.path.join(cache_path, file) for file in caches]
             caches = [file for file in caches if os.path.isfile(file)]
@@ -125,11 +187,13 @@ def normalizer_data_from_server(data):
 
         normal_json["classes_list"] = sort_classes(normal_json["classes_list"])
 
+        redacted_data = check_redacted_data(normal_json, last_file)
+
         # Сохранение
         with open(out_file_name, "w", encoding="utf-8") as f:
             json.dump(normal_json, f, ensure_ascii=False, indent=2)
             my_logger.info("Schedule normalized")
-            return out_file_name
+            return out_file_name, redacted_data
 
 
     except Exception as e:

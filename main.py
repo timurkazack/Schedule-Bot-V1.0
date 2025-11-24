@@ -141,6 +141,42 @@ class ScheduleBot:
     
 
 
+    def _set_trigger(self):
+        ws_parser.trigger_func = self._send_redacted_schedule
+
+
+
+    def _send_redacted_schedule(self, redacted_chedules):
+        """Отправка уведомлений об изменениях расписания"""
+        try:
+            if not redacted_chedules:
+                return
+
+            for klass, days in redacted_chedules.items():
+                formatted_days = "".join(f"• {day}\n" for day in days) if days else "—"
+                text = (
+                    "📢 Расписание изменилось!\n"
+                    f"Класс: {klass}\n"
+                    "Изменённые дни:\n"
+                    f"{formatted_days}"
+                )
+
+                user_ids = get_users_by_class(klass) or []
+                for user_id in user_ids:
+                    try:
+                        self.bot.send_message(user_id, text)
+                        time.sleep(0.5)
+                    except Exception as send_error:
+                        my_logger.error(
+                            f"Failed to notify user {user_id} about schedule update: {send_error}"
+                        )
+
+        except Exception as e:
+            my_logger.error(f"Error in send redacted schedule: {e}\n{traceback.format_exc()}")
+
+
+
+
     def _handle_start(self, message):
         """Обработка команды /start"""
         try:
@@ -657,6 +693,7 @@ class ScheduleBot:
         """Запуск бота"""
         try:
             my_logger.info("Starting bot...")
+            self._set_trigger()
             run_auto_update()
             self.bot.remove_webhook()
             
