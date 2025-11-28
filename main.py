@@ -153,19 +153,39 @@ class ScheduleBot:
             if not redacted_chedules:
                 return
 
-            for klass, days in redacted_chedules.items():
-                formatted_days = ""
-                if days:
-                    for day in days:
-                        ru_day = get_en_day_to_ru(day)
-                        formatted_days += f"• {ru_day}\n"
+            for klass, changes in redacted_chedules.items():
+                if isinstance(changes, dict):
+                    subjects_days = changes.get("subjects", [])
+                    rooms_days = changes.get("rooms", [])
                 else:
-                    formatted_days = "—"
+                    # Совместимость со старым форматом
+                    subjects_days = changes
+                    rooms_days = []
+
+                def format_days(days_list):
+                    if not days_list:
+                        return ""
+                    return "\n".join(
+                        f"• {get_en_day_to_ru(day)}" for day in days_list
+                    )
+
+                sections = []
+                subjects_text = format_days(subjects_days)
+                rooms_text = format_days(rooms_days)
+
+                if subjects_text:
+                    sections.append("Изменены предметы:\n" + subjects_text)
+                if rooms_text:
+                    sections.append("Изменены кабинеты:\n" + rooms_text)
+
+                if not sections:
+                    sections.append("Изменения зафиксированы, подробности уточняются")
+
+                formatted_changes = "\n\n".join(sections)
                 text = (
                     "📢 Расписание изменилось!\n"
                     f"Класс: {klass}\n"
-                    "Изменённые дни:\n"
-                    f"{formatted_days}"
+                    f"{formatted_changes}"
                 )
 
                 user_ids = get_users_by_class(klass) or []

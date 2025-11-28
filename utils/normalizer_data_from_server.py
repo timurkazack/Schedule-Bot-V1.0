@@ -40,62 +40,74 @@ def sort_classes(classes):
 def check_redacted_data(new_cache, last_cache):
     redacted_data = {}
     
-    if last_cache:
-        def get_all_classes(cache):
-            klasses = []
-            for key in cache["classes_list"].keys(): 
-                for content in cache["classes_list"][key]:
-                    klasses.append(content)
-            return set(klasses)
-
-        # Получаем все классы из обоих кешей
-        new_classes = get_all_classes(new_cache)
-        last_classes = get_all_classes(last_cache)
-        
-        # Объединяем все классы (на случай добавления/удаления классов)
-        all_classes = new_classes.union(last_classes)
-        
-        # Получаем все дни из обоих кешей
-        all_days = set(new_cache["days"]).union(set(last_cache["days"]))
-        
-        # Проверяем изменения для каждого класса и каждого дня
-        for class_name in all_classes:
-            changed_days = []
-            
-            # Проверяем, существует ли класс в обоих кешах
-            class_in_new = class_name in new_cache["schedule"]
-            class_in_last = class_name in last_cache["schedule"]
-            
-            # Если класс добавлен или удален - отмечаем все дни как измененные
-            if class_in_new != class_in_last:
-                changed_days = list(all_days)
-            else:
-                # Проверяем изменения по дням
-                for day in all_days:
-                    day_in_new = day in new_cache["schedule"].get(class_name, {})
-                    day_in_last = day in last_cache["schedule"].get(class_name, {})
-                    
-                    # Если день добавлен или удален для этого класса
-                    if day_in_new != day_in_last:
-                        changed_days.append(day)
-                    elif day_in_new and day_in_last:
-                        # Сравниваем расписание для этого дня
-                        new_schedule = new_cache["schedule"][class_name][day]
-                        last_schedule = last_cache["schedule"][class_name][day]
-                        
-                        # Если расписание отличается
-                        if new_schedule != last_schedule:
-                            changed_days.append(day)
-            
-            # Добавляем класс в результат, если есть изменения
-            if changed_days:
-                redacted_data[class_name] = changed_days
-        
-        # Возвращаем None если изменений нет, иначе словарь с изменениями
-        return redacted_data if redacted_data else None
-
-    else:
+    if not last_cache:
         return None
+
+    def get_all_classes(cache):
+        klasses = []
+        for key in cache["classes_list"].keys(): 
+            for content in cache["classes_list"][key]:
+                klasses.append(content)
+        return set(klasses)
+
+    # Получаем все классы из обоих кешей
+    new_classes = get_all_classes(new_cache)
+    last_classes = get_all_classes(last_cache)
+    
+    # Объединяем все классы (на случай добавления/удаления классов)
+    all_classes = new_classes.union(last_classes)
+    
+    # Получаем все дни из обоих кешей
+    all_days = set(new_cache["days"]).union(set(last_cache["days"]))
+    
+    # Проверяем изменения для каждого класса и каждого дня
+    for class_name in all_classes:
+        class_changes = {"subjects": set(), "rooms": set()}
+        
+        new_class_schedule = new_cache["schedule"].get(class_name, {})
+        last_class_schedule = last_cache["schedule"].get(class_name, {})
+
+        # Если класс добавлен или удален - считаем, что изменились предметы по всем дням
+        if not new_class_schedule or not last_class_schedule:
+            class_changes["subjects"].update(all_days)
+        else:
+            # Проверяем изменения по дням
+            for day in all_days:
+                new_day_schedule = new_class_schedule.get(day)
+                last_day_schedule = last_class_schedule.get(day)
+
+                # Если день добавлен или удален для этого класса
+                if (new_day_schedule is None) != (last_day_schedule is None):
+                    class_changes["subjects"].add(day)
+                    continue
+
+                if new_day_schedule is None and last_day_schedule is None:
+                    continue
+
+                new_day_schedule = new_day_schedule or {}
+                last_day_schedule = last_day_schedule or {}
+
+                new_lessons = set(new_day_schedule.keys())
+                last_lessons = set(last_day_schedule.keys())
+
+                # Изменение предметов (отличаются ключи уроков)
+                if new_lessons != last_lessons:
+                    class_changes["subjects"].add(day)
+
+                # Изменение кабинетов (ключи совпадают, но значения разные)
+                for lesson in new_lessons.intersection(last_lessons):
+                    if new_day_schedule[lesson] != last_day_schedule[lesson]:
+                        class_changes["rooms"].add(day)
+
+        cleaned_changes = {
+            key: sorted(value) for key, value in class_changes.items() if value
+        }
+
+        if cleaned_changes:
+            redacted_data[class_name] = cleaned_changes
+    
+    # Возвращаем None если изменений нет, иначе словарь с изменениями
+    return redacted_data if redacted_data else None
 
 
 def normalizer_data_from_server(data):
